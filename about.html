@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nfoSoft</title>
+  <link rel="stylesheet" href="css/about.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" href="img/logo.png" type="image/png">
+
+
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+
+   <!-- Logo -->
+<div class="logo">
+  <a href="index.html">
+    <img src="img/logo.png" alt="nfoSoft">
+  </a>
+</div>
+
+
+    <!-- Navigation -->
+    <nav class="nav" id="navMenu">
+      <a href="index.html" class="nav-link ">Home</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="careers.html" class="nav-link">Careers</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </nav>
+
+    <!-- Icons -->
+    <div class="right">
+      <!-- <span class="search">🔍</span> -->
+      <span class="menu-toggle" id="menuToggle">☰</span>
+    </div>
+
+  </div>
+</header>
+
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
+
+</script>
+<script>
+const nav = document.querySelector(".nav");
+const links = document.querySelectorAll(".nav-link");
+
+/* Hover white box */
+links.forEach(link => {
+  link.addEventListener("mouseenter", () => {
+    const linkRect = link.getBoundingClientRect();
+    const navRect = nav.getBoundingClientRect();
+
+    nav.style.setProperty("--left", `${linkRect.left - navRect.left}px`);
+    nav.style.setProperty("--width", `${linkRect.width}px`);
+    nav.style.setProperty("--opacity", "1");
+  });
+
+  /* Click = active purple */
+  link.addEventListener("click", () => {
+    links.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+  });
+});
+
+/* Hide hover box when mouse leaves menu */
+nav.addEventListener("mouseleave", () => {
+  nav.style.setProperty("--opacity", "0");
+});
+</script>
+
+
+
+
+
+
+
+<section class="page-hero">
+  <div class="hero-overlay">
+    <h1>About Us</h1>
+  </div>
+</section>
+
+
+
+
+<section class="about-started">
+  <div class="about-container">
+
+    <!-- Image -->
+    <div class="about-image animate-left">
+      <img src="img/about1.png" alt="How We Started">
+    </div>
+
+    <!-- Content -->
+    <div class="about-content animate-right">
+      <h2>How We Started</h2>
+
+      <p>
+        nfoSoft Innovation Pvt Ltd is the most Popular Software company.
+        Which was established in 2015. An IT solutions company with lots of
+        proven knowledge and experience of developing a wide range of
+        Websites, Mobile apps and Software applications.
+      </p>
+
+      <p>
+        We create your online identity by creating user-friendly company
+        websites, Static websites, dynamic websites, mobile applications,
+        software products and desktop applications. We have an expert team
+        of developers who can build any product with the latest technology.
+      </p>
+    </div>
+
+  </div>
+</section>
+<script>
+const aboutSection = document.querySelector(".about-started");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      aboutSection.classList.add("active");
+    }
+  });
+}, { threshold: 0.3 });
+
+observer.observe(aboutSection);
+</script>
+
+
+
+
+
+<section class="tech-focus">
+  <div class="tech-container">
+
+    <!-- LEFT SIDE -->
+    <div class="tech-left animate-left">
+      <h2>Our Technology Focus</h2>
+      <p class="tech-desc">
+        We focus on latest technology according to the requirement for the project.
+      </p>
+
+      <div class="tech-cards">
+        <div class="tech-card">
+          <i class="fa-solid fa-globe"></i>
+          <h4>Website Designing</h4>
+        </div>
+
+        <div class="tech-card">
+          <i class="fa-solid fa-play"></i>
+          <h4>Mobile Applications</h4>
+        </div>
+
+        <div class="tech-card">
+          <i class="fa-solid fa-desktop"></i>
+          <h4>Software Applications</h4>
+        </div>
+
+        <div class="tech-card">
+          <i class="fa-solid fa-pen-nib"></i>
+          <h4>Graphic Designing</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE IMAGE (YOU WILL GIVE PIC) -->
+    <div class="tech-right animate-right">
+      <img src="img/about2.png" alt="Technology">
+    </div>
+
+  </div>
+</section>
+<script>
+const sections = document.querySelectorAll(".tech-focus");
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+      sectionObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+sections.forEach(sec => sectionObserver.observe(sec));
+</script>
+
+
+
+
+
+
+<section class="keypeople-vision">
+
+  <!-- TOP CONTENT -->
+  <div class="top-content">
+    <h2 class="zoom">Our Key People</h2>
+    <p class="zoom">Specialized team with more than 10 years of experience</p>
+
+    <div class="people-row">
+
+  <div class="person zoom">
+    <i class="fa-solid fa-user-tie"></i>
+    <h4>Rishi Kumar</h4>
+    <span>CEO, Founder</span>
+  </div>
+
+  <div class="person zoom">
+    <i class="fa-solid fa-user-tie"></i>
+    <h4>Ruchita P</h4>
+    <span>Chief Technical Officer</span>
+  </div>
+
+  <div class="person zoom">
+    <i class="fa-solid fa-user-tie"></i>
+    <h4>David Williams</h4>
+    <span>IT Manager</span>
+  </div>
+
+</div>
+
+
+  <!-- OVAL IMAGE -->
+  <div class="vision-image zoom">
+    <img src="img/about3.png" alt="Our Vision">
+  </div>
+
+  <!-- VISION TEXT -->
+  <div class="vision-text zoom">
+    <h3>Our Vision</h3>
+    <p>To become largest digital transformation supporting consulting company</p>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-heading animate-late">connect.</h1>
+
+    <p class="hero-text animate-text">
+      We Help You Expand<br>
+      Your Business Globally
+    </p>
+
+   
+
+    <a href="contact.html" class="hero-cta-btn animate-late">
+      Start Your Project
+    </a>
+
+  </div>
+</section>
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-overlay">
+    <div class="footer-container">
+
+      <div class="footer-col imp-links">
+        <h3>IMPORTANT LINKS</h3>
+        <ul>
+          <li><a href="about.html"><span>›</span> About Us</a></li>
+          <li><a href="contact.html"><span>›</span> Contact Us</a></li>
+          <li><a href="policy.html"><span>›</span> Privacy Policy</a></li>
+          <li><a href="terms.html"><span>›</span> Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col reach">
+        <h3>REACH US</h3>
+        <p>
+          Plot No #682, 3rd Floor,<br>
+          Babukhan Rasheed Plaza,<br>
+          Rd No 36, Jubilee Hills,<br>
+          Hyderabad, Telangana-500033
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>CONTACT INFO</h3>
+        <p class="contact">
+          <i class="fa-solid fa-envelope"></i>
+          info@nfosoft.com
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>FOLLOW US ON</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © All Copyrights Reserved 2015-2025 | nfoSoft Innovations
+  </div>
+</footer>
+
+</body>
+</html>

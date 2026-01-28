@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nfoSoft</title>
+  <link rel="stylesheet" href="css/careers.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" href="img/logo.png" type="image/png">
+
+
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+
+   <!-- Logo -->
+<div class="logo">
+  <a href="index.html">
+    <img src="img/logo.png" alt="nfoSoft">
+  </a>
+</div>
+
+
+    <!-- Navigation -->
+    <nav class="nav" id="navMenu">
+      <a href="index.html" class="nav-link ">Home</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="careers.html" class="nav-link">Careers</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </nav>
+
+    <!-- Icons -->
+    <div class="right">
+      <!-- <span class="search">🔍</span> -->
+      <span class="menu-toggle" id="menuToggle">☰</span>
+    </div>
+
+  </div>
+</header>
+
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
+
+</script>
+<script>
+const nav = document.querySelector(".nav");
+const links = document.querySelectorAll(".nav-link");
+
+/* Hover white box */
+links.forEach(link => {
+  link.addEventListener("mouseenter", () => {
+    const linkRect = link.getBoundingClientRect();
+    const navRect = nav.getBoundingClientRect();
+
+    nav.style.setProperty("--left", `${linkRect.left - navRect.left}px`);
+    nav.style.setProperty("--width", `${linkRect.width}px`);
+    nav.style.setProperty("--opacity", "1");
+  });
+
+  /* Click = active purple */
+  link.addEventListener("click", () => {
+    links.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+  });
+});
+
+/* Hide hover box when mouse leaves menu */
+nav.addEventListener("mouseleave", () => {
+  nav.style.setProperty("--opacity", "0");
+});
+</script>
+
+
+
+
+
+
+<section class="page-hero">
+  <div class="hero-overlay">
+    <h1>Carrers</h1>
+  </div>
+</section>
+
+
+
+
+
+<section class="join-section">
+  <div class="join-content">
+    <h2 class="join-title">Join A Fast-Growing Successful Team</h2>
+    <a href="#careerForm" class="join-btn">APPLY NOW</a>
+
+  </div>
+</section>
+
+
+
+
+
+
+ 
+
+<section class="career-form-section" id="careerForm">
+  <h2 class="form-title">Enter Your Details</h2>
+
+  <form class="career-form">
+
+    <!-- Applying For -->
+    <div class="form-group select-box">
+      <div class="select-input">
+        <input type="text" id="jobSearch" placeholder="Applying for" readonly>
+        <span class="arrow">&#9662;</span>
+      </div>
+
+      <div class="dropdown">
+        <input type="text" id="searchInput" placeholder="Search role...">
+        <ul>
+          <li>Digital Marketing Analyst with WordPress</li>
+          <li>Full Stack Web Developer</li>
+          <li>Frontend Developer</li>
+          <li>Backend Developer</li>
+          <li>UI/UX Designer</li>
+          <li>System Admin</li>
+          <li>HR Executive</li>
+         
+          <li>Inside Sales Executive</li>
+          <li>Office Admin</li>
+          <li>Internship</li>
+          <li>Digital Marketing Internship</li>
+          <li>College Internship</li>
+          <li>Other</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Full Name">
+    </div>
+
+    <div class="form-group">
+      <input type="tel" placeholder="Contact Number">
+    </div>
+
+    <div class="form-group">
+      <input type="email" placeholder="Email ID">
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Current City">
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Highest Qualification">
+      <small>Ex: B.Tech (CSE) – Passout Year</small>
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Your Total Experience">
+      <small>Ex: 1 Year 6 Months, 0 for Fresher</small>
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Your Current CTC">
+      <small>Ex: 3.6 Lakhs, 0 for Fresher</small>
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Your Expected CTC">
+      <small>Ex: 4.6 Lakhs</small>
+    </div>
+
+    <div class="form-group">
+      <input type="text" placeholder="Top 5 Skills">
+    </div>
+
+    <div class="form-group">
+      <textarea placeholder="Your Queries"></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">SUBMIT</button>
+  </form>
+</section>
+
+<script>
+const jobInput = document.getElementById("jobSearch");
+const dropdown = document.querySelector(".dropdown");
+const searchInput = document.getElementById("searchInput");
+const items = dropdown.querySelectorAll("li");
+
+jobInput.addEventListener("click", () => {
+  dropdown.style.display = "block";
+  searchInput.focus();
+});
+
+items.forEach(item => {
+  item.addEventListener("click", () => {
+    jobInput.value = item.innerText;
+    dropdown.style.display = "none";
+  });
+});
+
+searchInput.addEventListener("keyup", () => {
+  let filter = searchInput.value.toLowerCase();
+  items.forEach(item => {
+    item.style.display = item.innerText.toLowerCase().includes(filter)
+      ? "block"
+      : "none";
+  });
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".select-box")) {
+    dropdown.style.display = "none";
+  }
+});
+</script>
+<script>
+window.addEventListener("load", () => {
+  document.querySelector(".career-form-section")
+    .classList.add("active");
+});
+</script>
+
+
+
+
+
+
+
+
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-heading animate-late">connect.</h1>
+
+    <p class="hero-text animate-text">
+      We Help You Expand<br>
+      Your Business Globally
+    </p>
+
+   
+
+    <a href="contact.html" class="hero-cta-btn animate-late">
+      Start Your Project
+    </a>
+
+  </div>
+</section>
+
+
+
+
+<footer class="footer">
+  <div class="footer-overlay">
+    <div class="footer-container">
+
+      <div class="footer-col imp-links">
+        <h3>IMPORTANT LINKS</h3>
+        <ul>
+          <li><a href="about.html"><span>›</span> About Us</a></li>
+          <li><a href="contact.html"><span>›</span> Contact Us</a></li>
+          <li><a href="policy.html"><span>›</span> Privacy Policy</a></li>
+          <li><a href="terms.html"><span>›</span> Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col reach">
+        <h3>REACH US</h3>
+        <p>
+          Plot No #682, 3rd Floor,<br>
+          Babukhan Rasheed Plaza,<br>
+          Rd No 36, Jubilee Hills,<br>
+          Hyderabad, Telangana-500033
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>CONTACT INFO</h3>
+        <p class="contact">
+          <i class="fa-solid fa-envelope"></i>
+          info@nfosoft.com
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>FOLLOW US ON</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © All Copyrights Reserved 2015-2025 | nfoSoft Innovations
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nfoSoft</title>
+  <link rel="stylesheet" href="css/contact.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" href="img/logo.png" type="image/png">
+
+
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+
+   <!-- Logo -->
+<div class="logo">
+  <a href="index.html">
+    <img src="img/logo.png" alt="nfoSoft">
+  </a>
+</div>
+
+
+    <!-- Navigation -->
+    <nav class="nav" id="navMenu">
+      <a href="index.html" class="nav-link ">Home</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="careers.html" class="nav-link">Careers</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </nav>
+
+    <!-- Icons -->
+    <div class="right">
+      <!-- <span class="search">🔍</span> -->
+      <span class="menu-toggle" id="menuToggle">☰</span>
+    </div>
+
+  </div>
+</header>
+
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
+
+</script>
+<script>
+const nav = document.querySelector(".nav");
+const links = document.querySelectorAll(".nav-link");
+
+/* Hover white box */
+links.forEach(link => {
+  link.addEventListener("mouseenter", () => {
+    const linkRect = link.getBoundingClientRect();
+    const navRect = nav.getBoundingClientRect();
+
+    nav.style.setProperty("--left", `${linkRect.left - navRect.left}px`);
+    nav.style.setProperty("--width", `${linkRect.width}px`);
+    nav.style.setProperty("--opacity", "1");
+  });
+
+  /* Click = active purple */
+  link.addEventListener("click", () => {
+    links.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+  });
+});
+
+/* Hide hover box when mouse leaves menu */
+nav.addEventListener("mouseleave", () => {
+  nav.style.setProperty("--opacity", "0");
+});
+</script>
+
+
+
+
+
+
+<section class="page-hero">
+  <div class="hero-overlay">
+    <h1>Contact Us</h1>
+  </div>
+</section>
+
+
+
+
+
+<section class="support-section">
+  <div class="support-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="support-left">
+      <h2>Help & Support</h2>
+
+      <div class="support-info">
+
+        <!-- LEFT COLUMN -->
+        <div class="info-left">
+          <div class="mail">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Support@nfosoft.com</span>
+          </div>
+
+          <div class="follow-text">
+            Follow Us On
+          </div>
+        </div>
+
+        <!-- CENTER LINE -->
+        <div class="info-divider"></div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="info-right">
+          <div class="mail">
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@nfosoft.com</span>
+          </div>
+
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="support-right">
+      <img src="img/contact2.png" alt="Help Support">
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="contact-section">
+  <div class="contact-container">
+
+    <!-- LEFT IMAGE -->
+    <div class="contact-image">
+      <img src="img/contact3.png" alt="Contact">
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="contact-form">
+      <h2>Contact</h2>
+
+      <form>
+        <input type="text" placeholder="Your Name">
+        <input type="text" placeholder="Contact Number">
+        <input type="email" placeholder="Email ID">
+        <input type="text" placeholder="Your Company Name">
+
+        <div class="checkbox-group">
+  <label class="checkbox-item">
+    <input type="checkbox">
+    <span>Website Designing</span>
+  </label>
+
+  <label class="checkbox-item">
+    <input type="checkbox">
+    <span>Mobile Apps (Android & IOS)</span>
+  </label>
+
+  <label class="checkbox-item">
+    <input type="checkbox">
+    <span>Software Applications</span>
+  </label>
+
+  <label class="checkbox-item">
+    <input type="checkbox">
+    <span>Graphic Designing</span>
+  </label>
+</div>
+
+
+        <label class="message-label">Comment or Message</label>
+        <textarea rows="5"></textarea>
+
+        <button type="submit">SUBMIT</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="locations-section">
+  <div class="location-icon">
+    <i class="fa-solid fa-location-dot"></i>
+  </div>
+
+  <h2>Our Locations</h2>
+  <p class="location-address">
+    HUDA Techno Enclave, Madhapur Hitech City, Hyderabad, Telangana - 500081
+  </p>
+
+  <div class="locations-container">
+
+    <!-- LEFT ILLUSTRATION -->
+    <div class="location-left">
+      <img src="img/contact4.png" alt="Location Illustration">
+    </div>
+
+    <!-- RIGHT MAP -->
+    <div class="location-right">
+      <iframe
+        src="https://www.google.com/maps?q=HUDA%20Techno%20Enclave%20Madhapur&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-heading animate-late">connect.</h1>
+
+    <p class="hero-text animate-text">
+      We Help You Expand<br>
+      Your Business Globally
+    </p>
+
+   
+
+    <a href="contact.html" class="hero-cta-btn animate-late">
+      Start Your Project
+    </a>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-overlay">
+    <div class="footer-container">
+
+      <div class="footer-col imp-links">
+        <h3>IMPORTANT LINKS</h3>
+        <ul>
+          <li><a href="about.html"><span>›</span> About Us</a></li>
+          <li><a href="contact.html"><span>›</span> Contact Us</a></li>
+          <li><a href="policy.html"><span>›</span> Privacy Policy</a></li>
+          <li><a href="terms.html"><span>›</span> Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col reach">
+        <h3>REACH US</h3>
+        <p>
+          Plot No #682, 3rd Floor,<br>
+          Babukhan Rasheed Plaza,<br>
+          Rd No 36, Jubilee Hills,<br>
+          Hyderabad, Telangana-500033
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>CONTACT INFO</h3>
+        <p class="contact">
+          <i class="fa-solid fa-envelope"></i>
+          info@nfosoft.com
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>FOLLOW US ON</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © All Copyrights Reserved 2015-2025 | nfoSoft Innovations
+  </div>
+</footer>
+
+</body>
+</html>
