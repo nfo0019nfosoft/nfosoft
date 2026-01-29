@@ -327,15 +327,65 @@
     opacity: 1;
   }
 }
+/* =========================
+   FOOTER – MOBILE FIX (CENTER + ANIMATION ON)
+========================= */
+@media (max-width: 576px) {
 
-/* OPTIONAL: mobile lo animation off */
-@media (max-width: 768px) {
-  .footer-col {
-    animation: none;
-    opacity: 1;
-    transform: none;
+  /* STACK & CENTER */
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
+
+  /* IMPORTANT LINKS CENTER (ICON + TEXT) */
+  .footer ul {
+    padding-left: 0;
+  }
+
+  .footer ul li a {
+    display: inline-flex;      /* 🔥 key */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* CONTACT + SOCIAL CENTER */
+  .contact {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
 }
+
+/* =========================
+   FOOTER – KEEP ANIMATION ON MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  .footer-col {
+    opacity: 0;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+  }
+
+  .footer-col:nth-child(1),
+  .footer-col:nth-child(2) {
+    animation-name: footerFromLeft;
+  }
+
+  .footer-col:nth-child(3),
+  .footer-col:nth-child(4) {
+    animation-name: footerFromRight;
+  }
+
+}
+
 
 
 
@@ -693,6 +743,75 @@
     transform: none;
   }
 }
+@media (max-width: 768px) {
+
+  /* SECTION SPACING */
+  .support-section {
+    padding: 60px 0;
+  }
+
+  /* CONTAINER */
+  .support-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  /* HEADING */
+  .support-left h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  /* INFO GRID → STACK */
+  .support-info {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+    justify-items: center;
+  }
+
+  /* REMOVE DIVIDER */
+  .info-divider {
+    display: none;
+  }
+
+  /* LEFT / RIGHT CONTENT CENTER */
+  .info-left,
+  .info-right {
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* MAIL */
+  .mail {
+    margin-left: 0;          /* 🔥 remove hard margin */
+    font-size: 17px;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* FOLLOW TEXT */
+  .follow-text {
+    margin-left: 0;          /* 🔥 remove hard margin */
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* SOCIAL ICONS */
+  .social-icons {
+    justify-content: center;
+  }
+
+  /* IMAGE */
+  .support-right img {
+    max-width: 100%;
+    margin: 20px auto 0;
+  }
+
+}
+
 
 
 
@@ -912,6 +1031,76 @@
     max-width: 100%;
   }
 }
+@media (max-width: 768px) {
+
+  /* SECTION SPACING */
+  .contact-section {
+    padding: 40px 0;
+  }
+
+  /* STACK LAYOUT */
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 16px;
+  }
+
+  /* IMAGE */
+  .contact-image {
+    margin-top: 0;
+    justify-content: center;
+  }
+
+  .contact-image img {
+    max-width: 100%;
+  }
+
+  /* FORM */
+  .contact-form {
+    align-items: stretch;
+  }
+
+  /* HEADING */
+  .contact-form h2 {
+    font-size: 28px;
+    margin-left: 0;              /* 🔥 remove 200px margin */
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  /* INPUTS */
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 15px;
+    padding: 12px 14px;
+  }
+
+  /* CHECKBOX GROUP */
+  .checkbox-group {
+    margin: 10px 0 16px;
+  }
+
+  .checkbox-item {
+    font-size: 15px;
+    gap: 8px;
+  }
+
+  /* MESSAGE LABEL */
+  .message-label {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  /* BUTTON */
+  .contact-form button {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+}
+
 
 
 

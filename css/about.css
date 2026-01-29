@@ -850,11 +850,10 @@
 
 
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
+
+
+
 
 .kp-wrapper {
   font-family: 'Poppins', sans-serif;
@@ -1022,4 +1021,40 @@
   .kp-bottom {
     padding-top: 220px;
   }
+}
+@media (max-width: 768px) {
+
+  /* TOP SECTION PADDING REDUCE */
+  .kp-top {
+    padding: 70px 20px 200px;
+  }
+
+  /* PEOPLE STACK */
+  .kp-people {
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 60px;
+  }
+
+  /* CENTER OVAL FIX */
+  .vision-oval {
+    position: absolute;
+    left: 50%;
+    bottom: -260px;              /* 🔥 controlled overlap */
+    transform: translateX(-50%);
+    z-index: 5;
+  }
+
+  .vision-oval img {
+    width: 240px;
+    height: 320px;
+    border-radius: 120px;
+    margin-left: 0;              /* 🔥 REMOVE desktop hack */
+  }
+
+  /* BOTTOM SECTION ADJUST */
+  .kp-bottom {
+    padding-top: 260px;          /* match oval overlap */
+  }
+
 }
