@@ -1,298 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>nfosoft</title>
   <link rel="stylesheet" href="css/portfolio.css">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="icon" href="img/logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" href="img/logo.png" type="image/png">
 
 
 </head>
+
 <body>
 
-<header class="header">
-  <div class="container">
-
-   <!-- Logo -->
-<div class="logo">
-  <a href="index.html">
-    <img src="img/logo.png" alt="nfoSoft">
-  </a>
-</div>
-
-
-    <!-- Navigation -->
-    <nav class="nav" id="navMenu">
-      <a href="index.html" class="nav-link ">Home</a>
-      <a href="about.html" class="nav-link">About Us</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="portfolio.html" class="nav-link">Portfolio</a>
-      <a href="careers.html" class="nav-link">Careers</a>
-      <a href="contact.html" class="nav-link">Contact Us</a>
-    </nav>
-
-    <!-- Icons -->
-    <div class="right">
-      <!-- <span class="search">🔍</span> -->
-      <span class="menu-toggle" id="menuToggle">☰</span>
-    </div>
-
-  </div>
-</header>
-
-<script>
-    const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
-
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
-});
-
-</script>
-<script>
-const nav = document.querySelector(".nav");
-const links = document.querySelectorAll(".nav-link");
-
-/* Hover white box */
-links.forEach(link => {
-  link.addEventListener("mouseenter", () => {
-    const linkRect = link.getBoundingClientRect();
-    const navRect = nav.getBoundingClientRect();
-
-    nav.style.setProperty("--left", `${linkRect.left - navRect.left}px`);
-    nav.style.setProperty("--width", `${linkRect.width}px`);
-    nav.style.setProperty("--opacity", "1");
-  });
-
-  /* Click = active purple */
-  link.addEventListener("click", () => {
-    links.forEach(l => l.classList.remove("active"));
-    link.classList.add("active");
-  });
-});
-
-/* Hide hover box when mouse leaves menu */
-nav.addEventListener("mouseleave", () => {
-  nav.style.setProperty("--opacity", "0");
-});
-</script>
-
-
-
-
-
-
-
-<section class="page-hero">
-  <div class="hero-overlay">
-    <h1>Portfolio</h1>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2 class="title">Websites</h2>
-
-<div class="grid">
-
-  <a href="#" class="card animate left">
-    <img src="img/p1.png">
-  </a>
-
-  <a href="#" class="card animate top">
-    <img src="img/p2.png">
-  </a>
-
-  <a href="#" class="card animate right">
-    <img src="img/p3.png">
-  </a>
-
-  <a href="#" class="card animate left">
-    <img src="img/p4.png">
-  </a>
-
-  <!-- 5th -->
-  <a href="#" class="card animate zoom blue">
-    <img src="img/p5.png">
-  </a>
-
-  <a href="#" class="card animate right">
-    <img src="img/p6.png">
-  </a>
-
-  <a href="#" class="card animate left">
-    <img src="img/p7.png">
-  </a>
-
-  <!-- 8th -->
-  <a href="#" class="card animate down blue">
-    <img src="img/p8.png">
-  </a>
-
-  <a href="#" class="card animate right">
-    <img src="img/p9.png">
-  </a>
-
-</div>
-
-
-
-<script>
-  const cards = document.querySelectorAll('.card');
-
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
-
-cards.forEach(card => observer.observe(card));
-
-</script>
-
-
-
-
-
-
-
-
-
-<section class="apps-section">
-  <h2 class="title">Mobile Apps</h2>
-
-  <div class="apps-grid">
-
-    <div class="app-card left">
-      <img src="img/m1.png">
-      <p>Restaurant Partner App</p>
-    </div>
-
-    <div class="app-card top">
-      <img src="img/m2.png">
-      <p>Biryani Blues</p>
-    </div>
-
-    <div class="app-card right">
-      <img src="img/m3.png">
-      <p>Event Ticket Hero</p>
-    </div>
-
-    <div class="app-card left">
-      <img src="img/m4.png">
-      <p>goTicket Bus Ticket</p>
-    </div>
-
-    <div class="app-card zoom">
-      <img src="img/m5.png">
-      <p>Mens Jeans &amp; Trousers</p>
-    </div>
-
-    <div class="app-card right">
-      <img src="img/m6.png">
-      <p>Landeed - Property Title Check</p>
-    </div>
-
-    <div class="app-card left">
-      <img src="img/m7.png">
-      <p>Book My OP Ticket</p>
-    </div>
-
-    <div class="app-card down">
-      <img src="img/m8.png">
-      <p>Kolo - Home Design &amp; Interiors</p>
-    </div>
-
-    <div class="app-card right">
-      <img src="img/m9.png">
-      <p>Cheap bags for women, purses</p>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
-
-
-<section class="quote-section">
-  <div class="quote-container">
-
-    <!-- LEFT -->
-    <div class="services animate-left">
-      <h2 class="section-title">More Services</h2>
-
-      <div class="services-grid">
-        <div class="service-box">Website<br>Designing</div>
-        <div class="service-box">Software Applications</div>
-        <div class="service-box">Android APP<br>Development</div>
-
-        <div class="service-box">UI/UX Designing</div>
-        <div class="service-box">VFX Designing</div>
-        <div class="service-box">Graphic Designing</div>
-
-        <div class="service-box">IOS APP Development</div>
-        <div class="service-box">Artificial Intelligence</div>
+  <header class="header">
+    <div class="container">
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="nfoSoft">
+        </a>
       </div>
+
+
+      <!-- Navigation -->
+      <nav class="nav" id="navMenu">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="careers.html" class="nav-link">Careers</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Icons -->
+      <div class="right">
+        <!-- <span class="search">🔍</span> -->
+        <span class="menu-toggle" id="menuToggle">☰</span>
+      </div>
+
     </div>
+  </header>
 
-    <!-- RIGHT -->
-    <div class="quote-form animate-right">
-      <h2 class="section-title">Get a Quote</h2>
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
 
-      <form>
-        <input type="text" placeholder="Your Name">
-        <input type="text" placeholder="Contact Number">
-        <input type="email" placeholder="Email ID">
-        <input type="text" placeholder="Your Company Name">
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
 
-        <div class="checks">
-          <label><input type="checkbox"> Website Designing</label>
-          <label><input type="checkbox"> Mobile Apps (Android & IOS)</label>
-          <label><input type="checkbox"> Software Applications</label>
-          <label><input type="checkbox"> Graphic Designing</label>
-        </div>
+  </script>
+  <script>
+    const nav = document.querySelector(".nav");
+    const links = document.querySelectorAll(".nav-link");
 
-        <textarea placeholder="Comment or Message"></textarea>
+    /* Hover white box */
+    links.forEach(link => {
+      link.addEventListener("mouseenter", () => {
+        const linkRect = link.getBoundingClientRect();
+        const navRect = nav.getBoundingClientRect();
 
-        <button type="submit">SUBMIT</button>
-      </form>
+        nav.style.setProperty("--left", `${linkRect.left - navRect.left}px`);
+        nav.style.setProperty("--width", `${linkRect.width}px`);
+        nav.style.setProperty("--opacity", "1");
+      });
+
+      /* Click = active purple */
+      link.addEventListener("click", () => {
+        links.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+
+    /* Hide hover box when mouse leaves menu */
+    nav.addEventListener("mouseleave", () => {
+      nav.style.setProperty("--opacity", "0");
+    });
+  </script>
+
+
+
+
+
+
+
+  <section class="page-hero">
+    <div class="hero-overlay">
+      <h1>Portfolio</h1>
     </div>
-
-  </div>
-</section>
+  </section>
 
 
 
@@ -304,23 +105,78 @@ cards.forEach(card => observer.observe(card));
 
 
 
-<section class="hero-section">
-  <div class="hero-content">
-    <h1 class="hero-heading animate-late">connect.</h1>
 
-    <p class="hero-text animate-text">
-      We Help You Expand<br>
-      Your Business Globally
-    </p>
 
-   
 
-    <a href="contact.html" class="hero-cta-btn animate-late">
-      Start Your Project
+
+
+
+
+
+
+  <h2 class="title">Websites</h2>
+
+  <div class="grid">
+
+    <a href="https://www.deltapage.com/" class="card animate left">
+      <img src="img/p1.png">
+    </a>
+
+    <a href="https://www.nobledegreecollege.com/" class="card animate top">
+      <img src="img/p2.png">
+    </a>
+
+    <a href="https://artclinicsivf.in/" class="card animate right">
+      <img src="img/p3.png">
+    </a>
+
+    <a href="https://www.jaypore.com/" class="card animate left">
+      <img src="img/p4.png">
+    </a>
+
+    <!-- 5th -->
+    <a href="https://jyothicaterers.in/" class="card animate zoom blue">
+      <img src="img/p5.png">
+    </a>
+
+    <a href="https://www.amecet.in/" class="card animate right">
+      <img src="img/p6.png">
+    </a>
+
+    <a href="https://www.zoomin.com/" class="card animate left">
+      <img src="img/p7.png">
+    </a>
+
+    <!-- 8th -->
+    <a href="https://cubicassociates.com/" class="card animate down blue">
+      <img src="img/p8.png">
+    </a>
+
+    <a href="https://kshethragroup.com/" class="card animate right">
+      <img src="img/p9.png">
     </a>
 
   </div>
-</section>
+
+
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cards.forEach(card => observer.observe(card));
+
+  </script>
 
 
 
@@ -330,72 +186,238 @@ cards.forEach(card => observer.observe(card));
 
 
 
+  <section class="apps-section">
+    <h2 class="title">Mobile Apps</h2>
 
+    <div class="apps-grid">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<footer class="footer">
-  <div class="footer-overlay">
-    <div class="footer-container">
-
-      <div class="footer-col imp-links">
-        <h3>IMPORTANT LINKS</h3>
-        <ul>
-          <li><a href="about.html"><span>›</span> About Us</a></li>
-          <li><a href="contact.html"><span>›</span> Contact Us</a></li>
-          <li><a href="policy.html"><span>›</span> Privacy Policy</a></li>
-          <li><a href="terms.html"><span>›</span> Terms & Conditions</a></li>
-        </ul>
+      <div class="app-card left">
+        <a href="https://play.google.com/store/apps/details?id=ca.skipthedishes.dashboard&gl=US&pli=1">
+          <img src="img/m1.png">
+          <p>Restaurant Partner App</p>
+        </a>
       </div>
 
-      <div class="footer-col reach">
-        <h3>REACH US</h3>
-        <p>
-          Plot No #682, 3rd Floor,<br>
-          Babukhan Rasheed Plaza,<br>
-          Rd No 36, Jubilee Hills,<br>
-          Hyderabad, Telangana-500033
-        </p>
+      <div class="app-card top">
+        <a href="https://play.google.com/store/apps/details?id=com.biryaniblues.app">
+          <img src="img/m2.png">
+          <p>Biryani Blues</p>
+        </a>
       </div>
 
-      <div class="footer-col">
-        <h3>CONTACT INFO</h3>
-        <p class="contact">
-          <i class="fa-solid fa-envelope"></i>
-          info@nfosoft.com
-        </p>
+      <div class="app-card right">
+        <a href="https://play.google.com/store/apps/details?id=com.biryaniblues.app">
+          <img src="img/m3.png">
+          <p>Event Ticket Hero</p>
+        </a>
       </div>
 
-      <div class="footer-col">
-        <h3>FOLLOW US ON</h3>
-        <div class="social-icons">
-          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        </div>
+      <div class="app-card left">
+        <a href="https://play.google.com/store/apps/details?id=com.travel.goticket">
+          <img src="img/m4.png">
+          <p>goTicket Bus Ticket</p>
+        </a>
+      </div>
+
+      <div class="app-card zoom">
+
+        <a href="https://play.google.com/store/apps/details?id=com.linonlineshopping.jeansformen">
+          <img src="img/m5.png">
+          <p>Mens Jeans &amp; Trousers</p>
+        </a>
+      </div>
+
+      <div class="app-card right">
+
+        <a href="https://play.google.com/store/apps/details?id=com.landeed">
+          <img src="img/m6.png">
+          <p>Landeed - Property Title Check</p>
+        </a>
+      </div>
+
+      <div class="app-card left">
+        
+        <a href="https://play.google.com/store/apps/details?id=apps.vcast.bop.bookmyop">
+          <img src="img/m7.png">
+          <p>Book My OP Ticket</p>
+        </a>
+      </div>
+
+      <div class="app-card down">
+
+        <a href="https://play.google.com/store/apps/details?id=com.kolo.android">
+          <img src="img/m8.png">
+          <p>Kolo - Home Design &amp; Interiors</p>
+        </a>
+      </div>
+
+      <div class="app-card right">
+
+        <a href="https://play.google.com/store/apps/details?id=com.handbagsforwomen_shoppingonline.handbags">
+          <img src="img/m9.png">
+          <p>Cheap bags for women, purses</p>
+        </a>
       </div>
 
     </div>
-  </div>
+  </section>
 
-  <div class="footer-bottom">
-    © All Copyrights Reserved 2015-2025 | nfoSoft Innovations
-  </div>
-</footer>
+
+
+
+
+
+
+  <section class="quote-section">
+    <div class="quote-container">
+
+      <!-- LEFT -->
+      <div class="services animate-left">
+        <h2 class="section-title">More Services</h2>
+
+        <div class="services-grid">
+          <div class="service-box">Website<br>Designing</div>
+          <div class="service-box">Software Applications</div>
+          <div class="service-box">Android APP<br>Development</div>
+
+          <div class="service-box">UI/UX Designing</div>
+          <div class="service-box">VFX Designing</div>
+          <div class="service-box">Graphic Designing</div>
+
+          <div class="service-box">IOS APP Development</div>
+          <div class="service-box">Artificial Intelligence</div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="quote-form animate-right">
+        <h2 class="section-title">Get a Quote</h2>
+
+        <form>
+          <input type="text" placeholder="Your Name">
+          <input type="text" placeholder="Contact Number">
+          <input type="email" placeholder="Email ID">
+          <input type="text" placeholder="Your Company Name">
+
+          <div class="checks">
+            <label><input type="checkbox"> Website Designing</label>
+            <label><input type="checkbox"> Mobile Apps (Android & IOS)</label>
+            <label><input type="checkbox"> Software Applications</label>
+            <label><input type="checkbox"> Graphic Designing</label>
+          </div>
+
+          <textarea placeholder="Comment or Message"></textarea>
+
+          <button type="submit">SUBMIT</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-heading animate-late">connect.</h1>
+
+      <p class="hero-text animate-text">
+        We Help You Expand<br>
+        Your Business Globally
+      </p>
+
+
+
+      <a href="contact.html" class="hero-cta-btn animate-late">
+        Start Your Project
+      </a>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="footer-overlay">
+      <div class="footer-container">
+
+        <div class="footer-col imp-links">
+          <h3>IMPORTANT LINKS</h3>
+          <ul>
+            <li><a href="about.html"><span>›</span> About Us</a></li>
+            <li><a href="contact.html"><span>›</span> Contact Us</a></li>
+            <li><a href="policy.html"><span>›</span> Privacy Policy</a></li>
+            <li><a href="terms.html"><span>›</span> Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col reach">
+          <h3>REACH US</h3>
+          <p>
+            Plot No #682, 3rd Floor,<br>
+            Babukhan Rasheed Plaza,<br>
+            Rd No 36, Jubilee Hills,<br>
+            Hyderabad, Telangana-500033
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>CONTACT INFO</h3>
+          <p class="contact">
+            <i class="fa-solid fa-envelope"></i>
+            info@nfosoft.com
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>FOLLOW US ON</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © All Copyrights Reserved 2015-2025 | nfoSoft Innovations
+    </div>
+  </footer>
 
 </body>
+
 </html>
