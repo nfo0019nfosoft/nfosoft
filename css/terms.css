@@ -336,3 +336,223 @@
     transform: none;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   PAGE HERO SECTION
+========================= */
+
+.page-hero {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background with zoom animation */
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/car1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: contactZoom 10s ease-in-out forwards;
+  z-index: 1;
+}
+
+/* Overlay */
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(42, 40, 90, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Text animation */
+.hero-overlay h1 {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  animation: contactText 1.1s ease-out forwards;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes contactZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes contactText {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .page-hero {
+    height: 260px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-overlay h1 {
+    font-size: 28px;
+  }
+}
+
+
+
+
+
+
+
+.bottom-area {
+  background: #49326b;
+  padding: 70px 90px; /* SAME LEFT RIGHT GAP */
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.6); /* white line */
+}
+
+.bottom-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* COLUMNS */
+.bottom-col {
+  width: 30%;
+}
+
+.bottom-col h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  gap:30%
+}
+
+/* LEFT LINKS */
+.bottom-col p {
+  font-size: 16px;
+  margin-bottom: 18px;
+  color: #eee;
+   margin-bottom: 28px;
+   
+}
+
+
+/* CONTACT INFO */
+.info {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.info i {
+  font-size: 26px;
+}
+
+.info strong {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.info p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.social-icons span {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.fb { background: #1877f2; }
+.ig { background: #e4405f; }
+.ln { background: #0a66c2; }
+
+/* LOGO */
+.brand-logo {
+  width: 220px;
+  margin-top: 10px;
+}
+
+/* ANIMATIONS */
+.anim-left {
+  animation: slideLeft 1.3s ease forwards;
+}
+
+.anim-right {
+  animation: slideRight 1.3s ease forwards;
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}

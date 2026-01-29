@@ -1,151 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Header</title>
+  <title>nfosoft</title>
   <link rel="stylesheet" href="css/index.css">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="icon" href="img/logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <link rel="icon" href="img/logo.png" type="image/png">
 
 
 </head>
+
 <body>
 
-<header class="header">
-  <div class="container">
+  <header class="header">
+    <div class="container">
 
-   <!-- Logo -->
-<div class="logo">
-  <a href="index.html">
-    <img src="img/logo.png" alt="nfoSoft">
-  </a>
-</div>
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="nfoSoft">
+        </a>
+      </div>
 
 
-    <!-- Navigation -->
-    <nav class="nav" id="navMenu">
-      <a href="index.html" class="nav-link ">Home</a>
-      <a href="about.html" class="nav-link">About Us</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="portfolio.html" class="nav-link">Portfolio</a>
-      <a href="careers.html" class="nav-link">Careers</a>
-      <a href="contact.html" class="nav-link">Contact Us</a>
-    </nav>
+      <!-- Navigation -->
+      <nav class="nav" id="navMenu">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="careers.html" class="nav-link">Careers</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
 
-    <!-- Icons -->
-    <div class="right">
-      <!-- <span class="search">🔍</span> -->
-      <span class="menu-toggle" id="menuToggle">☰</span>
+      <!-- Icons -->
+      <div class="right">
+        <!-- <span class="search">🔍</span> -->
+        <span class="menu-toggle" id="menuToggle">☰</span>
+      </div>
+
     </div>
+  </header>
 
-  </div>
-</header>
-
-<script>
+  <script>
     const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
+    const navMenu = document.getElementById("navMenu");
 
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
-});
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
 
-</script>
-<script>
-const nav = document.querySelector(".nav");
-const links = document.querySelectorAll(".nav-link");
+  </script>
+  <script>
+    const nav = document.querySelector(".nav");
+    const links = document.querySelectorAll(".nav-link");
 
-/* Hover white box */
-links.forEach(link => {
-  link.addEventListener("mouseenter", () => {
-    const linkRect = link.getBoundingClientRect();
-    const navRect = nav.getBoundingClientRect();
+    /* Hover white box */
+    links.forEach(link => {
+      link.addEventListener("mouseenter", () => {
+        const linkRect = link.getBoundingClientRect();
+        const navRect = nav.getBoundingClientRect();
 
-    nav.style.setProperty("--left", `${linkRect.left - navRect.left}px`);
-    nav.style.setProperty("--width", `${linkRect.width}px`);
-    nav.style.setProperty("--opacity", "1");
-  });
+        nav.style.setProperty("--left", `${linkRect.left - navRect.left}px`);
+        nav.style.setProperty("--width", `${linkRect.width}px`);
+        nav.style.setProperty("--opacity", "1");
+      });
 
-  /* Click = active purple */
-  link.addEventListener("click", () => {
-    links.forEach(l => l.classList.remove("active"));
-    link.classList.add("active");
-  });
-});
+      /* Click = active purple */
+      link.addEventListener("click", () => {
+        links.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
 
-/* Hide hover box when mouse leaves menu */
-nav.addEventListener("mouseleave", () => {
-  nav.style.setProperty("--opacity", "0");
-});
-</script>
-
-
+    /* Hide hover box when mouse leaves menu */
+    nav.addEventListener("mouseleave", () => {
+      nav.style.setProperty("--opacity", "0");
+    });
+  </script>
 
 
 
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Hero Slider</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <section class="hero">
+
+      <div class="slider">
+
+        <div class="slide active" style="background-image:url('img/wd.png')">
+          <div class="overlay"></div>
+          <div class="content">
+            <h1>WEBSITE DESIGNING</h1>
+            <p>Crafting responsive, user-friendly websites</p>
+            <a href="#" class="btn">Join With Us →</a>
+          </div>
+        </div>
+
+
+        <div class="slide" style="background-image:url('img/sa.png')">
+          <div class="overlay"></div>
+          <div class="content">
+            <h1>SOCIAL APPLICATIONS</h1>
+            <p>Our software development services are designed to transform our vision to reality</p>
+            <a href="#" class="btn">Join With Us →</a>
+          </div>
+        </div>
 
 
 
 
 
+        <div class="slide" style="background-image:url('img/ma.png')">
+          <div class="overlay"></div>
+          <div class="content">
+            <h1>MOBILE APPLICATIONS</h1>
+            <p>Crafting responsive, user-friendly websites</p>
+            <a href="#" class="btn">Join With Us →</a>
+          </div>
+        </div>
 
-
-
-<footer class="footer">
-  <div class="footer-overlay">
-    <div class="footer-container">
-
-      <div class="footer-col imp-links">
-        <h3>IMPORTANT LINKS</h3>
-        <ul>
-          <li><a href="about.html"><span>›</span> About Us</a></li>
-          <li><a href="contact.html"><span>›</span> Contact Us</a></li>
-          <li><a href="policy.html"><span>›</span> Privacy Policy</a></li>
-          <li><a href="terms.html"><span>›</span> Terms & Conditions</a></li>
-        </ul>
       </div>
 
-      <div class="footer-col reach">
-        <h3>REACH US</h3>
-        <p>
-          Plot No #682, 3rd Floor,<br>
-          Babukhan Rasheed Plaza,<br>
-          Rd No 36, Jubilee Hills,<br>
-          Hyderabad, Telangana-500033
-        </p>
-      </div>
 
-      <div class="footer-col">
-        <h3>CONTACT INFO</h3>
-        <p class="contact">
-          <i class="fa-solid fa-envelope"></i>
-          info@nfosoft.com
-        </p>
-      </div>
-
-      <div class="footer-col">
-        <h3>FOLLOW US ON</h3>
-        <div class="social-icons">
-          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <div class="slide " style="background-image:url('img/dm.png')">
+        <div class="overlay"></div>
+        <div class="content">
+          <h1>DIGITAL MARKETING</h1>
+          <p>Expand your business with our expertise</p>
+          <a href="#" class="btn">Join With Us →</a>
         </div>
       </div>
 
-    </div>
-  </div>
+    </section>
 
-  <div class="footer-bottom">
-    © All Copyrights Reserved 2015-2025 | nfoSoft Innovations
-  </div>
-</footer>
+    <script>
+      const slides = document.querySelectorAll('.slide');
+      let current = 0;
+
+      setInterval(() => {
+        let prev = current;
+        current = (current + 1) % slides.length;
+
+        slides[prev].classList.remove('active');
+        slides[prev].classList.add('prev');
+
+        slides[current].classList.add('active');
+
+        setTimeout(() => {
+          slides[prev].classList.remove('prev');
+        }, 1200);
+
+      }, 4000);
+
+    </script>
+  </body>
+
+  </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="about-section">
+    <div class="about-container">
+
+      <!-- LEFT IMAGE -->
+      <div class="about-image animate-left">
+        <img src="img/h1.png" alt="About Company">
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="about-content animate-right">
+        <h2>ABOUT OUR COMPANY</h2>
+        <p>
+          nfoSoft is the most popular IT and Digital Marketing company.
+          We are the most innovative and creative. We design and promote
+          applications across all the industries.
+        </p>
+
+        <a href="#" class="about-btn">KNOW MORE</a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  <section class="services-section">
+    <!-- TITLE -->
+    <h2 class="services-title animate-right">OUR SERVICES</h2>
+
+    <!-- SERVICES GRID -->
+    <div class="services-grid animate-left">
+
+      <div class="service-card">
+        <img src="img/h2.png" alt="Website Designing">
+        <h3>WEBSITE DESIGNING</h3>
+      </div>
+
+      <div class="service-card">
+        <img src="img/h3.png" alt="Digital Marketing">
+        <h3>DIGITAL MARKETING</h3>
+      </div>
+
+      <div class="service-card">
+        <img src="img/h4.png" alt="Mobile Apps">
+        <h3>MOBILE<br>APPS(ANDROID/IOS)</h3>
+      </div>
+
+      <div class="service-card">
+        <img src="img/h5.png" alt="Application Software">
+        <h3>APPLICATION SOFTWARE</h3>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+  <section class="projects-section">
+    <h2 class="projects-title">PROJECTS SO FAR</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <i class="fa-solid fa-globe"></i>
+        <h3 class="counter" data-target="472">0+</h3>
+        <p>WEBSITES</p>
+      </div>
+
+      <div class="project-card">
+        <i class="fa-solid fa-play"></i>
+        <h3 class="counter" data-target="72">0+</h3>
+        <p>MOBILE APPS</p>
+      </div>
+
+      <div class="project-card">
+        <i class="fa-solid fa-chart-column"></i>
+        <h3 class="counter" data-target="97">0+</h3>
+        <p>DIGITAL MARKETING</p>
+      </div>
+
+      <div class="project-card">
+        <i class="fa-solid fa-table-cells"></i>
+        <h3 class="counter" data-target="27">0+</h3>
+        <p>APPLICATION SOFTWARE</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COUNTER SCRIPT -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+
+    counters.forEach(counter => {
+      const target = +counter.dataset.target;
+      let count = 0;
+      const speed = 30;
+
+      const updateCount = () => {
+        const increment = Math.ceil(target / 100);
+
+        if (count < target) {
+          count += increment;
+          if (count > target) count = target;
+          counter.innerText = count + "+";
+          setTimeout(updateCount, speed);
+        } else {
+          counter.innerText = target + "+";
+        }
+      };
+
+      updateCount();
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+  <section class="portfolio-section">
+    <div class="portfolio-container">
+
+      <!-- LEFT CONTENT -->
+      <div class="portfolio-content animate-left">
+        <h2>PORTFOLIO</h2>
+        <a href="portfolio.html" class="portfolio-btn">KNOW MORE</a>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="portfolio-image animate-right">
+        <img src="img/h6.png" alt="Portfolio">
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section class="industries-section">
+
+    <!-- TOP SMALL GRAPH IMAGE -->
+    <div class="industries-top-icon">
+      <img src="img/h7.png" alt="graph">
+    </div>
+
+    <!-- HEADING -->
+    <h2 class="industries-title">INDUSTRIES WE SERVED SO FAR</h2>
+
+    <!-- GRID -->
+    <div class="industries-grid">
+
+      <div class="industry-card">
+        <img src="img/h8.png" alt="">
+        <span>E-COMMERCE</span>
+      </div>
+
+      <div class="industry-card">
+        <img src="img/h9.png" alt="">
+        <span>HEALTH CARE</span>
+      </div>
+
+      <div class="industry-card">
+        <img src="img/h10.png" alt="">
+        <span>INTERIOR DESIGNING</span>
+      </div>
+
+      <div class="industry-card">
+        <img src="img/h11.png" alt="">
+        <span>REAL ESTATE</span>
+      </div>
+
+      <div class="industry-card">
+        <img src="img/h12.png" alt="">
+        <span>EDUCATION</span>
+      </div>
+
+      <div class="industry-card">
+        <img src="img/h13.png" alt="">
+        <span>PHARMA INDUSTRY</span>
+      </div>
+
+      <div class="industry-card">
+        <img src="img/h14.png" alt="">
+        <span>BEAUTY INDUSTRY</span>
+      </div>
+
+      <div class="industry-card">
+        <img src="img/h15.png" alt="">
+        <span>FOOD INDUSTRY</span>
+      </div>
+
+      <div class="industry-card">
+        <img src="img/h16.png" alt="">
+        <span>NGO’s</span>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <section class="contact-section">
+    <div class="contact-overlay">
+
+      <!-- MAIN GRID -->
+      <div class="contact-container">
+
+        <!-- LEFT SIDE -->
+        <div class="contact-left animate-left">
+          <!-- HEADING OUTSIDE BOX -->
+          <h2 class="contact-heading">CONTACT US</h2>
+
+          <!-- FORM BOX -->
+          <div class="contact-form">
+            <input type="text" placeholder="Full Name">
+            <input type="text" placeholder="Contact Number">
+            <input type="email" placeholder="Email ID">
+            <textarea placeholder="Message"></textarea>
+
+            <button class="submit-btn">SUBMIT</button>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="contact-content animate-right">
+          <h2>CONNECT WITH YOUR CLIENTS</h2>
+
+          <ul>
+            <li>Innovative Designs</li>
+            <li>Most Secure And Privacy</li>
+            <li>Fast Loading Applications</li>
+          </ul>
+
+          <a href="contact.html" class="get-btn">GET STARTED →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="footer-overlay">
+      <div class="footer-container">
+
+        <div class="footer-col imp-links">
+          <h3>IMPORTANT LINKS</h3>
+          <ul>
+            <li><a href="about.html"><span>›</span> About Us</a></li>
+            <li><a href="contact.html"><span>›</span> Contact Us</a></li>
+            <li><a href="policy.html"><span>›</span> Privacy Policy</a></li>
+            <li><a href="terms.html"><span>›</span> Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col reach">
+          <h3>REACH US</h3>
+          <p>
+            Plot No #682, 3rd Floor,<br>
+            Babukhan Rasheed Plaza,<br>
+            Rd No 36, Jubilee Hills,<br>
+            Hyderabad, Telangana-500033
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>CONTACT INFO</h3>
+          <p class="contact">
+            <i class="fa-solid fa-envelope"></i>
+            info@nfosoft.com
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>FOLLOW US ON</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © All Copyrights Reserved 2015-2025 | nfoSoft Innovations
+    </div>
+  </footer>
 
 </body>
+
 </html>
