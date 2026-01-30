@@ -425,7 +425,7 @@
 /* CONTENT */
 .about-content h2 {
   font-size: 30px;
-  color: #1e1b4b;
+  color: #1c1b40;
   margin-bottom: 20px;
 }
 
@@ -565,7 +565,7 @@
 .services-title {
   text-align: center;
   font-size: 36px;
-  color: #1e1b4b;
+  color: #1c1b40;
   margin-bottom: 60px;
   opacity: 0;
   margin-top: -70px;
@@ -701,7 +701,7 @@
   text-align:center;
   font-size:36px;
   font-weight:700;
-  color:#1e1b4b;
+  color:#1c1b40;
   margin-bottom:70px;
   letter-spacing:1px;
 
@@ -752,7 +752,7 @@
 /* ICON */
 .project-card i{
   font-size:52px;
-  color:#1e1b4b;
+  color:#1c1b40;
   margin-bottom:26px;
 }
 
@@ -768,7 +768,7 @@
 .project-card p{
   font-size:15px;
   font-weight:600;
-  color:#1e1b4b;
+  color:#1c1b40;
   letter-spacing:1px;
 }
 
@@ -891,7 +891,7 @@
 .portfolio-content h2{
   font-size:28px;
   font-weight:700;
-  color:#1e1b4b;
+  color:#1c1b40;
   margin-bottom:30px;
   margin-left: 100px;
 }
@@ -900,7 +900,7 @@
 .portfolio-btn{
   display:inline-block;
   padding:14px 34px;
-  background:#1e1b4b;
+  background:#1c1b40;
   color:#fff;
   text-decoration:none;
   border-radius:40px;
@@ -1032,7 +1032,7 @@
 .industries-title{
   font-size:32px;
   font-weight:700;
-  color:#1e1b4b;
+  color:#1c1b40;
   margin-bottom:60px;
 
   /* zoom animation */

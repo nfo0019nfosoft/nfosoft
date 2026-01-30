@@ -659,11 +659,6 @@
 
 
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 .services-section {
   font-family: 'Poppins', sans-serif;
@@ -676,7 +671,7 @@
 .services-subtitle {
   font-size: 13px;
   font-weight: 600;
-  color: #49326b;
+  color: #584379;
   margin-bottom: 8px;
 }
 
@@ -684,7 +679,7 @@
 .services-title {
   font-size: 32px;
   font-weight: 700;
-  color: #49326b;
+  color: #584379;
   margin-bottom: 50px;
 }
 
