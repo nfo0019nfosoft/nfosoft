@@ -473,43 +473,47 @@ services.forEach(service=>observer.observe(service));
 </section>
 <script>
 const portfolioData = {
-  web:{
-    title:"Website Designing Projects",
-    items:[
-      {img:"https://source.unsplash.com/600x400/?website",name:"Corporate Website"},
-      {img:"https://source.unsplash.com/601x400/?web-design",name:"Landing Page"},
-      {img:"https://source.unsplash.com/602x400/?ui-design",name:"UI / UX Design"},
-      {img:"https://source.unsplash.com/603x400/?portfolio-website",name:"Portfolio Website"}
+  web: {
+    title: "Website Designing Projects",
+    items: [
+      { img: "img/por1.png", name: "Corporate Website" },
+      { img: "img/por2.png", name: "Landing Page" },
+      { img: "img/por3.png", name: "UI / UX Design" },
+      { img: "img/por4.png", name: "Portfolio Website" }
     ]
   },
-  mobile:{
-    title:"Mobile Application Projects",
-    items:[
-      {img:"https://source.unsplash.com/600x400/?mobile-app",name:"Mobile App UI"},
-      {img:"https://source.unsplash.com/601x400/?android-app",name:"Android App"},
-      {img:"https://source.unsplash.com/602x400/?ios-app",name:"iOS App"},
-      {img:"https://source.unsplash.com/603x400/?app-ui",name:"App Interface"}
+
+  mobile: {
+    title: "Mobile Application Projects",
+    items: [
+      { img: "img/por5.png", name: "Mobile App UI" },
+      { img: "img/por6.png", name: "Android App" },
+      { img: "img/por7.png", name: "iOS App" },
+      { img: "img/por8.png", name: "App Interface" }
     ]
   },
-  software:{
-    title:"Application Software Projects",
-    items:[
-      {img:"https://source.unsplash.com/600x400/?software-dashboard",name:"Admin Dashboard"},
-      {img:"https://source.unsplash.com/601x400/?crm",name:"CRM Software"},
-      {img:"https://source.unsplash.com/602x400/?erp",name:"ERP System"},
-      {img:"https://source.unsplash.com/603x400/?business-software",name:"Business App"}
+
+  software: {
+    title: "Application Software Projects",
+    items: [
+      { img: "img/por9.png", name: "Admin Dashboard" },
+      { img: "img/por10.png", name: "CRM Software" },
+      { img: "img/por11.png", name: "ERP System" },
+      { img: "img/por12.png", name: "Business App" }
     ]
   },
-  marketing:{
-    title:"Digital Marketing Projects",
-    items:[
-      {img:"https://source.unsplash.com/600x400/?digital-marketing",name:"Digital Campaign"},
-      {img:"https://source.unsplash.com/601x400/?seo",name:"SEO Optimization"},
-      {img:"https://source.unsplash.com/602x400/?social-media",name:"Social Media Marketing"},
-      {img:"https://source.unsplash.com/603x400/?branding",name:"Brand Promotion"}
+
+  marketing: {
+    title: "Digital Marketing Projects",
+    items: [
+      { img: "img/por13.png", name: "Digital Campaign" },
+      { img: "img/por14.png", name: "SEO Optimization" },
+      { img: "img/por15.png", name: "Social Media Marketing" },
+      { img: "img/por16.png", name: "Brand Promotion" }
     ]
   }
 };
+
 
 const cards = document.querySelectorAll(".category-card");
 const display = document.getElementById("portfolioDisplay");
