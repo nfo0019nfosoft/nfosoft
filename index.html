@@ -87,18 +87,6 @@
 
 
 
-  <!DOCTYPE html>
-  <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Hero Slider</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-  </head>
-
-  <body>
-
     <section class="hero">
 
       <div class="slider">
@@ -135,7 +123,7 @@
           </div>
         </div>
 
-      </div>
+      
 
 
       <div class="slide " style="background-image:url('img/dm.png')">
@@ -146,33 +134,31 @@
           <a href="#" class="btn">Join With Us →</a>
         </div>
       </div>
+      </div>
 
     </section>
 
     <script>
-      const slides = document.querySelectorAll('.slide');
-      let current = 0;
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
 
-      setInterval(() => {
-        let prev = current;
-        current = (current + 1) % slides.length;
+  setInterval(() => {
+    const prev = current;
+    current = (current + 1) % slides.length;
 
-        slides[prev].classList.remove('active');
-        slides[prev].classList.add('prev');
+    slides[prev].classList.remove('active');
+    slides[prev].classList.add('prev');
 
-        slides[current].classList.add('active');
+    slides[current].classList.add('active');
 
-        setTimeout(() => {
-          slides[prev].classList.remove('prev');
-        }, 1200);
+    setTimeout(() => {
+      slides[prev].classList.remove('prev');
+    }, 1600); // match CSS transition
 
-      }, 4000);
+  }, 4500);
+</script>
 
-    </script>
-  </body>
-
-  </html>
-
+  
 
 
 
@@ -206,10 +192,12 @@
         <p>
           nfoSoft is the most popular IT and Digital Marketing company.
           We are the most innovative and creative. We design and promote
-          applications across all the industries.
+          applications across all the industries.At nfosoft, we focus on quality, performance, security, and user experience, ensuring every solution we build meets global standards
+
+, we specialize in website designing, mobile application development, software solutions, digital marketing.We believe in long-term partnerships, transparent communication, and continuous innovation. From startups to enterprises, nfosoft serves clients across diverse industries by delivering reliable technology solutions tailored to their unique business needs.
         </p>
 
-        <a href="#" class="about-btn">KNOW MORE</a>
+        <a href="about.html" class="about-btn">KNOW MORE</a>
       </div>
 
     </div>
@@ -223,35 +211,138 @@
 
 
 
-  <section class="services-section">
-    <!-- TITLE -->
-    <h2 class="services-title animate-right">OUR SERVICES</h2>
 
-    <!-- SERVICES GRID -->
-    <div class="services-grid animate-left">
+<section class="services-3d">
 
-      <div class="service-card">
-        <img src="img/h2.png" alt="Website Designing">
-        <h3>WEBSITE DESIGNING</h3>
-      </div>
+  <h2 class="services-title">OUR SERVICES</h2>
 
-      <div class="service-card">
-        <img src="img/h3.png" alt="Digital Marketing">
-        <h3>DIGITAL MARKETING</h3>
-      </div>
+  <!-- SERVICE 1 -->
+  <div class="service-3d-item">
 
-      <div class="service-card">
-        <img src="img/h4.png" alt="Mobile Apps">
-        <h3>MOBILE<br>APPS(ANDROID/IOS)</h3>
-      </div>
-
-      <div class="service-card">
-        <img src="img/h5.png" alt="Application Software">
-        <h3>APPLICATION SOFTWARE</h3>
-      </div>
-
+    <div class="service-images">
+      <img src="img/h2.png" class="img left">
+      <img src="img/h2.png" class="img right">
     </div>
-  </section>
+
+    <div class="service-box">
+      <div class="icon">
+        <i class="fa-solid fa-code"></i>
+      </div>
+      <h3>Website Designing</h3>
+      <p>
+        Modern, responsive and visually stunning websites
+        crafted to elevate your digital presence.
+      </p>
+      <a href="#" class="btn">Know More</a>
+    </div>
+
+  </div>
+
+  <!-- SERVICE 2 -->
+  <div class="service-3d-item">
+
+    <div class="service-images">
+      <img src="img/h3.png" class="img left">
+      <img src="img/h3.png" class="img right">
+    </div>
+
+    <div class="service-box">
+      <div class="icon">
+        <i class="fa-solid fa-bullhorn"></i>
+      </div>
+      <h3>Digital Marketing</h3>
+      <p>
+        SEO, social media and performance marketing strategies
+        that drive business growth.
+      </p>
+      <a href="#" class="btn">Know More</a>
+    </div>
+
+  </div>
+
+  <!-- SERVICE 3 -->
+  <div class="service-3d-item">
+
+    <div class="service-images">
+      <img src="img/h4.png" class="img left">
+      <img src="img/h4.png" class="img right">
+    </div>
+
+    <div class="service-box">
+      <div class="icon">
+        <i class="fa-solid fa-mobile-screen"></i>
+      </div>
+      <h3>Mobile Applications</h3>
+      <p>
+        Scalable Android & iOS applications with
+        smooth user experience.
+      </p>
+      <a href="#" class="btn">Know More</a>
+    </div>
+
+  </div>
+
+  <!-- SERVICE 4 -->
+  <div class="service-3d-item">
+
+    <div class="service-images">
+      <img src="img/h5.png" class="img left">
+      <img src="img/h5.png" class="img right">
+    </div>
+
+    <div class="service-box">
+      <div class="icon">
+        <i class="fa-solid fa-gears"></i>
+      </div>
+      <h3>Application Software</h3>
+      <p>
+        Custom software solutions to automate
+        and scale your business.
+      </p>
+      <a href="#" class="btn">Know More</a>
+    </div>
+
+  </div>
+
+</section>
+<script>
+const services = document.querySelectorAll(".service-3d-item");
+
+const observer = new IntersectionObserver(
+  entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("active");
+      }
+    });
+  },
+  { threshold:0.45 }
+);
+
+services.forEach(service=>observer.observe(service));
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
 
 
 
@@ -268,18 +359,18 @@
         <h3 class="counter" data-target="472">0+</h3>
         <p>WEBSITES</p>
       </div>
-
+ <div class="project-card">
+        <i class="fa-solid fa-chart-column"></i>
+        <h3 class="counter" data-target="97">0+</h3>
+        <p>DIGITAL MARKETING</p>
+      </div>
       <div class="project-card">
         <i class="fa-solid fa-play"></i>
         <h3 class="counter" data-target="72">0+</h3>
         <p>MOBILE APPS</p>
       </div>
 
-      <div class="project-card">
-        <i class="fa-solid fa-chart-column"></i>
-        <h3 class="counter" data-target="97">0+</h3>
-        <p>DIGITAL MARKETING</p>
-      </div>
+     
 
       <div class="project-card">
         <i class="fa-solid fa-table-cells"></i>
@@ -292,19 +383,19 @@
 
   <!-- COUNTER SCRIPT -->
   <script>
-    const counters = document.querySelectorAll('.counter');
+  const counters = document.querySelectorAll('.counter');
+  let started = false;
 
+  const startCounters = () => {
     counters.forEach(counter => {
       const target = +counter.dataset.target;
       let count = 0;
-      const speed = 30;
+      const speed = 25;
 
       const updateCount = () => {
-        const increment = Math.ceil(target / 100);
-
+        const increment = Math.ceil(target / 80);
         if (count < target) {
           count += increment;
-          if (count > target) count = target;
           counter.innerText = count + "+";
           setTimeout(updateCount, speed);
         } else {
@@ -314,99 +405,135 @@
 
       updateCount();
     });
-  </script>
+  };
+
+  window.addEventListener('scroll', () => {
+    const section = document.querySelector('.projects-section');
+    const sectionTop = section.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (!started && sectionTop < screenHeight - 150) {
+      startCounters();
+      started = true;
+    }
+  });
+</script>
 
 
 
 
 
+<section class="portfolio-section" id="portfolio">
 
+  <!-- MAIN TITLE -->
+  <h2 class="portfolio-title">PORTFOLIO</h2>
 
+  <!-- TOP CATEGORY IMAGES -->
+  <div class="portfolio-categories">
 
-
-  <section class="portfolio-section">
-    <div class="portfolio-container">
-
-      <!-- LEFT CONTENT -->
-      <div class="portfolio-content animate-left">
-        <h2>PORTFOLIO</h2>
-        <a href="portfolio.html" class="portfolio-btn">KNOW MORE</a>
-      </div>
-
-      <!-- RIGHT IMAGE -->
-      <div class="portfolio-image animate-right">
-        <img src="img/h6.png" alt="Portfolio">
-      </div>
-
-    </div>
-  </section>
-
-
-
-
-
-
-
-  <section class="industries-section">
-
-    <!-- TOP SMALL GRAPH IMAGE -->
-    <div class="industries-top-icon">
-      <img src="img/h7.png" alt="graph">
+    <div class="category-card" data-category="web">
+      <img src="img/h2.png" alt="Website Designing">
+      <h4>Website Designing</h4>
     </div>
 
-    <!-- HEADING -->
-    <h2 class="industries-title">INDUSTRIES WE SERVED SO FAR</h2>
-
-    <!-- GRID -->
-    <div class="industries-grid">
-
-      <div class="industry-card">
-        <img src="img/h8.png" alt="">
-        <span>E-COMMERCE</span>
-      </div>
-
-      <div class="industry-card">
-        <img src="img/h9.png" alt="">
-        <span>HEALTH CARE</span>
-      </div>
-
-      <div class="industry-card">
-        <img src="img/h10.png" alt="">
-        <span>INTERIOR DESIGNING</span>
-      </div>
-
-      <div class="industry-card">
-        <img src="img/h11.png" alt="">
-        <span>REAL ESTATE</span>
-      </div>
-
-      <div class="industry-card">
-        <img src="img/h12.png" alt="">
-        <span>EDUCATION</span>
-      </div>
-
-      <div class="industry-card">
-        <img src="img/h13.png" alt="">
-        <span>PHARMA INDUSTRY</span>
-      </div>
-
-      <div class="industry-card">
-        <img src="img/h14.png" alt="">
-        <span>BEAUTY INDUSTRY</span>
-      </div>
-
-      <div class="industry-card">
-        <img src="img/h15.png" alt="">
-        <span>FOOD INDUSTRY</span>
-      </div>
-
-      <div class="industry-card">
-        <img src="img/h16.png" alt="">
-        <span>NGO’s</span>
-      </div>
-
+    <div class="category-card" data-category="marketing">
+      <img src="img/h3.png" alt="Digital Marketing">
+      <h4>Digital Marketing</h4>
     </div>
-  </section>
+
+
+    <div class="category-card" data-category="mobile">
+      <img src="img/h4.png" alt="Mobile Applications">
+      <h4>Mobile Applications</h4>
+    </div>
+
+    <div class="category-card" data-category="software">
+      <img src="img/h5.png" alt="Application Software">
+      <h4>Application Software</h4>
+    </div>
+
+
+  </div>
+
+  <!-- TOP BUTTON (ALWAYS VISIBLE) -->
+  <a href="portfolio.html" class="portfolio-know-btn top-btn">KNOW MORE</a>
+
+  <!-- BOTTOM CONTENT (HIDDEN INITIALLY) -->
+  <div class="portfolio-display" id="portfolioDisplay">
+
+    <h3 class="portfolio-subtitle" id="portfolioHeading"></h3>
+
+    <div class="portfolio-grid" id="portfolioGrid"></div>
+
+    <!-- BOTTOM BUTTON -->
+    <a href="portfolio.html" class="portfolio-know-btn bottom-btn">KNOW MORE</a>
+
+  </div>
+
+</section>
+<script>
+const portfolioData = {
+  web:{
+    title:"Website Designing Projects",
+    items:[
+      {img:"https://source.unsplash.com/600x400/?website",name:"Corporate Website"},
+      {img:"https://source.unsplash.com/601x400/?web-design",name:"Landing Page"},
+      {img:"https://source.unsplash.com/602x400/?ui-design",name:"UI / UX Design"},
+      {img:"https://source.unsplash.com/603x400/?portfolio-website",name:"Portfolio Website"}
+    ]
+  },
+  mobile:{
+    title:"Mobile Application Projects",
+    items:[
+      {img:"https://source.unsplash.com/600x400/?mobile-app",name:"Mobile App UI"},
+      {img:"https://source.unsplash.com/601x400/?android-app",name:"Android App"},
+      {img:"https://source.unsplash.com/602x400/?ios-app",name:"iOS App"},
+      {img:"https://source.unsplash.com/603x400/?app-ui",name:"App Interface"}
+    ]
+  },
+  software:{
+    title:"Application Software Projects",
+    items:[
+      {img:"https://source.unsplash.com/600x400/?software-dashboard",name:"Admin Dashboard"},
+      {img:"https://source.unsplash.com/601x400/?crm",name:"CRM Software"},
+      {img:"https://source.unsplash.com/602x400/?erp",name:"ERP System"},
+      {img:"https://source.unsplash.com/603x400/?business-software",name:"Business App"}
+    ]
+  },
+  marketing:{
+    title:"Digital Marketing Projects",
+    items:[
+      {img:"https://source.unsplash.com/600x400/?digital-marketing",name:"Digital Campaign"},
+      {img:"https://source.unsplash.com/601x400/?seo",name:"SEO Optimization"},
+      {img:"https://source.unsplash.com/602x400/?social-media",name:"Social Media Marketing"},
+      {img:"https://source.unsplash.com/603x400/?branding",name:"Brand Promotion"}
+    ]
+  }
+};
+
+const cards = document.querySelectorAll(".category-card");
+const display = document.getElementById("portfolioDisplay");
+const heading = document.getElementById("portfolioHeading");
+const grid = document.getElementById("portfolioGrid");
+
+cards.forEach(card=>{
+  card.addEventListener("click",()=>{
+    const key = card.dataset.category;
+    heading.textContent = portfolioData[key].title;
+    grid.innerHTML = "";
+
+    portfolioData[key].items.forEach(item=>{
+      const div = document.createElement("div");
+      div.className = "portfolio-item";
+      div.innerHTML = `<img src="${item.img}"><h4>${item.name}</h4>`;
+      grid.appendChild(div);
+    });
+
+    display.style.display = "block";
+    display.scrollIntoView({behavior:"smooth"});
+  });
+});
+</script>
 
 
 
@@ -415,52 +542,155 @@
 
 
 
+<section class="industries-section">
+
+  
+  <!-- HEADING -->
+  <h2 class="industries-title">INDUSTRIES WE SERVED SO FAR</h2>
+
+  <!-- GRID -->
+  <div class="industries-grid">
+
+    <!-- CARD 1 -->
+    <div class="industry-card">
+      <img src="img/h8.png" alt="E-Commerce">
+      <span class="title">E-COMMERCE</span>
+
+      <div class="hover-content">
+        <h4>E-Commerce</h4>
+        <p>Online stores, payment gateways & scalable digital platforms</p>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="industry-card">
+      <img src="img/h9.png" alt="Health Care">
+      <span class="title">HEALTH CARE</span>
+
+      <div class="hover-content">
+        <h4>Health Care</h4>
+        <p>Hospital systems, patient management & healthcare solutions</p>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="industry-card">
+      <img src="img/h10.png" alt="Interior Designing">
+      <span class="title">INTERIOR DESIGNING</span>
+
+      <div class="hover-content">
+        <h4>Interior Designing</h4>
+        <p>Creative portfolios, design showcases & client engagement tools</p>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="industry-card">
+      <img src="img/h11.png" alt="Real Estate">
+      <span class="title">REAL ESTATE</span>
+
+      <div class="hover-content">
+        <h4>Real Estate</h4>
+        <p>Property listings, CRM systems & lead management platforms</p>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="industry-card">
+      <img src="img/h12.png" alt="Education">
+      <span class="title">EDUCATION</span>
+
+      <div class="hover-content">
+        <h4>Education</h4>
+        <p>E-learning platforms, LMS systems & student portals</p>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="industry-card">
+      <img src="img/h13.png" alt="Pharma Industry">
+      <span class="title">PHARMA INDUSTRY</span>
+
+      <div class="hover-content">
+        <h4>Pharma Industry</h4>
+        <p>Product management, compliance systems & digital branding</p>
+      </div>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="industry-card">
+      <img src="img/h14.png" alt="Beauty Industry">
+      <span class="title">BEAUTY INDUSTRY</span>
+
+      <div class="hover-content">
+        <h4>Beauty Industry</h4>
+        <p>Salon booking apps, brand websites & online promotions</p>
+      </div>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="industry-card">
+      <img src="img/h15.png" alt="Food Industry">
+      <span class="title">FOOD INDUSTRY</span>
+
+      <div class="hover-content">
+        <h4>Food Industry</h4>
+        <p>Restaurant websites, food delivery & order management</p>
+      </div>
+    </div>
+
+    <!-- CARD 9 -->
+    <div class="industry-card">
+      <img src="img/h16.png" alt="NGO">
+      <span class="title">NGO’s</span>
+
+      <div class="hover-content">
+        <h4>NGO’s</h4>
+        <p>Donation platforms, awareness campaigns & community systems</p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
-  <section class="contact-section">
-    <div class="contact-overlay">
 
-      <!-- MAIN GRID -->
-      <div class="contact-container">
 
-        <!-- LEFT SIDE -->
-        <div class="contact-left animate-left">
-          <!-- HEADING OUTSIDE BOX -->
-          <h2 class="contact-heading">CONTACT US</h2>
+<section class="contact-section">
+  <div class="contact-overlay">
 
-          <!-- FORM BOX -->
-          <div class="contact-form">
-            <input type="text" placeholder="Full Name">
-            <input type="text" placeholder="Contact Number">
-            <input type="email" placeholder="Email ID">
-            <textarea placeholder="Message"></textarea>
+    <div class="contact-container">
 
-            <button class="submit-btn">SUBMIT</button>
-          </div>
+      <!-- LEFT -->
+      <div class="contact-left">
+        <h2 class="contact-heading center">CONTACT US</h2>
+
+        <div class="contact-form">
+          <input type="text" placeholder="Full Name">
+          <input type="text" placeholder="Contact Number">
+          <input type="email" placeholder="Email ID">
+          <textarea placeholder="Message"></textarea>
+          <button class="submit-btn">SUBMIT</button>
         </div>
-
-        <!-- RIGHT SIDE -->
-        <div class="contact-content animate-right">
-          <h2>CONNECT WITH YOUR CLIENTS</h2>
-
-          <ul>
-            <li>Innovative Designs</li>
-            <li>Most Secure And Privacy</li>
-            <li>Fast Loading Applications</li>
-          </ul>
-
-          <a href="contact.html" class="get-btn">GET STARTED →</a>
-        </div>
-
       </div>
+
+      <!-- RIGHT -->
+      <div class="contact-content">
+        <h2 class="contact-heading">CONNECT WITH YOUR CLIENTS</h2>
+
+        <ul>
+          <li>Innovative Designs</li>
+          <li>Most Secure And Privacy</li>
+          <li>Fast Loading Applications</li>
+        </ul>
+
+        <a href="contact.html" class="get-btn">GET STARTED →</a>
+      </div>
+
     </div>
-  </section>
 
-
-
-
-
-
+  </div>
+</section>
 
 
 
@@ -513,7 +743,7 @@
     </div>
 
     <div class="footer-bottom">
-      © All Copyrights Reserved 2015-2025 | nfoSoft Innovations
+      © All Copyrights Reserved 2015-2026 | nfoSoft Innovations
     </div>
   </footer>
 

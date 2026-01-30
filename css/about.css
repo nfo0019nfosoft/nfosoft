@@ -1075,3 +1075,45 @@
 }
 
 
+/* ================= FORCE MOBILE CENTER FIX ================= */
+@media (max-width: 768px) {
+
+  /* People container */
+  .kp-people {
+    align-items: center;
+  }
+
+  /* Center card full width */
+  .center-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* OVAL IMAGE CENTER */
+  .vision-oval {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 40px auto 0 !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .vision-oval img {
+    display: block;
+    margin: 0 auto !important;
+    width: 230px;
+    height: 310px;
+    border-radius: 115px;
+    object-fit: cover;
+  }
+
+  /* Bottom section spacing */
+  .kp-bottom {
+    padding-top: 60px !important;
+  }
+}
