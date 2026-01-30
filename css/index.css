@@ -1590,40 +1590,15 @@
   z-index: 1;
 }
 
-.slide .overlay{
-  position:absolute;
-  inset:0;
-  z-index:1;
-  pointer-events:none;
+
+/* OVERLAY */
+.slide .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(5px);
+  z-index: 1;
 }
-
-/* RIGHT SIDE BLUR ONLY */
-.slide .overlay::after{
-  content:"";
-  position:absolute;
-  top:0;
-  right:0;
-  width:55%;                      /* 🔥 right side only */
-  height:100%;
-
-  background:linear-gradient(
-    to left,
-    rgba(0,0,0,0.65),
-    rgba(0,0,0,0.35),
-    rgba(0,0,0,0)
-  );
-
-  backdrop-filter: blur(6px);
-}
-
-/* OPTIONAL: very light dark on whole image (no blur) */
-.slide .overlay::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.15);    /* 🔥 light overall contrast */
-}
-
 
 /* CONTENT */
 .content {
