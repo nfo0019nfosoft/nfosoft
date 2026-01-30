@@ -1111,3 +1111,50 @@
   }
 
 }
+/* ================= MOBILE FIX – OVAL IMAGE ================= */
+@media (max-width: 768px) {
+
+  /* TOP SECTION */
+  .kp-top {
+    padding: 70px 20px 220px;
+  }
+
+  /* PEOPLE STACK */
+  .kp-people {
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 60px;
+  }
+
+  .icon-box i {
+    font-size: 90px;
+  }
+
+  /* 🔥 OVAL IMAGE – REAL FIX */
+  .vision-oval {
+    position: absolute;
+    left: 50%;
+    bottom: -200px;                 /* controlled overlap */
+    transform: translateX(-50%);
+    z-index: 5;
+  }
+
+  .vision-oval img {
+    width: 240px;
+    height: 320px;
+    border-radius: 120px;           /* perfect oval */
+    object-fit: cover;
+    margin: 0;                      /* 🔥 remove desktop hack */
+  }
+
+  /* BOTTOM SECTION */
+  .kp-bottom {
+    padding: 260px 20px 60px;       /* space for oval */
+  }
+
+  .kp-bottom h2 {
+    margin-top: 0;
+    font-size: 22px;
+  }
+
+}
