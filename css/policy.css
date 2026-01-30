@@ -619,3 +619,75 @@
   from { opacity: 0; transform: translateX(50px); }
   to { opacity: 1; transform: translateX(0); }
 }
+/* =========================
+   BOTTOM AREA – MOBILE VIEW
+========================= */
+@media (max-width: 768px) {
+
+  /* SECTION PADDING */
+  .bottom-area {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  /* STACK COLUMNS */
+  .bottom-wrap {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  /* COLUMN FULL WIDTH */
+  .bottom-col {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  /* HEADINGS */
+  .bottom-col h3 {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  /* TEXT */
+  .bottom-col p {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  /* CONTACT INFO CENTER */
+  .info {
+    justify-content: center;
+    text-align: left;   /* text neat ga undadaniki */
+  }
+
+  .info i {
+    font-size: 22px;
+  }
+
+  .info strong {
+    font-size: 16px;
+  }
+
+  .info p {
+    font-size: 14px;
+  }
+
+  /* SOCIAL ICONS CENTER */
+  .social-icons {
+    justify-content: center;
+  }
+
+  .social-icons span {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  /* LOGO CENTER */
+  .brand-logo {
+    margin: 10px auto 0;
+    width: 180px;
+  }
+
+}
