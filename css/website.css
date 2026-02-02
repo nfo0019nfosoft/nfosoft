@@ -518,96 +518,6 @@
 
 
 
-/* =========================
-   PAGE HERO SECTION
-========================= */
-
-.page-hero {
-  width: 100%;
-  height: 250px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Background with zoom animation */
-.page-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("../img/car1.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: contactZoom 10s ease-in-out forwards;
-  z-index: 1;
-}
-
-/* Overlay */
-.hero-overlay {
-  width: 100%;
-  height: 100%;
-  background: rgba(42, 40, 90, 0.65);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 2;
-}
-
-/* Text animation */
-.hero-overlay h1 {
-  color: #ffffff;
-  font-size: 48px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-  animation: contactText 1.1s ease-out forwards;
-}
-
-/* =========================
-   ANIMATIONS
-========================= */
-
-@keyframes contactZoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes contactText {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-  .page-hero {
-    height: 260px;
-  }
-
-  .hero-overlay h1 {
-    font-size: 34px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-overlay h1 {
-    font-size: 28px;
-  }
-}
-
 
 
 
@@ -772,7 +682,10 @@
 
 
 
-/* ===== COMMON ===== */
+/* =====================================================
+   COMMON REVEAL ANIMATION
+===================================================== */
+
 .reveal{
   opacity:0;
   transform:translateY(60px);
@@ -783,18 +696,22 @@
   transform:translateY(0);
 }
 
-/* ===== HERO ===== */
+/* =====================================================
+   WEBSITE DESIGNING – HERO
+===================================================== */
+
 .wd-hero{
   display:flex;
-  gap:60px;
   align-items:center;
-
-  padding:70px 8% 50px;   /* 🔥 bottom gap reduced */
+  justify-content:center;
+  gap:60px;
+  padding:70px 8% 50px;
+  flex-wrap:wrap;
 }
-
 
 .wd-hero-image img{
   width:420px;
+  max-width:100%;
   animation:slideInLeft 1.2s ease forwards;
 }
 
@@ -803,7 +720,7 @@
 }
 
 .wd-hero h1{
-  font-size:34px;               /* 🔥 reduced size */
+  font-size:34px;
   color:#584379;
   margin-bottom:14px;
 }
@@ -815,51 +732,68 @@
   text-align:justify;
 }
 
-/* ===== WHAT WE OFFER ===== */
-.wd-services{
-  padding:50px 8% 90px;
+
+
+
+
+
+
+
+
+.wd-modern{
+  font-family:Poppins, sans-serif;
+  color:#222;
 }
 
-.wd-heading{
-  text-align:center;            /* 🔥 center */
-  font-size:32px;
-  color:#584379;                /* 🔥 updated color */
+/* TRUST */
+.trust-bar{
+  background:linear-gradient(90deg,#584379,#1c1b40);
+  color:#fff;
+  padding:18px;
+  text-align:center;
+  font-size:15px;
+}
+
+/* OFFER */
+.offer-wrap{
+  padding:90px 8%;
+  background:#fafbff;
+  text-align:center;
+}
+.offer-wrap h2{
+  font-size:34px;
   margin-bottom:60px;
+  color:#584379;
 }
-
-.wd-grid{
+.offer-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:35px;
+  max-width:1100px;
+  margin:auto;
 }
-
-.wd-card{
+.offer-card{
   background:#fff;
-  padding:38px;
-  border-radius:24px;
-  box-shadow:0 30px 80px rgba(0,0,0,.12);
-  transition:.5s ease;
-  text-align:justify;
+  padding:36px 28px;
+  border-radius:22px;
+  box-shadow:0 25px 60px rgba(0,0,0,.08);
+  transition:.4s ease;
+}
+.offer-card i{
+  font-size:34px;
+  color:#584379;
+  margin-bottom:14px;
+}
+.offer-card:hover{
+  transform:translateY(-12px);
+  box-shadow:0 40px 90px rgba(88,67,121,.25);
 }
 
-.wd-card i{
-  font-size:36px;
-  color:#1c1b40;
-  margin-bottom:18px;
-  display:block;
-  text-align:center;            /* 🔥 icon center */
-}
 
-.wd-card h3{
-  text-align:center;
-  margin-bottom:12px;
-}
+/* =====================================================
+   STATS – FIXED & RESPONSIVE
+===================================================== */
 
-.wd-card:hover{
-  transform:translateY(-12px) rotateX(6deg) rotateY(-6deg);
-}
-
-/* ===== STATS ===== */
 .wd-stats{
   padding:90px 8%;
   background:#f3f4ff;
@@ -869,12 +803,15 @@
   text-align:center;
   font-size:30px;
   margin-bottom:60px;
-  color:#1c1b40;
+  color:#584379;
 }
 
+/* 🔥 DESKTOP: FIXED 4 CARDS */
 .wd-stats-grid{
+  max-width:1100px;
+  margin:0 auto;
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(4, 1fr);
   gap:30px;
 }
 
@@ -896,47 +833,174 @@
   font-size:38px;
 }
 
-/* ===== CTA ===== */
-.wd-cta{
-  padding:90px 8%;
-  background:#1c1b40;
-  color:#fff;
-  text-align:center;
+/* =====================================================
+   TABLET
+===================================================== */
+@media (max-width: 1024px){
+  .wd-stats-grid{
+    grid-template-columns:repeat(2,1fr); /* 2 + 2 */
+  }
 }
 
-.wd-btn{
-  display:inline-block;
-  margin-top:30px;
-  padding:14px 42px;
-  background:#fff;
-  color:#1c1b40;
-  border-radius:40px;
-  font-weight:600;
+/* =====================================================
+   MOBILE
+===================================================== */
+@media (max-width: 768px){
+  .wd-stats{
+    padding:60px 6%;
+  }
+
+  .wd-stats-title{
+    font-size:24px;
+    margin-bottom:40px;
+  }
+
+  .wd-stats-grid{
+    grid-template-columns:1fr; /* 🔥 single column */
+  }
+
+  .stat-card{
+    padding:28px 18px;
+  }
+
+  .stat-card h3{
+    font-size:28px;
+  }
 }
 
-/* ===== ANIMATIONS ===== */
-@keyframes slideInLeft{
-  from{opacity:0; transform:translateX(-80px)}
-  to{opacity:1; transform:translateX(0)}
-}
 
-/* ===== MOBILE ===== */
-@media(max-width:768px){
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   MOBILE VIEW FIXES (ONLY)
+===================================================== */
+@media (max-width: 768px){
+
+  /* ================= HERO ================= */
   .wd-hero{
     flex-direction:column;
+    gap:30px;
+    padding:50px 6% 40px;
     text-align:center;
   }
 
   .wd-hero-image img{
     width:100%;
+    max-width:320px;
+    margin:0 auto;
   }
 
-  .wd-grid{
-    grid-template-columns:1fr;
+  .wd-hero-content{
+    max-width:100%;
+  }
+
+  .wd-hero h1{
+    font-size:26px;
+  }
+
+  .wd-hero p{
+    font-size:15px;
+    text-align:center;
+  }
+
+  /* ================= OFFER ================= */
+  .offer-wrap{
+    padding:60px 6%;
+  }
+
+  .offer-wrap h2{
+    font-size:26px;
+    margin-bottom:40px;
+  }
+
+  .offer-grid{
+    grid-template-columns:1fr;   /* 🔥 single column */
+    gap:24px;
+  }
+
+  .offer-card{
+    padding:28px 22px;
+  }
+
+  .offer-card i{
+    font-size:28px;
+  }
+
+  /* ================= PROCESS ================= */
+  .wd-process{
+    padding:60px 6%;
+  }
+
+  .process-grid{
+    grid-template-columns:1fr;   /* already, but force */
+    gap:24px;
+  }
+
+  .process-step{
+    padding:26px 20px;
+  }
+
+  /* ================= STATS ================= */
+  .wd-stats{
+    padding:60px 6%;
+  }
+
+  .wd-stats-title{
+    font-size:24px;
+    margin-bottom:40px;
   }
 
   .wd-stats-grid{
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr 1fr;  /* 2 per row */
+    gap:20px;
+  }
+
+  .stat-card{
+    padding:28px 16px;
+  }
+
+  .stat-card h3{
+    font-size:28px;
+  }
+
+  
+}
+
+/* =====================================================
+   SMALL MOBILE (VERY SMALL SCREENS)
+===================================================== */
+@media (max-width: 480px){
+
+  .wdhero h1{
+    font-size:22px;
+  }
+
+  .wd-hero p{
+    font-size:14px;
+  }
+
+  .wd-stats-grid{
+    grid-template-columns:1fr;  /* 🔥 single column */
+  }
+
+  .offer-card h4,
+  .offer-card h3{
+    font-size:16px;
+  }
+
+  .trust-bar{
+    font-size:14px;
+    padding:14px 10px;
   }
 }
 
@@ -947,3 +1011,292 @@
 
 
 
+
+
+/* ================= BASE ================= */
+.why-web-advanced{
+  position:relative;
+  background:#584379;
+  padding:110px 8% 150px;
+  color:#fff;
+  font-family:Poppins, sans-serif;
+  overflow:hidden;
+}
+
+/* ================= HEADING ================= */
+.why-title{
+  text-align:center;
+  font-size:32px;
+  line-height:1.4;
+  margin-bottom:90px;
+  opacity:0;
+  transform:scale(0.7);
+}
+
+.animate-zoom{
+  animation:zoomIn 1.6s ease forwards;
+}
+
+@keyframes zoomIn{
+  to{ opacity:1; transform:scale(1); }
+}
+
+/* NFOSOFT COLOR ANIMATION */
+.brand{
+  font-size:38px;
+  font-weight:700;
+  margin-left:6px;
+  animation:brandColor 6s ease-in-out infinite;
+  animation-delay:1.8s; /* zoom ayyaka */
+}
+
+@keyframes brandColor{
+  0%   { color:white; }
+  25%  { color:#9c27b0; }
+  50%  { color:#e91e63; }
+  75%  { color:darkgoldenrod; }
+  100% { color:darkred }
+}
+
+/* ================= GRID ================= */
+.why-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:60px 40px;
+  align-items:center;
+}
+
+/* ================= TEXT ================= */
+.why-text h3{
+  color: white;
+  margin-bottom:10px;
+}
+
+.why-text p{
+  font-size:14.5px;
+  line-height:1.7;
+  color:#ddd;
+  text-align:justify;
+}
+
+/* ================= IMAGES ================= */
+.why-img img{
+  width:160px;
+  display:block;
+  margin:auto;
+}
+
+/* IMAGE ANIMATIONS */
+.left img{
+  opacity:0;
+  transform:translateX(-80px);
+  animation:imgLeft 1.2s ease forwards;
+}
+
+.right img{
+  opacity:0;
+  transform:translateX(80px);
+  animation:imgRight 1.2s ease forwards;
+}
+
+@keyframes imgLeft{
+  to{ opacity:1; transform:translateX(0); }
+}
+@keyframes imgRight{
+  to{ opacity:1; transform:translateX(0); }
+}
+
+/* ================= BACKGROUND SHAPES ================= */
+.shape{
+  position:absolute;
+  opacity:.15;
+}
+
+.tri{
+  width:0; height:0;
+  border-left:60px solid transparent;
+  border-right:60px solid transparent;
+  border-bottom:100px solid #ff8a00;
+  top:20%;
+  left:5%;
+}
+
+.rect{
+  width:120px;
+  height:60px;
+  background:#9c27b0;
+  top:40%;
+  right:8%;
+  transform:rotate(20deg);
+}
+
+.square{
+  width:70px;
+  height:70px;
+  background:#03a9f4;
+  bottom:35%;
+  left:15%;
+  transform:rotate(45deg);
+}
+
+/* ================= WAVE ================= */
+.wave{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:120px;
+  background:#fff;
+  border-top-left-radius:100% 60px;
+  border-top-right-radius:100% 60px;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+
+  .why-title{
+    font-size:24px;
+  }
+
+  .brand{
+    font-size:28px;
+  }
+
+  .why-grid{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+  .why-text{
+    text-align:center;
+  }
+
+  .why-text p{
+    text-align:center;
+  }
+
+  .why-img img{
+    width:120px;
+  }
+
+  .shape{
+    display:none; /* mobile clean */
+  }
+}
+
+
+
+
+
+
+
+/* ===============================
+   CTA SECTION – WHITE BACKGROUND
+================================ */
+
+.cta-section-alt{
+  padding:70px 8% 80px;     /* 🔥 compact spacing */
+  background:#ffffff;      /* 🔥 white bg */
+  text-align:center;
+  color:#1c1b40;
+  position:relative;
+  overflow:hidden;
+  margin-top: -60px;
+}
+
+/* soft subtle background accent */
+.cta-section-alt::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at top,
+      rgba(88,67,121,0.06),
+      transparent 65%);
+  pointer-events:none;
+}
+
+/* ===============================
+   HEADING
+================================ */
+
+.cta-title-alt{
+  font-size:34px;
+  font-weight:700;
+  margin-bottom:16px;
+  color:#584379;
+}
+
+/* ===============================
+   TEXT
+================================ */
+
+.cta-text-alt{
+  max-width:650px;
+  margin:0 auto 34px;
+  font-size:16.5px;
+  line-height:1.7;
+  color:#444;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+
+.cta-btn-alt{
+  display:inline-block;
+  padding:14px 42px;
+  background:#584379;
+  color:#ffffff;
+  border-radius:50px;
+  font-size:15.5px;
+  font-weight:600;
+  text-decoration:none;
+  transition:.35s ease;
+  box-shadow:0 16px 40px rgba(28,27,64,.25);
+}
+
+/* hover */
+.cta-btn-alt:hover{
+  transform:translateY(-3px);
+  background:#1c1b40;
+  box-shadow:0 26px 60px rgba(255,138,0,.35);
+}
+
+/* ===============================
+   MOBILE VIEW
+================================ */
+
+@media(max-width:768px){
+
+  .cta-section-alt{
+    padding:55px 6% 65px;   /* 🔥 less height */
+  }
+
+  .cta-title-alt{
+    font-size:26px;
+  }
+
+  .cta-text-alt{
+    font-size:15px;
+    margin-bottom:28px;
+  }
+
+  .cta-btn-alt{
+    padding:13px 34px;
+    font-size:15px;
+  }
+}
+
+@media(max-width:480px){
+
+  .cta-title-alt{
+    font-size:22px;
+  }
+
+  .cta-text-alt{
+    font-size:14.5px;
+  }
+}
