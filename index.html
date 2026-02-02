@@ -32,7 +32,7 @@
       <!-- Navigation -->
       <nav class="nav" id="navMenu">
         <a href="index.html" class="nav-link ">Home</a>
-        <a href="about.html" class="nav-link">About Us</a>
+        <a href="website.html" class="nav-link">website</a>
         <a href="services.html" class="nav-link">Services</a>
         <a href="portfolio.html" class="nav-link">Portfolio</a>
         <a href="careers.html" class="nav-link">Careers</a>
@@ -138,24 +138,23 @@
 
     </section>
 
-    <script>
-  const slides = document.querySelectorAll('.slide');
-  let current = 0;
+   <script>
+const slides = document.querySelectorAll('.slide');
+let slideIndex = 0;
 
-  setInterval(() => {
-    const prev = current;
-    current = (current + 1) % slides.length;
+setInterval(() => {
+  const prev = slideIndex;
+  slideIndex = (slideIndex + 1) % slides.length;
 
-    slides[prev].classList.remove('active');
-    slides[prev].classList.add('prev');
+  slides[prev].classList.remove('active');
+  slides[prev].classList.add('prev');
 
-    slides[current].classList.add('active');
+  slides[slideIndex].classList.add('active');
 
-    setTimeout(() => {
-      slides[prev].classList.remove('prev');
-    }, 1600); // match CSS transition
-
-  }, 4500);
+  setTimeout(() => {
+    slides[prev].classList.remove('prev');
+  }, 1600);
+}, 4500);
 </script>
 
   
@@ -211,123 +210,89 @@
 
 
 
-
 <section class="services-3d">
 
   <h2 class="services-title">OUR SERVICES</h2>
 
   <!-- SERVICE 1 -->
   <div class="service-3d-item">
-
     <div class="service-images">
       <img src="img/h2.png" class="img left">
       <img src="img/h2.png" class="img right">
     </div>
-
     <div class="service-box">
-      <div class="icon">
-        <i class="fa-solid fa-code"></i>
-      </div>
+      <div class="icon"><i class="fa-solid fa-code"></i></div>
       <h3>Website Designing</h3>
-      <p>
-        Modern, responsive and visually stunning websites
-        crafted to elevate your digital presence.
-      </p>
+      <p>Modern, responsive and visually stunning websites crafted to elevate your digital presence.</p>
       <a href="#" class="btn">Know More</a>
     </div>
-
   </div>
 
   <!-- SERVICE 2 -->
   <div class="service-3d-item">
-
     <div class="service-images">
       <img src="img/h3.png" class="img left">
       <img src="img/h3.png" class="img right">
     </div>
-
     <div class="service-box">
-      <div class="icon">
-        <i class="fa-solid fa-bullhorn"></i>
-      </div>
+      <div class="icon"><i class="fa-solid fa-bullhorn"></i></div>
       <h3>Digital Marketing</h3>
-      <p>
-        SEO, social media and performance marketing strategies
-        that drive business growth.
-      </p>
+      <p>SEO, social media and performance marketing strategies that drive business growth.</p>
       <a href="#" class="btn">Know More</a>
     </div>
-
   </div>
 
   <!-- SERVICE 3 -->
   <div class="service-3d-item">
-
     <div class="service-images">
       <img src="img/h4.png" class="img left">
       <img src="img/h4.png" class="img right">
     </div>
-
     <div class="service-box">
-      <div class="icon">
-        <i class="fa-solid fa-mobile-screen"></i>
-      </div>
+      <div class="icon"><i class="fa-solid fa-mobile-screen"></i></div>
       <h3>Mobile Applications</h3>
-      <p>
-        Scalable Android & iOS applications with
-        smooth user experience.
-      </p>
+      <p>Scalable Android & iOS applications with smooth user experience.</p>
       <a href="#" class="btn">Know More</a>
     </div>
-
   </div>
 
   <!-- SERVICE 4 -->
   <div class="service-3d-item">
-
     <div class="service-images">
       <img src="img/h5.png" class="img left">
       <img src="img/h5.png" class="img right">
     </div>
-
     <div class="service-box">
-      <div class="icon">
-        <i class="fa-solid fa-gears"></i>
-      </div>
+      <div class="icon"><i class="fa-solid fa-gears"></i></div>
       <h3>Application Software</h3>
-      <p>
-        Custom software solutions to automate
-        and scale your business.
-      </p>
+      <p>Custom software solutions to automate and scale your business.</p>
       <a href="#" class="btn">Know More</a>
     </div>
-
   </div>
 
 </section>
+
 <script>
+
 const services = document.querySelectorAll(".service-3d-item");
 
 const observer = new IntersectionObserver(
-  entries=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
         entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active"); // replay animation
       }
     });
   },
-  { threshold:0.45 }
+  { threshold: 0.45 }
 );
 
-services.forEach(service=>observer.observe(service));
+services.forEach(service => observer.observe(service));
+
+
 </script>
-
-
-
-
-
-
-
 
 
 
@@ -423,121 +388,127 @@ services.forEach(service=>observer.observe(service));
 
 
 
-<section class="portfolio-section" id="portfolio">
 
-  <!-- MAIN TITLE -->
+
+
+<section class="portfolio-section">
+
   <h2 class="portfolio-title">PORTFOLIO</h2>
 
-  <!-- TOP CATEGORY IMAGES -->
+  <!-- TOP TABS -->
   <div class="portfolio-categories">
-
-    <div class="category-card" data-category="web">
-      <img src="img/h2.png" alt="Website Designing">
+    <div class="category-card" data-tab="web">
+      <img src="img/h2.png">
       <h4>Website Designing</h4>
     </div>
 
-    <div class="category-card" data-category="marketing">
-      <img src="img/h3.png" alt="Digital Marketing">
+    <div class="category-card" data-tab="marketing">
+      <img src="img/h3.png">
       <h4>Digital Marketing</h4>
     </div>
 
-
-    <div class="category-card" data-category="mobile">
-      <img src="img/h4.png" alt="Mobile Applications">
+    <div class="category-card" data-tab="mobile">
+      <img src="img/h4.png">
       <h4>Mobile Applications</h4>
     </div>
 
-    <div class="category-card" data-category="software">
-      <img src="img/h5.png" alt="Application Software">
+    <div class="category-card" data-tab="software">
+      <img src="img/h5.png">
       <h4>Application Software</h4>
     </div>
-
-
   </div>
 
-  <!-- TOP BUTTON (ALWAYS VISIBLE) -->
-  <a href="portfolio.html" class="portfolio-know-btn top-btn">KNOW MORE</a>
-
-  <!-- BOTTOM CONTENT (HIDDEN INITIALLY) -->
-  <div class="portfolio-display" id="portfolioDisplay">
-
-    <h3 class="portfolio-subtitle" id="portfolioHeading"></h3>
-
-    <div class="portfolio-grid" id="portfolioGrid"></div>
-
-    <!-- BOTTOM BUTTON -->
-    <a href="portfolio.html" class="portfolio-know-btn bottom-btn">KNOW MORE</a>
-
+  <!-- CONTENT -->
+  <div class="portfolio-tabs" id="portfolioTabs">
+    <h3 class="portfolio-subtitle" id="tabTitle"></h3>
+    <div class="portfolio-grid" id="tabGrid"></div>
+     <a href="portfolio.html" class="portfolio-know-btn">
+    KNOW MORE
+  </a>
   </div>
 
 </section>
 <script>
-const portfolioData = {
-  web: {
-    title: "Website Designing Projects",
-    items: [
-      { img: "img/por1.png", name: "Corporate Website" },
-      { img: "img/por2.png", name: "Landing Page" },
-      { img: "img/por3.png", name: "UI / UX Design" },
-      { img: "img/por4.png", name: "Portfolio Website" }
-    ]
+const data = {
+  web:{
+    title:"Website Designing Projects",
+    items:["por1.png","por2.png","por3.png","por4.png"]
   },
-
-  mobile: {
-    title: "Mobile Application Projects",
-    items: [
-      { img: "img/por5.png", name: "Mobile App UI" },
-      { img: "img/por6.png", name: "Android App" },
-      { img: "img/por7.png", name: "iOS App" },
-      { img: "img/por8.png", name: "App Interface" }
-    ]
+  marketing:{
+    title:"Digital Marketing Projects",
+    items:["por13.png","por14.png","por15.png","por16.png"]
   },
-
-  software: {
-    title: "Application Software Projects",
-    items: [
-      { img: "img/por9.png", name: "Admin Dashboard" },
-      { img: "img/por10.png", name: "CRM Software" },
-      { img: "img/por11.png", name: "ERP System" },
-      { img: "img/por12.png", name: "Business App" }
-    ]
+  mobile:{
+    title:"Mobile Application Projects",
+    items:["por5.png","por6.png","por7.png","por8.png"]
   },
-
-  marketing: {
-    title: "Digital Marketing Projects",
-    items: [
-      { img: "img/por13.png", name: "Digital Campaign" },
-      { img: "img/por14.png", name: "SEO Optimization" },
-      { img: "img/por15.png", name: "Social Media Marketing" },
-      { img: "img/por16.png", name: "Brand Promotion" }
-    ]
+  software:{
+    title:"Application Software Projects",
+    items:["por9.png","por10.png","por11.png","por12.png"]
   }
 };
 
-
 const cards = document.querySelectorAll(".category-card");
-const display = document.getElementById("portfolioDisplay");
-const heading = document.getElementById("portfolioHeading");
-const grid = document.getElementById("portfolioGrid");
+const tabs  = document.getElementById("portfolioTabs");
+const grid  = document.getElementById("tabGrid");
+const title = document.getElementById("tabTitle");
+
+let activeTab = null;
+
+function openTab(key){
+  title.textContent = data[key].title;
+  grid.innerHTML = "";
+
+  data[key].items.forEach(img=>{
+    grid.innerHTML += `
+      <div class="portfolio-item">
+        <img src="img/${img}">
+        <h4>${data[key].title}</h4>
+      </div>`;
+  });
+
+  tabs.classList.add("show");
+}
+
+function closeTab(){
+  tabs.classList.remove("show");
+  setTimeout(()=>tabs.style.display="none",300);
+  activeTab = null;
+}
 
 cards.forEach(card=>{
   card.addEventListener("click",()=>{
-    const key = card.dataset.category;
-    heading.textContent = portfolioData[key].title;
-    grid.innerHTML = "";
+    const key = card.dataset.tab;
 
-    portfolioData[key].items.forEach(item=>{
-      const div = document.createElement("div");
-      div.className = "portfolio-item";
-      div.innerHTML = `<img src="${item.img}"><h4>${item.name}</h4>`;
-      grid.appendChild(div);
-    });
+    /* SAME CARD CLICK = CLOSE */
+    if(activeTab === key){
+      closeTab();
+      cards.forEach(c=>c.classList.remove("active"));
+      return;
+    }
 
-    display.style.display = "block";
-    display.scrollIntoView({behavior:"smooth"});
+    /* SWITCH TAB */
+    activeTab = key;
+    cards.forEach(c=>c.classList.remove("active"));
+    card.classList.add("active");
+
+    tabs.style.display="block";
+    openTab(key);
   });
 });
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

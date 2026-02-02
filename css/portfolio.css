@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -23,21 +22,24 @@
 
 /* CONTAINER */
 .container {
-  max-width: 1400px;
+  max-width: 1280px;          /* 🔥 width taggindi */
   margin: auto;
-  padding: 18px 30px;
+  padding: 14px 20px;         /* 🔥 height kuda slim */
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
+
 
 /* =====================
    LOGO
 ===================== */
 .logo img {
-  height: 80px;
-  margin-left: 40px;
-  margin-right: 180px;
+  height: 72px;
+  margin-left: 10px;      /* 🔥 little left */
+  margin-right: 0;        /* 🔥 remove extra gap */
 }
+
 
 /* =====================
    NAV
@@ -59,7 +61,7 @@
   height: 52px;
   background: #ffffff;
   transform: translateY(-50%);
-  box-shadow: 0 6px 16px rgba(73, 50, 107, 0.45);
+  box-shadow: 0 6px 16px rgba(73, 50, 107, 0.95);
   transition: all 0.3s ease;
   opacity: var(--opacity, 0);
   z-index: 1;
@@ -141,6 +143,27 @@
     display: none;
   }
 }
+/* 🔥 REMOVE GAP BELOW LOGO */
+.logo img {
+  display: block;        /* 🔥 main fix */
+}
+
+/* 🔥 HEADER HEIGHT SLIM */
+.container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -162,7 +185,7 @@
 /* OVERLAY */
 .footer-overlay {
   background: rgba(40, 35, 80, 0.8); /* BG visible */
-  padding: 70px 0;
+  padding: 50px 0;
 }
 
 /* CONTAINER */
@@ -172,14 +195,14 @@
   padding: 0 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 60px;
+  gap: 45px;
 }
 
 /* HEADINGS */
 .footer h3 {
   font-size: 22px;
   font-weight: 700;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
 /* LINKS */
@@ -188,7 +211,7 @@
 }
 
 .footer ul li {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .footer ul li a {
@@ -212,21 +235,21 @@
 /* TEXT */
 .footer p {
   font-size: 18px;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 /* CONTACT */
 .contact {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   font-size: 18px;
 }
 
 /* SOCIAL ICONS */
 .social-icons {
   display: flex;
-  gap: 18px;
+  gap: 14px;
 }
 
 .social-icons a {
@@ -253,7 +276,7 @@
 .footer-bottom {
   background: #1d1a3f;
   text-align: center;
-  padding: 18px 10px;
+  padding: 14px 10px;
   font-size: 16px;
   border-top: 1px solid rgba(255,255,255,0.25);
 }
@@ -328,7 +351,6 @@
     opacity: 1;
   }
 }
-
 /* =========================
    FOOTER – MOBILE PERFECT ALIGNMENT + ANIMATION
 ========================= */

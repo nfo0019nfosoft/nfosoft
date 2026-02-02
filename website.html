@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nfosoft</title>
+  <link rel="stylesheet" href="css/website.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="icon" href="img/logo.png" type="image/png">
+
+
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+
+   <!-- Logo -->
+<div class="logo">
+  <a href="index.html">
+    <img src="img/logo.png" alt="nfoSoft">
+  </a>
+</div>
+
+
+    <!-- Navigation -->
+    <nav class="nav" id="navMenu">
+      <a href="index.html" class="nav-link ">Home</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="careers.html" class="nav-link">Careers</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+    </nav>
+
+    <!-- Icons -->
+    <div class="right">
+      <!-- <span class="search">🔍</span> -->
+      <span class="menu-toggle" id="menuToggle">☰</span>
+    </div>
+
+  </div>
+</header>
+
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
+
+</script>
+<script>
+const nav = document.querySelector(".nav");
+const links = document.querySelectorAll(".nav-link");
+
+/* Hover white box */
+links.forEach(link => {
+  link.addEventListener("mouseenter", () => {
+    const linkRect = link.getBoundingClientRect();
+    const navRect = nav.getBoundingClientRect();
+
+    nav.style.setProperty("--left", `${linkRect.left - navRect.left}px`);
+    nav.style.setProperty("--width", `${linkRect.width}px`);
+    nav.style.setProperty("--opacity", "1");
+  });
+
+  /* Click = active purple */
+  link.addEventListener("click", () => {
+    links.forEach(l => l.classList.remove("active"));
+    link.classList.add("active");
+  });
+});
+
+/* Hide hover box when mouse leaves menu */
+nav.addEventListener("mouseleave", () => {
+  nav.style.setProperty("--opacity", "0");
+});
+</script>
+
+
+
+
+
+
+<section class="page-hero">
+  <div class="hero-overlay hero-content">
+    <h1 class="hero-heading animate-text">
+      <span class="static-word">Website</span>
+      <span class="dynamic-word">
+        <span>Designing</span>
+      </span>
+    </h1>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- WEBSITE DESIGNING PAGE CONTENT -->
+
+<section class="wd-hero reveal">
+  <div class="wd-hero-image">
+    <img src="img/h1.png" alt="Website Designing">
+  </div>
+
+  <div class="wd-hero-content">
+    <h1>Website Designing Services</h1>
+    <p>
+      We create visually appealing, user-focused and performance-driven
+      websites that help businesses grow online. Our designs balance
+      creativity, clarity and functionality to deliver measurable results.
+    </p>
+  </div>
+</section>
+
+
+<section class="wd-services reveal">
+  <h2 class="wd-heading">What We Offer</h2>
+
+  <div class="wd-grid">
+
+    <div class="wd-card">
+      <i class="fa-solid fa-pen-nib"></i>
+      <h3>UI / UX Design</h3>
+      <p>
+        User-centered designs with clean layouts, intuitive navigation
+        and engaging experiences that improve usability.
+      </p>
+    </div>
+
+    <div class="wd-card">
+      <i class="fa-solid fa-mobile-screen"></i>
+      <h3>Responsive Design</h3>
+      <p>
+        Websites that adapt seamlessly across mobile, tablet and desktop
+        devices for a consistent experience.
+      </p>
+    </div>
+
+    <div class="wd-card">
+      <i class="fa-solid fa-building"></i>
+      <h3>Corporate Websites</h3>
+      <p>
+        Professional business websites designed to build trust and
+        strengthen your brand presence.
+      </p>
+    </div>
+
+    <div class="wd-card">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <h3>E-Commerce Websites</h3>
+      <p>
+        Secure and scalable e-commerce platforms optimized for
+        conversions and user experience.
+      </p>
+    </div>
+
+    <div class="wd-card">
+      <i class="fa-solid fa-bullseye"></i>
+      <h3>Landing Pages</h3>
+      <p>
+        High-impact landing pages crafted for marketing campaigns,
+        lead generation and performance ads.
+      </p>
+    </div>
+
+    <div class="wd-card">
+      <i class="fa-solid fa-rotate"></i>
+      <h3>Website Redesign</h3>
+      <p>
+        Modern redesigns that improve speed, SEO, usability and
+        overall visual appeal.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="wd-stats reveal">
+  <h2 class="wd-stats-title">Websites Designed for Our Clients</h2>
+
+  <div class="wd-stats-grid">
+    <div class="stat-card">
+      <i class="fa-solid fa-globe"></i>
+      <h3 class="counter" data-target="450">0</h3>
+      <p>Websites Delivered</p>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa-solid fa-users"></i>
+      <h3 class="counter" data-target="320">0</h3>
+      <p>Happy Clients</p>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa-solid fa-star"></i>
+      <h3 class="counter" data-target="98">0</h3>
+      <p>Client Satisfaction %</p>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa-solid fa-clock"></i>
+      <h3 class="counter" data-target="8">0</h3>
+      <p>Years of Experience</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="wd-cta reveal">
+  <h2>Let’s Build Your Website</h2>
+  <p>
+    Work with our team to create a powerful digital presence that
+    reflects your brand and drives growth.
+  </p>
+  <a href="contact.html" class="wd-btn">Get Started</a>
+</section>
+<script>
+/* SCROLL REVEAL */
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
+  entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  { threshold:0.25 }
+);
+
+reveals.forEach(el=>observer.observe(el));
+
+/* COUNTER */
+const counters = document.querySelectorAll(".counter");
+let started = false;
+
+function startCounters(){
+  counters.forEach(counter=>{
+    const target = +counter.dataset.target;
+    let count = 0;
+    const step = target / 80;
+
+    const update = ()=>{
+      if(count < target){
+        count += step;
+        counter.textContent = Math.ceil(count);
+        requestAnimationFrame(update);
+      }else{
+        counter.textContent = target;
+      }
+    };
+    update();
+  });
+}
+
+const statsSection = document.querySelector(".wd-stats");
+
+window.addEventListener("scroll",()=>{
+  if(!started && statsSection.getBoundingClientRect().top < window.innerHeight - 150){
+    startCounters();
+    started = true;
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-overlay">
+    <div class="footer-container">
+
+      <div class="footer-col imp-links">
+        <h3>IMPORTANT LINKS</h3>
+        <ul>
+          <li><a href="about.html"><span>›</span> About Us</a></li>
+          <li><a href="contact.html"><span>›</span> Contact Us</a></li>
+          <li><a href="policy.html"><span>›</span> Privacy Policy</a></li>
+          <li><a href="terms.html"><span>›</span> Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col reach">
+        <h3>REACH US</h3>
+        <p>
+          Plot No #682, 3rd Floor,<br>
+          Babukhan Rasheed Plaza,<br>
+          Rd No 36, Jubilee Hills,<br>
+          Hyderabad, Telangana-500033
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>CONTACT INFO</h3>
+        <p class="contact">
+          <i class="fa-solid fa-envelope"></i>
+          info@nfosoft.com
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>FOLLOW US ON</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © All Copyrights Reserved 2015-2026 | nfoSoft Innovations
+  </div>
+</footer>
+
+</body>
+</html>
