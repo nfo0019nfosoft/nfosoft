@@ -890,7 +890,7 @@ textarea {
 }
 
 /* DROPDOWN */
-.dropdown {
+.job-dropdown  {
   display: none;
   position: absolute;
   top: 100%;

@@ -29,61 +29,82 @@
 </div>
 
 
-    <!-- Navigation -->
-    <nav class="nav" id="navMenu">
-      <a href="index.html" class="nav-link ">Home</a>
-      <a href="about.html" class="nav-link">About Us</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="portfolio.html" class="nav-link">Portfolio</a>
-      <a href="careers.html" class="nav-link">Careers</a>
-      <a href="contact.html" class="nav-link">Contact Us</a>
-    </nav>
+   
+      <!-- Navigation -->
+      <nav class="nav" id="navMenu">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <div class="dropdown">
+          <a href="services.html" class="nav-link">Services ▾</a>
 
-    <!-- Icons -->
-    <div class="right">
-      <!-- <span class="search">🔍</span> -->
-      <span class="menu-toggle" id="menuToggle">☰</span>
+          <div class="dropdown-menu">
+            <a href="website.html">Website Design</a>
+            <a href="software.html">Software Application</a>
+            <a href="mobile.html">Mobile Application</a>
+            <a href="digital.html">Digital Marketing</a>
+          </div>
+        </div>
+
+
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="careers.html" class="nav-link">Careers</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Icons -->
+      <div class="right">
+        <!-- <span class="search">🔍</span> -->
+        <span class="menu-toggle" id="menuToggle">☰</span>
+      </div>
+
     </div>
+  </header>
 
-  </div>
-</header>
-
-<script>
+  <script>
     const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
+    const navMenu = document.getElementById("navMenu");
 
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
-});
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
 
-</script>
-<script>
-const nav = document.querySelector(".nav");
-const links = document.querySelectorAll(".nav-link");
+  </script>
+  <script>
+    const nav = document.querySelector(".nav");
+    const links = document.querySelectorAll(".nav-link");
 
-/* Hover white box */
-links.forEach(link => {
-  link.addEventListener("mouseenter", () => {
-    const linkRect = link.getBoundingClientRect();
-    const navRect = nav.getBoundingClientRect();
+    /* Hover white box */
+    links.forEach(link => {
+      link.addEventListener("mouseenter", () => {
+        const linkRect = link.getBoundingClientRect();
+        const navRect = nav.getBoundingClientRect();
 
-    nav.style.setProperty("--left", `${linkRect.left - navRect.left}px`);
-    nav.style.setProperty("--width", `${linkRect.width}px`);
-    nav.style.setProperty("--opacity", "1");
-  });
+        nav.style.setProperty("--left", `${linkRect.left - navRect.left}px`);
+        nav.style.setProperty("--width", `${linkRect.width}px`);
+        nav.style.setProperty("--opacity", "1");
+      });
 
-  /* Click = active purple */
-  link.addEventListener("click", () => {
-    links.forEach(l => l.classList.remove("active"));
-    link.classList.add("active");
-  });
-});
+      /* Click = active purple */
+      link.addEventListener("click", () => {
+        links.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
 
-/* Hide hover box when mouse leaves menu */
-nav.addEventListener("mouseleave", () => {
-  nav.style.setProperty("--opacity", "0");
-});
-</script>
+    /* Hide hover box when mouse leaves menu */
+    nav.addEventListener("mouseleave", () => {
+      nav.style.setProperty("--opacity", "0");
+    });
+
+    document.querySelectorAll(".dropdown > .nav-link").forEach(link => {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth < 992) {
+          e.preventDefault();
+          this.parentElement.classList.toggle("show");
+        }
+      });
+    });
+  </script>
 
 
 
@@ -119,7 +140,8 @@ nav.addEventListener("mouseleave", () => {
     <h1>WEBSITE DESIGNING</h1>
     <p>
       We create visually appealing, user-focused and performance-driven websites that help businesses build a strong online presence. Our designs combine creativity, clarity and functionality to deliver engaging user experiences and measurable results.
-Our approach focuses on developing responsive websites that work seamlessly across all devices—desktop, tablet and mobile—ensuring speed, accessibility and smooth navigation.
+Our approach focuses on developing responsive websites that work seamlessly across all devices—desktop, tablet and mobile—ensuring speed, accessibility and smooth navigation.Professional website designing services for businesses and startups.
+We create fast, secure, and visually appealing websites that convert visitors into customers.
 With nfosoft, you don’t just get a website—you get a powerful digital solution designed to strengthen your brand and grow your business online.
     </p>
   </div>
