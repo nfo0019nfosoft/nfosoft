@@ -153,7 +153,74 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.dropdown{
+  position:relative;
+}
 
+.dropdown-menu{
+  position:absolute;
+  top:100%;
+  left:0;
+  background:#fff;
+  min-width:220px;
+  border-radius:8px;
+  box-shadow:0 6px 16px rgba(0,0,0,0.15);
+
+  display:flex;
+  flex-direction:column;
+
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(8px);
+  transition:0.25s ease;
+
+  pointer-events:none;
+  z-index:999;
+}
+
+/* Hover area fix */
+.dropdown:hover .dropdown-menu{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+  pointer-events:auto;
+}
+
+.dropdown-menu a{
+  padding:14px 18px;
+  font-size:14px;
+  color:var(--primary);
+  transition:0.25s;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover{
+  background:var(--primary);
+  color:#fff;
+}
+
+@media (max-width: 992px){
+
+  .dropdown-menu{
+    position:static;
+    opacity:1;
+    visibility:visible;
+    transform:none;
+    pointer-events:auto;
+    display:none;
+  }
+
+  .dropdown.show .dropdown-menu{
+    display:flex;
+  }
+}
+/* Make dropdown link behave exactly like nav links */
+.dropdown > .nav-link{
+  display:inline-block;
+  padding:16px 28px;
+  line-height:1;
+  top:2px; 
+}
 
 
 
