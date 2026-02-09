@@ -795,8 +795,31 @@
 .wd-hero p{
   font-size:16px;
   line-height:1.7;
-  color:#444;
+  color:black;
   text-align:justify;
+}
+/* INITIAL STATE */
+.wd-hero-image,
+.wd-hero-content{
+  opacity:0;
+  transition:1s ease;
+}
+
+/* LEFT IMAGE */
+.wd-hero-image{
+  transform:translateX(-80px);
+}
+
+/* RIGHT CONTENT */
+.wd-hero-content{
+  transform:translateX(80px);
+}
+
+/* SHOW STATE */
+.wd-hero-image.show,
+.wd-hero-content.show{
+  opacity:1;
+  transform:translateX(0);
 }
 
 
@@ -809,7 +832,7 @@
 
 .wd-modern{
   font-family:Poppins, sans-serif;
-  color:#222;
+  color:black;
 }
 
 /* TRUST */
@@ -934,6 +957,37 @@
     font-size:28px;
   }
 }
+/* INITIAL STATE */
+.offer-wrap h2,
+.offer-card{
+  opacity:0;
+}
+
+/* TITLE ZOOM */
+.offer-wrap h2{
+  transform:scale(.8);
+  transition:.8s ease;
+}
+
+.offer-wrap h2.show{
+  opacity:1;
+  transform:scale(1);
+}
+
+/* CARDS INITIAL POSITIONS */
+.offer-card:nth-child(1){ transform:translateX(-70px); }
+.offer-card:nth-child(2){ transform:translateY(-70px); }
+.offer-card:nth-child(3){ transform:translateX(70px); }
+.offer-card:nth-child(4){ transform:translateX(-70px); }
+.offer-card:nth-child(5){ transform:translateY(70px); }
+.offer-card:nth-child(6){ transform:translateX(70px); }
+
+/* SHOW STATE */
+.offer-card.show{
+  opacity:1;
+  transform:translate(0);
+  transition:1s ease;
+}
 
 
 
@@ -1017,6 +1071,10 @@
     padding:26px 20px;
   }
 
+
+
+
+
   /* ================= STATS ================= */
   .wd-stats{
     padding:60px 6%;
@@ -1070,6 +1128,20 @@
     padding:14px 10px;
   }
 }
+/* INITIAL STATE */
+.wd-stats-title,
+.stat-card{
+  opacity:0;
+  transform:scale(.85);
+  transition:0.8s ease;
+}
+
+/* SHOW STATE */
+.wd-stats-title.show,
+.stat-card.show{
+  opacity:1;
+  transform:scale(1);
+}
 
 
 
@@ -1079,8 +1151,7 @@
 
 
 
-
-/* ================= BASE ================= */
+/* SECTION */
 .why-web-advanced{
   position:relative;
   background:#584379;
@@ -1090,129 +1161,118 @@
   overflow:hidden;
 }
 
-/* ================= HEADING ================= */
+/* HEADING */
 .why-title{
   text-align:center;
   font-size:32px;
-  line-height:1.4;
   margin-bottom:90px;
   opacity:0;
   transform:scale(0.7);
 }
 
-.animate-zoom{
-  animation:zoomIn 1.6s ease forwards;
+/* Zoom after scroll */
+.show .why-title{
+  animation:zoomIn 1.2s ease forwards;
 }
 
 @keyframes zoomIn{
-  to{ opacity:1; transform:scale(1); }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
 }
 
-/* NFOSOFT COLOR ANIMATION */
+/* NFOSOFT COLOR */
 .brand{
   font-size:38px;
   font-weight:700;
-  margin-left:6px;
-  animation:brandColor 6s ease-in-out infinite;
-  animation-delay:1.8s; /* zoom ayyaka */
+  animation:brandColor 5s linear infinite;
 }
 
 @keyframes brandColor{
-  0%   { color:white; }
-  25%  { color:#9c27b0; }
-  50%  { color:#e91e63; }
-  75%  { color:darkgoldenrod; }
-  100% { color:darkred }
+  0%{color:white;}
+  25%{color:#9c27b0;}
+  50%{color:#e91e63;}
+  75%{color:#ffc107;}
+  100%{color:white;}
 }
 
-/* ================= GRID ================= */
+/* GRID */
 .why-grid{
   max-width:1100px;
   margin:auto;
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:60px 40px;
-  align-items:center;
 }
 
-/* ================= TEXT ================= */
+/* TEXT */
 .why-text h3{
-  color: white;
   margin-bottom:10px;
 }
-
 .why-text p{
   font-size:14.5px;
-  line-height:1.7;
   color:#ddd;
+  line-height:1.7;
   text-align:justify;
 }
 
-/* ================= IMAGES ================= */
+/* IMAGES */
 .why-img img{
   width:160px;
   display:block;
   margin:auto;
+  opacity:0;
 }
 
-/* IMAGE ANIMATIONS */
-.left img{
-  opacity:0;
-  transform:translateX(-80px);
-  animation:imgLeft 1.2s ease forwards;
-}
+/* START POSITIONS */
+.left img{ transform:translateX(-80px); }
+.right img{ transform:translateX(80px); }
 
-.right img{
-  opacity:0;
-  transform:translateX(80px);
-  animation:imgRight 1.2s ease forwards;
+/* Animate after scroll */
+.show .left img{
+  animation:imgLeft 1.1s ease forwards;
+}
+.show .right img{
+  animation:imgRight 1.1s ease forwards;
 }
 
 @keyframes imgLeft{
-  to{ opacity:1; transform:translateX(0); }
+  to{opacity:1; transform:translateX(0);}
 }
 @keyframes imgRight{
-  to{ opacity:1; transform:translateX(0); }
+  to{opacity:1; transform:translateX(0);}
 }
 
-/* ================= BACKGROUND SHAPES ================= */
-.shape{
-  position:absolute;
-  opacity:.15;
-}
+/* SHAPES */
+.shape{position:absolute; opacity:.15;}
 
 .tri{
-  width:0; height:0;
+  width:0;height:0;
   border-left:60px solid transparent;
   border-right:60px solid transparent;
   border-bottom:100px solid #ff8a00;
-  top:20%;
-  left:5%;
+  top:20%; left:5%;
 }
 
 .rect{
-  width:120px;
-  height:60px;
+  width:120px;height:60px;
   background:#9c27b0;
-  top:40%;
-  right:8%;
+  top:40%; right:8%;
   transform:rotate(20deg);
 }
 
 .square{
-  width:70px;
-  height:70px;
+  width:70px;height:70px;
   background:#03a9f4;
-  bottom:35%;
-  left:15%;
+  bottom:35%; left:15%;
   transform:rotate(45deg);
 }
 
-/* ================= WAVE ================= */
+/* WAVE */
 .wave{
   position:absolute;
-  bottom:0;
-  left:0;
+  bottom:0; left:0;
   width:100%;
   height:120px;
   background:#fff;
@@ -1220,39 +1280,11 @@
   border-top-right-radius:100% 60px;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 @media(max-width:768px){
-
-  .why-title{
-    font-size:24px;
-  }
-
-  .brand{
-    font-size:28px;
-  }
-
-  .why-grid{
-    grid-template-columns:1fr;
-    gap:50px;
-  }
-
-  .why-text{
-    text-align:center;
-  }
-
-  .why-text p{
-    text-align:center;
-  }
-
-  .why-img img{
-    width:120px;
-  }
-
-  .shape{
-    display:none; /* mobile clean */
-  }
+  .why-grid{grid-template-columns:1fr;}
+  .why-img img{width:120px;}
 }
-
 
 
 
@@ -1366,4 +1398,24 @@
   .cta-text-alt{
     font-size:14.5px;
   }
+}
+/* LEFT ANIMATION */
+.reveal-left{
+  opacity:0;
+  transform:translateX(-80px);
+  transition:all .9s ease;
+}
+
+/* RIGHT ANIMATION */
+.reveal-right{
+  opacity:0;
+  transform:translateX(80px);
+  transition:all .9s ease;
+}
+
+/* SHOW STATE */
+.reveal-left.show,
+.reveal-right.show{
+  opacity:1;
+  transform:translateX(0);
 }

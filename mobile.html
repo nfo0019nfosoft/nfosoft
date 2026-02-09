@@ -144,6 +144,27 @@ With nfosoft, you don’t just get a mobile app—you get a powerful digital sol
     </p>
   </div>
 </section>
+<script>
+window.addEventListener("scroll", function(){
+
+  const img = document.querySelector(".wd-hero-image");
+  const content = document.querySelector(".wd-hero-content");
+
+  if(!img || !content) return;
+
+  const trigger = window.innerHeight - 100;
+
+  if(img.getBoundingClientRect().top < trigger){
+    img.classList.add("show");
+  }
+
+  if(content.getBoundingClientRect().top < trigger){
+    content.classList.add("show");
+  }
+
+});
+</script>
+
 
 
 
@@ -193,6 +214,28 @@ With nfosoft, you don’t just get a mobile app—you get a powerful digital sol
 
   </div>
 </div>
+<script>
+function revealOffer(){
+  const title = document.querySelector(".offer-wrap h2");
+  const cards = document.querySelectorAll(".offer-card");
+  const trigger = window.innerHeight - 100;
+
+  if(title && title.getBoundingClientRect().top < trigger){
+    title.classList.add("show");
+  }
+
+  cards.forEach(card=>{
+    if(card.getBoundingClientRect().top < trigger){
+      card.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOffer);
+window.addEventListener("load", revealOffer);
+</script>
+
+
 
 
 
@@ -283,6 +326,37 @@ window.addEventListener("scroll",()=>{
 
 
 
+<script>
+function revealStats(){
+  const title = document.querySelector(".wd-stats-title");
+  const cards = document.querySelectorAll(".stat-card");
+  const trigger = window.innerHeight - 80;
+
+  if(title && title.getBoundingClientRect().top < trigger){
+    title.classList.add("show");
+  }
+
+  cards.forEach(card=>{
+    if(card.getBoundingClientRect().top < trigger){
+      card.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealStats);
+window.addEventListener("load", revealStats);
+</script>
+
+
+
+
+
+
+
+
+
+
+
 
 <section class="why-web-advanced">
 
@@ -292,72 +366,88 @@ window.addEventListener("scroll",()=>{
   <span class="shape square"></span>
 
   <!-- HEADING -->
-  <h2 class="why-title animate-zoom">
+  <h2 class="why-title">
     Why Should We Choose
     <span class="brand">nfosoft</span><br>
-    For Website Designing Service?
+    For Mobile Application Development ?
   </h2>
 
   <!-- GRID -->
-  <div class="why-grid">
+<div class="why-grid">
 
-    <!-- ROW 1 -->
-    <div class="why-img left">
-      <img src="img/w1.png" alt="">
-    </div>
-    <div class="why-text">
-      <h3>Proficiency</h3>
-      <p>
-        NFOSOFT has a team of experienced designers who build
-        visually appealing, secure and modern websites using
-        the latest technologies.
-      </p>
-    </div>
-
-    <div class="why-img right">
-      <img src="img/w2.png" alt="">
-    </div>
-    <div class="why-text">
-      <h3>Affordability</h3>
-      <p>
-        We provide cost-effective website designing solutions
-        tailored to your business needs without compromising quality.
-      </p>
-    </div>
-
-    <!-- ROW 2 -->
-    <div class="why-text">
-      <h3>Quality</h3>
-      <p>
-        Our websites feature clean layouts, smooth performance
-        and excellent user experience across all devices.
-      </p>
-    </div>
-    <div class="why-img left">
-      <img src="img/w3.png" alt="">
-    </div>
-
-    <div class="why-text">
-      <h3>Support</h3>
-      <p>
-        We offer reliable 24/7 support to ensure your website
-        stays secure, updated and efficient.
-      </p>
-    </div>
-    <div class="why-img right">
-      <img src="img/w4.png" alt="">
-    </div>
-
+  <!-- ROW 1 -->
+  <div class="why-img left">
+    <img src="img/w1.png" alt="">
   </div>
+  <div class="why-text">
+    <h3>Expert Development</h3>
+    <p>
+      NFOSOFT has a skilled team of mobile app developers who build
+      high-performance, secure and scalable mobile applications using
+      modern technologies and best practices.
+    </p>
+  </div>
+
+  <div class="why-img right">
+    <img src="img/w2.png" alt="">
+  </div>
+  <div class="why-text">
+    <h3>Affordable Solutions</h3>
+    <p>
+      We deliver cost-effective mobile application solutions tailored
+      to your business needs while maintaining high quality,
+      performance and reliability.
+    </p>
+  </div>
+
+  <!-- ROW 2 -->
+  <div class="why-text">
+    <h3>High Performance</h3>
+    <p>
+      Our mobile apps are optimized for speed, smooth navigation and
+      excellent user experience across Android and iOS devices.
+    </p>
+  </div>
+  <div class="why-img left">
+    <img src="img/w3.png" alt="">
+  </div>
+
+  <div class="why-text">
+    <h3>Continuous Support</h3>
+    <p>
+      We provide ongoing maintenance, updates and technical support to
+      ensure your mobile application remains secure, fast and
+      up-to-date.
+    </p>
+  </div>
+  <div class="why-img right">
+    <img src="img/w4.png" alt="">
+  </div>
+
+</div>
+
 
   <!-- WAVE -->
   <div class="wave"></div>
 
 </section>
+<script>
+function revealWhySection(){
+  const section = document.querySelector(".why-web-advanced");
 
+  if(!section) return;
 
+  const sectionTop = section.getBoundingClientRect().top;
+  const screenHeight = window.innerHeight - 80;
 
+  if(sectionTop < screenHeight){
+    section.classList.add("show");
+  }
+}
 
+window.addEventListener("scroll", revealWhySection);
+window.addEventListener("load", revealWhySection);
+</script>
 
 
 
@@ -366,13 +456,40 @@ window.addEventListener("scroll",()=>{
 
 
 <section class="cta-section-alt">
-  <h2 class="cta-title-alt">Let’s Build Your Website</h2>
-  <p class="cta-text-alt">
+
+  <h2 class="cta-title-alt reveal-left">
+    Let’s Build Your Website
+  </h2>
+
+  <p class="cta-text-alt reveal-right">
     Work with our team to create a powerful digital presence that
     reflects your brand and drives growth.
   </p>
-  <a href="contact.html" class="cta-btn-alt">Get Started</a>
+
+  <a href="contact.html" class="cta-btn-alt reveal-left">
+    Get Started
+  </a>
+
 </section>
+<script>
+function revealAnimation(){
+  const reveals = document.querySelectorAll(".reveal-left, .reveal-right");
+
+  reveals.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight - 80;
+
+    if(elementTop < windowHeight){
+      el.classList.add("show");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealAnimation);
+window.addEventListener("load", revealAnimation);
+</script>
+
+
 
 
 
