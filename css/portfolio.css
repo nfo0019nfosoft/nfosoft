@@ -108,35 +108,64 @@
    MOBILE RESPONSIVE
 ===================== */
 @media (max-width: 992px) {
-
-  .logo img {
-    margin-right: 40px;
+  /* 1. Header padding adjust cheyandi screen ki antuku pokunda */
+  .container {
+    padding: 10px 20px !important;
+    display: flex;
+    justify-content: space-between; /* Logo left, Icons right */
+    align-items: center;
+    width: 100%;
   }
 
+  /* 2. Logo size thagginchandi, margin remove cheyandi */
+  .logo img {
+    height: 50px !important; /* Mobile lo pedda logo overflow chesthundi */
+    margin: 0 !important;
+  }
+
+  /* 3. Right section fix */
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  /* 4. Menu Toggle Button Highlight */
+  .menu-toggle {
+    display: block !important; 
+    font-size: 30px; /* Konchem peddaga kanipisthundi */
+    color: var(--primary);
+    cursor: pointer;
+    padding: 5px;
+    z-index: 10001;
+  }
+
+  /* 5. Navigation Menu Fix */
   .nav {
     position: absolute;
-    top: 100%;
+    top: 100%; /* Header kindha modalavthundi */
     left: 0;
     width: 100%;
     background: #fff;
     flex-direction: column;
-    padding: 20px 0;
-    display: none;
+    padding: 0;
+    display: none; /* Default hidden */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    z-index: 9999;
   }
 
   .nav.show {
-    display: flex;
+    display: flex !important;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
   }
 
   .nav::before {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-    font-size: 26px;
-    color: var(--primary);
-    cursor: pointer;
+    display: none; /* Mobile lo white hover box vaddu */
   }
 
   .search {
@@ -221,9 +250,18 @@
   line-height:1;
   top:2px; 
 }
+/* కేవలం మెనూ ఐకాన్ ని లోపలికి జరపడానికి */
+@media (max-width: 992px) {
+  .container {
+    max-width: 100vw !important;
+    overflow: hidden !important;
+    padding-right: 15px !important; /* Right side gap పెంచుతుంది */
+  }
 
-
-
+  .right {
+    margin-right: 5px !important; /* ఐకాన్ ని ఇంకాస్త ఎడమకి నెడుతుంది */
+  }
+}
 
 
 

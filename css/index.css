@@ -631,6 +631,7 @@
     line-height: 1.6;
     max-width: 100%;
     margin-bottom: 20px;
+    text-align: justify;
   }
 
   /* BUTTON */
@@ -643,18 +644,15 @@
 
 
 
-
-
-
 /* ================= SECTION ================= */
 .services-3d{
-  padding:55px 20px;                 /* compact section */
+  padding:55px 20px;
   background:linear-gradient(180deg,#ffffff,#f3f4ff);
   font-family:"Poppins", sans-serif;
 }
 
 .services-title{
-  text-align:center;                 /* 🔥 FIX: title center */
+  text-align:center;
   font-size:42px;
   font-weight:700;
   margin-bottom:35px;
@@ -665,7 +663,7 @@
 .service-3d-item{
   position:relative;
   max-width:1100px;
-  margin:0 auto 20px;                /* 🔥 VERY LESS GAP */
+  margin:0 auto 20px;
   min-height:420px;
 }
 
@@ -775,39 +773,27 @@
   .services-title{
     font-size:28px;
     margin-bottom:30px;
-    text-align:center;               /* 🔥 FIX */
   }
 
   .service-3d-item{
-    min-height:auto;
-    margin-bottom:20px;
+    min-height:360px;
   }
 
   .service-images{
-    position:relative;
-    height:180px;
-    padding:0;
+    padding:0 20px;
   }
 
   .img{
-    width:100%;
-    height:100%;
-    transform:none !important;
+    width:48%;
+    height:180px;
   }
 
   .service-box{
-    position:relative;
-    top:auto;
-    left:auto;
-    transform:none;
-    opacity:1;
-    width:auto;
-    margin:-30px 15px 0;
-    padding:28px 22px;
+    width:90%;
+    padding:25px;
   }
+
 }
-
-
 
 
 
