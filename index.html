@@ -40,7 +40,7 @@
             <a href="website.html">Website Design</a>
             <a href="software.html">Software Application</a>
             <a href="mobile.html">Mobile Application</a>
-            <a href="digital.html">Digital Marketing</a>
+            <a href="ai.html">AI Services</a>
           </div>
         </div>
 
@@ -118,7 +118,7 @@
         <div class="content">
           <h1>WEBSITE DESIGNING</h1>
           <p>Crafting responsive, user-friendly websites</p>
-          <a href="#" class="btn">Join With Us →</a>
+          <a href="contact.html" class="btn">Join With Us →</a>
         </div>
       </div>
 
@@ -126,9 +126,9 @@
       <div class="slide" style="background-image:url('img/sa.png')">
         <div class="overlay"></div>
         <div class="content">
-          <h1>SOCIAL APPLICATIONS</h1>
+          <h1>SOFTWARE APPLICATIONS</h1>
           <p>Our software development services are designed to transform our vision to reality</p>
-          <a href="#" class="btn">Join With Us →</a>
+          <a href="contact.html" class="btn">Join With Us →</a>
         </div>
       </div>
 
@@ -141,19 +141,19 @@
         <div class="content">
           <h1>MOBILE APPLICATIONS</h1>
           <p>Crafting responsive, user-friendly websites</p>
-          <a href="#" class="btn">Join With Us →</a>
+          <a href="contact.html" class="btn">Join With Us →</a>
         </div>
       </div>
 
 
 
 
-      <div class="slide " style="background-image:url('img/dm.png')">
+      <div class="slide " style="background-image:url('img/ai.png')">
         <div class="overlay"></div>
         <div class="content">
-          <h1>DIGITAL MARKETING</h1>
-          <p>Expand your business with our expertise</p>
-          <a href="#" class="btn">Join With Us →</a>
+          <h1>AI SERVICES</h1>
+          <p>Smart AI Solutions for Modern Businesses</p>
+          <a href="contact.html" class="btn">Join With Us →</a>
         </div>
       </div>
     </div>
@@ -194,43 +194,72 @@
 
 
 
+<section class="premium-about">
+    <div class="luxury-container">
+        <div class="about-main-grid">
+            <div class="about-image-wrapper animate-left">
+                <div class="image-overlay-card">
+                    <img src="img/h1.png" alt="About Nfosoft">
+                    <div class="experience-badge">
+                        <span>10+</span>
+                        <p>Years of Excellence</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="about-text-wrapper animate-right">
+                <span class="luxury-tag">About Our Company</span>
+                <h2>We Drive Innovation with <b>Digital Excellence</b></h2>
+                <p>nfoSoft Innovation Pvt Ltd is the most Popular Software company. Which was established in 2015. An IT solutions company with lots of proven knowledge and experience of developing a wide range of Websites, Mobile apps and Software applications.
 
+We create your online identity by creating user-friendly company websites, Static websites, dynamic websites, mobile applications, software products and desktop applications. </p>
+                <div class="btn-group">
+                    <a href="#" class="luxury-btn">Know More</a>
+                </div>
+            </div>
+        </div>
 
-
-
-  <section class="about-section">
-    <div class="about-container">
-
-      <!-- LEFT IMAGE -->
-      <div class="about-image animate-left">
-        <img src="img/h1.png" alt="About Company">
-      </div>
-
-      <!-- RIGHT CONTENT -->
-      <div class="about-content animate-right">
-        <h2>ABOUT OUR COMPANY</h2>
-        <p>
-          nfoSoft is the most popular IT and Digital Marketing company.
-          We are the most innovative and creative. We design and promote
-          applications across all the industries.At nfosoft, we focus on quality, performance, security, and user
-          experience, ensuring every solution we build meets global standards
-
-          , we specialize in website designing, mobile application development, software solutions, digital marketing.We
-          believe in long-term partnerships, transparent communication, and continuous innovation. From startups to
-          enterprises, nfosoft serves clients across diverse industries by delivering reliable technology solutions
-          tailored to their unique business needs.
-        </p>
-
-        <a href="about.html" class="about-btn">KNOW MORE</a>
-      </div>
-
+        <div class="services-grid-layout">
+            <div class="service-minimal-card animate-bottom">
+                <div class="card-number">01</div>
+                <h3>Website Design</h3>
+                <p>Creative and high-performance web solutions.</p>
+            </div>
+            <div class="service-minimal-card animate-bottom">
+                <div class="card-number">02</div>
+                <h3>Software Application</h3>
+                <p>Customized software for business automation.</p>
+            </div>
+            <div class="service-minimal-card animate-bottom">
+                <div class="card-number">03</div>
+                <h3>Mobile Application</h3>
+                <p>Next-gen apps for iOS and Android platforms.</p>
+            </div>
+            <div class="service-minimal-card animate-bottom">
+                <div class="card-number">04</div>
+                <h3>AI Services</h3>
+                <p>Smart AI-driven insights and technology.</p>
+            </div>
+        </div>
     </div>
-  </section>
+</section>
 
 
+<script>
+ const revealOnScroll = function() {
+    const reveals = document.querySelectorAll('.reveal-on-scroll');
+    for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+        let elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add('reveal-active');
+        }
+    }
+}
 
-
+window.addEventListener('scroll', revealOnScroll);
+</script>
 
 
 
@@ -243,82 +272,95 @@
     <!-- SERVICE 1 -->
     <div class="service-3d-item">
       <div class="service-images">
-        <img src="img/h2.png" class="img left">
-        <img src="img/h2.png" class="img right">
+        <img src="img/wd.png" class="img left">
+        <img src="img/wd.png" class="img right">
       </div>
       <div class="service-box">
         <div class="icon"><i class="fa-solid fa-code"></i></div>
         <h3>Website Designing</h3>
         <p>Modern, responsive and visually stunning websites crafted to elevate your digital presence.</p>
-        <a href="#" class="btn">Know More</a>
+        <a href="website.html" class="btn">Know More</a>
       </div>
     </div>
 
-    <!-- SERVICE 2 -->
-    <div class="service-3d-item">
-      <div class="service-images">
-        <img src="img/h3.png" class="img left">
-        <img src="img/h3.png" class="img right">
-      </div>
-      <div class="service-box">
-        <div class="icon"><i class="fa-solid fa-bullhorn"></i></div>
-        <h3>Digital Marketing</h3>
-        <p>SEO, social media and performance marketing strategies that drive business growth.</p>
-        <a href="#" class="btn">Know More</a>
-      </div>
-    </div>
+   
 
     <!-- SERVICE 3 -->
     <div class="service-3d-item">
       <div class="service-images">
-        <img src="img/h4.png" class="img left">
-        <img src="img/h4.png" class="img right">
+        <img src="img/ma.png" class="img left">
+        <img src="img/ma.png" class="img right">
       </div>
       <div class="service-box">
         <div class="icon"><i class="fa-solid fa-mobile-screen"></i></div>
         <h3>Mobile Applications</h3>
         <p>Scalable Android & iOS applications with smooth user experience.</p>
-        <a href="#" class="btn">Know More</a>
+        <a href="mobile.html" class="btn">Know More</a>
       </div>
     </div>
 
     <!-- SERVICE 4 -->
     <div class="service-3d-item">
       <div class="service-images">
-        <img src="img/h5.png" class="img left">
-        <img src="img/h5.png" class="img right">
+        <img src="img/sa.png" class="img left">
+        <img src="img/sa.png" class="img right">
       </div>
       <div class="service-box">
         <div class="icon"><i class="fa-solid fa-gears"></i></div>
-        <h3>Application Software</h3>
+        <h3> Software Application </h3>
         <p>Custom software solutions to automate and scale your business.</p>
-        <a href="#" class="btn">Know More</a>
+        <a href="software.html" class="btn">Know More</a>
       </div>
     </div>
+
+
+
+
+    <!-- SERVICE 4 -->
+    <div class="service-3d-item">
+      <div class="service-images">
+        <img src="img/ai.png" class="img left">
+        <img src="img/ai.png" class="img right">
+      </div>
+      <div class="service-box">
+        <div class="icon"><i class="fa-solid fa-gears"></i></div>
+        <h3> AI Services </h3>
+        <p>Transforming Businesses with Artificial Intelligence.</p>
+        <a href="ai.html" class="btn">Know More</a>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
 
   </section>
 
   <script>
 
-    const services = document.querySelectorAll(".service-3d-item");
+const items = document.querySelectorAll(".service-3d-item, .about-section");
 
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-          } else {
-            entry.target.classList.remove("active"); // replay animation
-          }
-        });
-      },
-      { threshold: 0.45 }
-    );
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active"); // replay animation
+      }
+    });
+  },
+  { threshold: 0.45 }
+);
 
-    services.forEach(service => observer.observe(service));
+items.forEach(item => observer.observe(item));
 
+</script>
 
-  </script>
 
 
 
@@ -415,114 +457,153 @@
 
 
 
+<section class="portfolio-section">
+
+<h2 class="portfolio-title">PORTFOLIO</h2>
+
+<!-- CATEGORY TABS -->
+<div class="portfolio-categories">
+
+<div class="category-card" data-tab="web">
+<img src="img/h2.png">
+<h4>Website Designing</h4>
+</div>
 
 
-  <section class="portfolio-section">
+<div class="category-card" data-tab="software">
+<img src="img/h5.png">
+<h4>Software Applications</h4>
+</div>
 
-    <h2 class="portfolio-title">PORTFOLIO</h2>
+<div class="category-card" data-tab="mobile">
+<img src="img/h4.png">
+<h4>Mobile Applications</h4>
+</div>
 
-    <!-- TOP TABS -->
-    <div class="portfolio-categories">
-      <div class="category-card" data-tab="web">
-        <img src="img/h2.png">
-        <h4>Website Designing</h4>
-      </div>
+<div class="category-card" data-tab="ai">
+<img src="img/ai.png">
+<h4>AI services</h4>
+</div>
 
-      <div class="category-card" data-tab="marketing">
-        <img src="img/h3.png">
-        <h4>Digital Marketing</h4>
-      </div>
 
-      <div class="category-card" data-tab="mobile">
-        <img src="img/h4.png">
-        <h4>Mobile Applications</h4>
-      </div>
+</div>
 
-      <div class="category-card" data-tab="software">
-        <img src="img/h5.png">
-        <h4>Application Software</h4>
-      </div>
-    </div>
+<!-- TAB CONTENT -->
+<div class="portfolio-tabs" id="portfolioTabs">
 
-    <!-- CONTENT -->
-    <div class="portfolio-tabs" id="portfolioTabs">
-      <h3 class="portfolio-subtitle" id="tabTitle"></h3>
-      <div class="portfolio-grid" id="tabGrid"></div>
-      <a href="portfolio.html" class="portfolio-know-btn">
-        KNOW MORE
-      </a>
-    </div>
 
-  </section>
-  <script>
-    const data = {
-      web: {
-        title: "Website Designing Projects",
-        items: ["por1.png", "por2.png", "por3.png", "por4.png"]
-      },
-      marketing: {
-        title: "Digital Marketing Projects",
-        items: ["por13.png", "por14.png", "por15.png", "por16.png"]
-      },
-      mobile: {
-        title: "Mobile Application Projects",
-        items: ["por5.png", "por6.png", "por7.png", "por8.png"]
-      },
-      software: {
-        title: "Application Software Projects",
-        items: ["por9.png", "por10.png", "por11.png", "por12.png"]
-      }
-    };
+<div class="portfolio-grid" id="tabGrid"></div>
 
-    const cards = document.querySelectorAll(".category-card");
-    const tabs = document.getElementById("portfolioTabs");
-    const grid = document.getElementById("tabGrid");
-    const title = document.getElementById("tabTitle");
+<div class="portfolio-btn-wrap" id="btnWrap"></div>
 
-    let activeTab = null;
+</div>
 
-    function openTab(key) {
-      title.textContent = data[key].title;
-      grid.innerHTML = "";
+</section>
 
-      data[key].items.forEach(img => {
-        grid.innerHTML += `
-      <div class="portfolio-item">
-        <img src="img/${img}">
-        <h4>${data[key].title}</h4>
-      </div>`;
-      });
+<script>
 
-      tabs.classList.add("show");
-    }
+const data = {
 
-    function closeTab() {
-      tabs.classList.remove("show");
-      setTimeout(() => tabs.style.display = "none", 300);
-      activeTab = null;
-    }
+web:{
+title:"Website Designing Projects",
+items:["por1.png","por2.png","por3.png","por4.png"],
+link:"website.html"
+},
 
-    cards.forEach(card => {
-      card.addEventListener("click", () => {
-        const key = card.dataset.tab;
 
-        /* SAME CARD CLICK = CLOSE */
-        if (activeTab === key) {
-          closeTab();
-          cards.forEach(c => c.classList.remove("active"));
-          return;
-        }
 
-        /* SWITCH TAB */
-        activeTab = key;
-        cards.forEach(c => c.classList.remove("active"));
-        card.classList.add("active");
+software:{
+title:"Application Software Projects",
+items:["por9.png","por10.png","por11.png","por12.png"],
+link:"software.html"
+},
 
-        tabs.style.display = "block";
-        openTab(key);
-      });
-    });
-  </script>
+
+
+
+mobile:{
+title:"Mobile Application Projects",
+items:["por5.png","por6.png","por7.png","por8.png"],
+link:"mobile.html"
+},
+
+
+
+
+ai:{
+title:"AI Services",
+items:["por13.png","por14.png","por15.png","por16.png"],
+link:"ai.html"
+},
+
+};
+
+const cards=document.querySelectorAll(".category-card");
+const tabs=document.getElementById("portfolioTabs");
+const grid=document.getElementById("tabGrid");
+const title=document.getElementById("tabTitle");
+const btnWrap=document.getElementById("btnWrap");
+
+let activeTab=null;
+
+function openTab(key){
+
+
+grid.innerHTML="";
+
+data[key].items.forEach(img=>{
+
+grid.innerHTML+=`
+<div class="portfolio-item">
+<img src="img/${img}">
+<h4>${data[key].title}</h4>
+</div>
+`;
+
+});
+
+/* dynamic button */
+btnWrap.innerHTML=`
+<a href="${data[key].link}" class="portfolio-know-btn">
+Know More
+</a>
+`;
+
+tabs.classList.add("show");
+
+}
+
+cards.forEach(card=>{
+
+card.addEventListener("click",()=>{
+
+const key=card.dataset.tab;
+
+if(activeTab===key){
+
+tabs.classList.remove("show");
+card.classList.remove("active");
+activeTab=null;
+return;
+
+}
+
+activeTab=key;
+
+cards.forEach(c=>c.classList.remove("active"));
+card.classList.add("active");
+
+tabs.style.display="block";
+
+openTab(key);
+
+});
+
+});
+
+</script>
+
+
 
 
 

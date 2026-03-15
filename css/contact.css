@@ -582,330 +582,187 @@
 
 
 
-/* =========================
-   HELP & SUPPORT SECTION
-========================= */
+
+
+
+
+
 
 .support-section {
-  background: linear-gradient(90deg, #1b1a3f, #23225a);
-  padding: 80px 0;
-  color: #ffffff;
+    background: linear-gradient(135deg, #1b1a3f 0%, #23225a 100%);
+    padding: 50px 5%;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
 }
 
 .support-container {
-  max-width: 1400px;
-  margin: auto;
-  padding: 0 80px;
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  align-items: center;
-  gap: 60px;
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 60px;
 }
 
-/* =========================
-   LEFT CONTENT
-========================= */
-
-.support-left h2 {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 40px;
+/* LEFT CONTENT */
+.support-title {
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
 }
 
-/* =========================
-   INFO GRID (MAIL + FOLLOW)
-========================= */
+.support-location {
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-left: 4px solid #6c63ff;
+    border-radius: 8px;
+}
 
+.support-location h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: #a5a1ff;
+}
+
+.support-location p {
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* INFO GRID - FIXED ALIGNMENT */
+/* INFO GRID - FIXED ALIGNMENT & LEFT BLUE LINE */
 .support-info {
-  display: grid;
-  grid-template-columns: auto 1px auto; /* LEFT | DIVIDER | RIGHT */
-  column-gap: 22px;                     /* tight spacing */
-  align-items: start;
+    display: flex;
+    align-items: center; /* Vertical ga okate line lo unchutundi */
+    gap: 0; /* Divider maname customize chestunnam kabatti */
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+     border-left: 4px solid #6c63ff;
+    margin-top: 30px;
 }
 
-/* LEFT / RIGHT COLUMNS */
-.info-left,
-.info-right {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  padding: 0;                           /* no extra space near divider */
+.info-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 30px; /* Space for the blue line */
+   /* Nuvvu adigina Left side Blue Line */
 }
 
-/* MAIL STYLE */
+/* Mail and Text alignment */
 .mail {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-size: 20px;
-  font-weight: 500;
-  white-space: nowrap;
-  margin-left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 19px;
+    height: 10px; /* Rendu emails same height lo undataniki */
 }
 
 .mail i {
-  font-size: 22px;
+    color: #6c63ff;
+    font-size: 22px;
 }
 
-/* FOLLOW TEXT */
 .follow-text {
-  font-size: 18px;
-  font-weight: 500;
-  margin-left: 150px;                       /* divider pakkana gap ledu */
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
 }
 
-/* SINGLE STRAIGHT DIVIDER */
+/* Middle Divider (Optional, if you want it between boxes) */
 .info-divider {
-  width: 1px;
-  height: 100%;
-  background: rgba(255,255,255,0.35);
+    width: 2px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 20px;
 }
 
-/* =========================
-   SOCIAL ICONS
-========================= */
-
+/* Social Icons */
 .social-icons {
-  display: flex;
-  gap: 16px;
+    display: flex;
+    gap: 12px;
+    height: 30px; /* Mail box height tho match avvadaniki */
+    align-items: center;
 }
 
 .social-icons a {
-  width: 44px;
-  height: 44px;
-  background: #ffffff;
-  color: #1b1a3f;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  transition: 0.3s ease;
+    width: 38px;
+    height: 38px;
+    background: #fff;
+    color: #1b1a3f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    text-decoration: none;
 }
 
 .social-icons a:hover {
-  background: #6c63ff;
-  color: #ffffff;
-  transform: translateY(-3px);
+    background: #6c63ff;
+    color: #fff;
+    transform: translateY(-3px);
 }
-
-/* =========================
-   RIGHT IMAGE
-========================= */
-
+/* RIGHT IMAGE */
 .support-right img {
-  width: 100%;
-  max-width: 520px;
+    width: 100%;
+    max-width: 500px;
+    filter: drop-shadow(0 20px 50px rgba(0,0,0,0.5));
+    animation: float 6s ease-in-out infinite;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 992px) {
-  .support-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .support-info {
-    justify-content: center;
-  }
-
-  .info-left,
-  .info-right {
-    align-items: center;
-  }
-
-  .support-right img {
-    margin: 40px auto 0;
-  }
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
 }
 
-@media (max-width: 768px) {
-  .support-left h2 {
-    font-size: 38px;
-  }
-
-  .support-info {
-    grid-template-columns: 1fr;
-    row-gap: 20px;
-  }
-
-  .info-divider {
-    width: 40px;
-    height: 1px;
-    margin: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .support-left h2 {
-    font-size: 32px;
-  }
-
-  .mail {
-    font-size: 18px;
-  }
-}
-/* =========================
-   SUPPORT SECTION ANIMATIONS
-========================= */
-
-/* 1️⃣ HELP & SUPPORT – ZOOM OUT */
-.support-left h2 {
-  opacity: 0;
-  animation: zoomOutHeading 1s ease-out forwards;
-}
-
-/* 2️⃣ MAILS – ZOOM IN */
-.support-info .info-left .mail,
-.support-info .info-right .mail {
-  opacity: 0;
-  animation: zoomInContent 0.9s ease-out forwards;
-  animation-delay: 0.3s;
-}
-
-/* 3️⃣ FOLLOW US – ZOOM IN (SLIGHT DELAY) */
-.follow-text,
-.social-icons {
-  opacity: 0;
-  animation: zoomInContent 0.9s ease-out forwards;
-  animation-delay: 0.5s;
-}
-
-/* 4️⃣ RIGHT IMAGE – SLIDE FROM RIGHT */
-.support-right img {
-  opacity: 0;
-  animation: slideFromRight 1.2s ease-out forwards;
-  animation-delay: 0.4s;
-}
-
-/* =========================
-   KEYFRAMES
-========================= */
-
-/* ZOOM OUT */
-@keyframes zoomOutHeading {
-  from {
-    transform: scale(1.3);
+/* REVEAL ANIMATIONS */
+.reveal {
     opacity: 0;
-  }
-  to {
-    transform: scale(1);
+    transform: translateY(40px);
+    transition: all 0.9s ease-out;
+}
+
+.reveal.active {
     opacity: 1;
-  }
+    transform: translateY(0);
 }
 
-/* ZOOM IN */
-@keyframes zoomInContent {
-  from {
-    transform: scale(0.85);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+/* RESPONSIVE */
+@media(max-width: 992px) {
+    .support-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .support-info {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .info-divider {
+        width: 80%;
+        height: 1px;
+    }
+    .support-location p, .mail {
+        justify-content: center;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+    .support-right img {
+        margin: auto;
+    }
 }
-
-/* SLIDE FROM RIGHT */
-@keyframes slideFromRight {
-  from {
-    transform: translateX(120px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* =========================
-   MOBILE – OPTIONAL (TURN OFF)
-========================= */
-
-@media (max-width: 768px) {
-  .support-left h2,
-  .support-info *,
-  .support-right img {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-}
-@media (max-width: 768px) {
-
-  /* SECTION SPACING */
-  .support-section {
-    padding: 60px 0;
-  }
-
-  /* CONTAINER */
-  .support-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 0 20px;
-    text-align: center;
-  }
-
-  /* HEADING */
-  .support-left h2 {
-    font-size: 30px;
-    margin-bottom: 30px;
-  }
-
-  /* INFO GRID → STACK */
-  .support-info {
-    grid-template-columns: 1fr;
-    row-gap: 24px;
-    justify-items: center;
-  }
-
-  /* REMOVE DIVIDER */
-  .info-divider {
-    display: none;
-  }
-
-  /* LEFT / RIGHT CONTENT CENTER */
-  .info-left,
-  .info-right {
-    align-items: center;
-    gap: 20px;
-  }
-
-  /* MAIL */
-  .mail {
-    margin-left: 0;          /* 🔥 remove hard margin */
-    font-size: 17px;
-    justify-content: center;
-    white-space: normal;
-    text-align: center;
-  }
-
-  /* FOLLOW TEXT */
-  .follow-text {
-    margin-left: 0;          /* 🔥 remove hard margin */
-    font-size: 16px;
-    text-align: center;
-  }
-
-  /* SOCIAL ICONS */
-  .social-icons {
-    justify-content: center;
-  }
-
-  /* IMAGE */
-  .support-right img {
-    max-width: 100%;
-    margin: 20px auto 0;
-  }
-
-}
-
-
-
-
 
 
 
@@ -1199,109 +1056,6 @@
 
 
 
-/* =========================
-   LOCATIONS SECTION
-========================= */
-
-.locations-section {
-  background: linear-gradient(180deg, #1b1a3f, #141334);
-  color: #ffffff;
-  padding: 80px 0;
-  text-align: center;
-}
-
-/* ICON */
-.location-icon {
-  width: 70px;
-  height: 70px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-}
-
-.location-icon i {
-  font-size: 34px;
-  color: #7b61ff;
-}
-
-/* HEADING */
-.locations-section h2 {
-  font-size: 44px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-/* ADDRESS */
-.location-address {
-  font-size: 18px;
-  margin-bottom: 50px;
-  color: #e0e0ff;
-}
-
-/* =========================
-   CONTENT LAYOUT
-========================= */
-
-.locations-container {
-  max-width: 1400px;
-  margin: auto;
-  padding: 0 60px;
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 60px;
-  align-items: center;
-}
-
-/* LEFT IMAGE */
-.location-left img {
-  width: 100%;
-  max-width: 520px;
-}
-
-/* RIGHT MAP */
-.location-right iframe {
-  width: 100%;
-  height: 380px;
-  border-radius: 10px;
-  border: none;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 992px) {
-  .locations-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .location-left img {
-    margin: auto;
-  }
-}
-
-@media (max-width: 576px) {
-  .locations-section h2 {
-    font-size: 32px;
-  }
-
-  .location-address {
-    font-size: 16px;
-    padding: 0 15px;
-  }
-
-  .locations-container {
-    padding: 0 20px;
-  }
-
-  .location-right iframe {
-    height: 300px;
-  }
-}
 
 
 

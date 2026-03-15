@@ -122,55 +122,76 @@
 
 
 
+
 <section class="support-section">
-  <div class="support-container">
+    <div class="support-container">
 
-    <!-- LEFT CONTENT -->
-    <div class="support-left">
-      <h2>Help & Support</h2>
+        <div class="support-left">
+            <h2 class="support-title reveal">Help & Support</h2>
 
-      <div class="support-info">
-
-        <!-- LEFT COLUMN -->
-        <div class="info-left">
-          <div class="mail">
+            <div class="support-location reveal">
+                <h3>Our Location</h3>
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    HUDA Techno Enclave, Madhapur Hitech City, <br>
+                    Hyderabad, Telangana - 500081
+                </p>
+            </div>
+<div class="support-info reveal">
+    
+    <div class="info-column">
+        <div class="mail">
             <i class="fa-solid fa-envelope"></i>
-            <span>Support@nfosoft.com</span>
-          </div>
-
-          <div class="follow-text">
-            Follow Us On
-          </div>
+            <span>support@nfosoft.com</span>
         </div>
+        <p class="follow-text">Follow Us On</p>
+    </div>
 
-        <!-- CENTER LINE -->
-        <div class="info-divider"></div>
+    <div class="info-divider"></div>
 
-        <!-- RIGHT COLUMN -->
-        <div class="info-right">
-          <div class="mail">
+    <div class="info-column">
+        <div class="mail">
             <i class="fa-solid fa-envelope"></i>
             <span>info@nfosoft.com</span>
-          </div>
-
-          <div class="social-icons">
+        </div>
+        <div class="social-icons">
             <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          </div>
+        </div>
+    </div>
+
+</div>
         </div>
 
-      </div>
-    </div>
+        <div class="support-right reveal">
+            <img src="img/contact2.png" alt="Support Illustration">
+        </div>
 
-    <!-- RIGHT IMAGE -->
-    <div class="support-right">
-      <img src="img/contact2.png" alt="Help Support">
     </div>
-
-  </div>
 </section>
+
+<script>
+    const revealElements = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+        revealElements.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const elementTop = el.getBoundingClientRect().top;
+            const revealPoint = 100;
+
+            if (elementTop < windowHeight - revealPoint) {
+                el.classList.add("active");
+            }
+        });
+    }
+
+    // Initialize on scroll and load
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+</script>
+
 
 
 
@@ -236,54 +257,6 @@
 
 
 
-
-
-<section class="locations-section">
-  <div class="location-icon">
-    <i class="fa-solid fa-location-dot"></i>
-  </div>
-
-  <h2>Our Locations</h2>
-  <p class="location-address">
-    HUDA Techno Enclave, Madhapur Hitech City, Hyderabad, Telangana - 500081
-  </p>
-
-  <div class="locations-container">
-
-    <!-- LEFT ILLUSTRATION -->
-    <div class="location-left">
-      <img src="img/contact4.png" alt="Location Illustration">
-    </div>
-
-    <!-- RIGHT MAP -->
-    <div class="location-right">
-      <iframe
-        src="https://www.google.com/maps?q=HUDA%20Techno%20Enclave%20Madhapur&t=&z=13&ie=UTF8&iwloc=&output=embed"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
-    </div>
-
-  </div>
-</section>
-
-<section class="hero-section">
-  <div class="hero-content">
-    <h1 class="hero-heading animate-late">connect.</h1>
-
-    <p class="hero-text animate-text">
-      We Help You Expand<br>
-      Your Business Globally
-    </p>
-
-   
-
-    <a href="contact.html" class="hero-cta-btn animate-late">
-      Start Your Project
-    </a>
-
-  </div>
-</section>
 
 
 
