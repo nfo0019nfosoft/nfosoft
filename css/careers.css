@@ -238,7 +238,20 @@
   .nav-link::after {
     display: none; /* Disables underline on mobile */
   }
+   /* Individual Nav Links Hover State */
+.nav-link:active, 
+.nav-link:hover {
+  background-color: #f8f6ff; /* Touch chesinappudu vache light lavender background */
+  color: var(--accent); /* #6c63ff colour loki maruthundi */
+}
 
+/* Dropdown Sub-menu items Hover */
+.dropdown-menu a:active,
+.dropdown-menu a:hover {
+  background-color: #f0edff; /* Sub-items ki inka koncham darker tint */
+  color: var(--accent);
+  padding-left: 45px; /* Subtle slide inside dropdown */
+}
   /* Dropdown Specific Fix */
   .dropdown {
     width: 100%;
@@ -262,7 +275,7 @@
     background: #fcfbff; /* Very light tint for sub-menu */
     padding: 0;
     border: none;
-    border-left: 4px solid var(--primary); /* Visual indicator for sub-menu */
+   
   }
 
   .dropdown.show .dropdown-menu {
@@ -698,7 +711,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../img/car1.png");
+  background-image: url("../img/contact1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -968,7 +981,7 @@ color:#555;
 }
 
 /* DROPDOWN */
-.job-dropdown  {
+.job-dropdown {
   display: none;
   position: absolute;
   top: 100%;
@@ -981,26 +994,33 @@ color:#555;
   z-index: 10;
 }
 
-.dropdown input {
+.job-dropdown input {
   border-bottom: 1px solid #ddd;
   border-radius: 0;
 }
 
-.dropdown ul {
+/* LIST */
+.job-dropdown ul {
   list-style: none;
-  padding: 0;
+  padding: 6px 0;
   margin: 0;
 }
 
-.dropdown li {
-  padding: 12px 16px;
+/* ITEMS */
+.job-dropdown li {
+  padding: 14px 18px;     /* space increase */
   cursor: pointer;
+  line-height: 1.5;       /* text spacing */
+  font-size: 15px;
+  border-bottom: 1px solid #f1f1f1;
+  transition: 0.2s;
 }
 
-.dropdown li:hover {
-  background: #f2f2f2;
+/* HOVER */
+.job-dropdown li:hover {
+  background: #f5f5f5;
+  padding-left: 22px;     /* slight move effect */
 }
-
 @media (max-width: 600px) {
   .career-form {
     padding: 25px;

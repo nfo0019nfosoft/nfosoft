@@ -13,7 +13,16 @@
 
   <link rel="icon" href="img/logo.png" type="image/png">
 
+<script>
+   
+  // ఒకవేళ సెషన్‌లో పర్మిషన్ లేకపోతే...
+  if (sessionStorage.getItem("portfolio_access_granted") !== "true") {
+      // అలర్ట్ ఇచ్చి ఫారమ్ పేజీకి పంపడం
+      alert("Access Denied! Please fill out the form to view our portfolio.");
+      window.location.href = "portfolio-form.html"; // ఇక్కడ నీ ఫారమ్ పేజీ పేరు కరెక్ట్ గా ఇవ్వు
+  }
 
+</script>
 </head>
 
 <body>
@@ -40,7 +49,7 @@
             <a href="website.html">Website Design</a>
             <a href="software.html">Software Application</a>
             <a href="mobile.html">Mobile Application</a>
-            <a href="digital.html">Digital Marketing</a>
+            <a href="ai.html">AI Services</a>
           </div>
         </div>
 
@@ -300,12 +309,7 @@
           <div class="service-box">Software Applications</div>
           <div class="service-box">Android APP<br>Development</div>
 
-          <div class="service-box">UI/UX Designing</div>
-          <div class="service-box">VFX Designing</div>
-          <div class="service-box">Graphic Designing</div>
-
-          <div class="service-box">IOS APP Development</div>
-          <div class="service-box">Artificial Intelligence</div>
+          <div class="service-box">AI Services</div>
         </div>
       </div>
 
@@ -321,9 +325,9 @@
 
           <div class="checks">
             <label><input type="checkbox"> Website Designing</label>
-            <label><input type="checkbox"> Mobile Apps (Android & IOS)</label>
             <label><input type="checkbox"> Software Applications</label>
-            <label><input type="checkbox"> Graphic Designing</label>
+            <label><input type="checkbox"> Mobile Applications (Android & IOS)</label>
+            <label><input type="checkbox"> AI Servics</label>
           </div>
 
           <textarea placeholder="Comment or Message"></textarea>

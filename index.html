@@ -532,73 +532,68 @@ link:"mobile.html"
 
 ai:{
 title:"AI Services",
-items:["por13.png","por14.png","por15.png","por16.png"],
+items:["por13.png","por14.png","por15.png","aii.png"],
 link:"ai.html"
 },
 
 };
 
-const cards=document.querySelectorAll(".category-card");
-const tabs=document.getElementById("portfolioTabs");
-const grid=document.getElementById("tabGrid");
-const title=document.getElementById("tabTitle");
-const btnWrap=document.getElementById("btnWrap");
+const cards = document.querySelectorAll(".category-card");
+const tabs = document.getElementById("portfolioTabs");
+const grid = document.getElementById("tabGrid");
+const btnWrap = document.getElementById("btnWrap");
 
-let activeTab=null;
+let activeTab = null;
 
-function openTab(key){
+function openTab(key) {
+  grid.innerHTML = "";
+  data[key].items.forEach(img => {
+    grid.innerHTML += `
+      <div class="portfolio-item">
+        <img src="img/${img}">
+        <h4>${data[key].title}</h4>
+      </div>
+    `;
+  });
 
+  btnWrap.innerHTML = `
+    <a href="${data[key].link}" class="portfolio-know-btn">
+      Know More
+    </a>
+  `;
 
-grid.innerHTML="";
-
-data[key].items.forEach(img=>{
-
-grid.innerHTML+=`
-<div class="portfolio-item">
-<img src="img/${img}">
-<h4>${data[key].title}</h4>
-</div>
-`;
-
-});
-
-/* dynamic button */
-btnWrap.innerHTML=`
-<a href="${data[key].link}" class="portfolio-know-btn">
-Know More
-</a>
-`;
-
-tabs.classList.add("show");
-
+  // Display block cheసి, కొంచెం గ్యాప్ తర్వాత opacity క్లాస్ యాడ్ చేస్తే యానిమేషన్ బాగుంటుంది
+  tabs.style.display = "block";
+  setTimeout(() => {
+    tabs.classList.add("show");
+  }, 10);
 }
 
-cards.forEach(card=>{
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+    const key = card.dataset.tab;
 
-card.addEventListener("click",()=>{
+    // ఒకవేళ ఆల్రెడీ ఓపెన్ అయి ఉన్న ట్యాబ్ నే మళ్ళీ క్లిక్ చేస్తే...
+    if (activeTab === key) {
+      tabs.classList.remove("show");
+      card.classList.remove("active");
+      
+      // యానిమేషన్ ముగిశాక పూర్తిగా స్పేస్ ని రిమూవ్ చేయడానికి
+      setTimeout(() => {
+        tabs.style.display = "none";
+      }, 400); 
 
-const key=card.dataset.tab;
+      activeTab = null;
+      return;
+    }
 
-if(activeTab===key){
+    activeTab = key;
 
-tabs.classList.remove("show");
-card.classList.remove("active");
-activeTab=null;
-return;
+    cards.forEach(c => c.classList.remove("active"));
+    card.classList.add("active");
 
-}
-
-activeTab=key;
-
-cards.forEach(c=>c.classList.remove("active"));
-card.classList.add("active");
-
-tabs.style.display="block";
-
-openTab(key);
-
-});
-
+    openTab(key);
+  });
 });
 
 </script>

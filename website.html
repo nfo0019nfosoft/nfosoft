@@ -41,7 +41,7 @@
             <a href="website.html">Website Design</a>
             <a href="software.html">Software Application</a>
             <a href="mobile.html">Mobile Application</a>
-            <a href="digital.html">Digital Marketing</a>
+           <a href="ai.html">AI Services</a>
           </div>
         </div>
 
@@ -108,18 +108,20 @@
 
 
 
-
-
-
 <section class="page-hero">
-  <div class="hero-overlay hero-content">
-    <h1 class="hero-heading animate-text">
-      <span class="static-word">WEBSITE</span>
-      <span class="dynamic-word">
-        <span>DESIGNING</span>
-      </span>
-    </h1>
-  </div>
+
+<div class="hero-overlay">
+
+<h1 class="hero-heading">
+
+<span class="hero-word">WEBSITE</span>
+
+<span class="hero-word">DESIGNING</span>
+
+</h1>
+
+</div>
+
 </section>
 
 
@@ -128,44 +130,47 @@
 
 
 
-
-<!-- WEBSITE DESIGNING PAGE CONTENT -->
-
-<section class="wd-hero reveal">
-  <div class="wd-hero-image">
-    <img src="img/wd.png" alt="Website Designing">
+<section class="wd-hero">
+  <div class="wd-blob-wrapper">
+    <div class="wd-shape-bg"></div>
+    <img src="img/wdd.png" alt="NFOSOFT Web Design" class="wd-hero-image wd-reveal">
   </div>
 
-  <div class="wd-hero-content">
-    <h1>WEBSITE DESIGNING</h1>
+  <div class="wd-hero-content wd-reveal">
+    <h1>WEBSITE <span style="color:var(--accent)">DESIGNING</span></h1>
     <p>
-      We create visually appealing, user-focused and performance-driven websites that help businesses build a strong online presence. Our designs combine creativity, clarity and functionality to deliver engaging user experiences and measurable results.
-Our approach focuses on developing responsive websites that work seamlessly across all devices—desktop, tablet and mobile—ensuring speed, accessibility and smooth navigation.Professional website designing services for businesses and startups.
-We create fast, secure, and visually appealing websites that convert visitors into customers.
-With nfosoft, you don’t just get a website—you get a powerful digital solution designed to strengthen your brand and grow your business online.
+      At NFOSOFT, we specialize in creating high-performance, visually stunning websites tailored to your unique business needs. From conceptualization to launch, our expert team ensures that every pixel is perfect and every line of code is optimized for speed and SEO.
+      <br><br>
+      We combine creative UI/UX design with robust front-end development to deliver seamless experiences across all devices. Whether you need a corporate portfolio, an e-commerce platform, or a custom web application, we provide scalable solutions that drive engagement and grow your brand in the competitive digital landscape.
     </p>
+ 
+    <a href="contact.html" class="wd-cta-btn">
+      Start Your Project 
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
   </div>
 </section>
 <script>
-window.addEventListener("scroll", function(){
+  // Unique Observer for Website Design Page
+  const wdObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        // Okasari animation vachaka malli observe cheyalsina avasaram ledu
+        wdObserver.unobserve(entry.target); 
+      }
+    });
+  }, { 
+    threshold: 0.2 // 20% element screen loki rakane start avtundi
+  });
 
-  const img = document.querySelector(".wd-hero-image");
-  const content = document.querySelector(".wd-hero-content");
-
-  if(!img || !content) return;
-
-  const trigger = window.innerHeight - 100;
-
-  if(img.getBoundingClientRect().top < trigger){
-    img.classList.add("show");
-  }
-
-  if(content.getBoundingClientRect().top < trigger){
-    content.classList.add("show");
-  }
-
-});
+  // Observe all elements with 'wd-reveal' class
+  document.querySelectorAll('.wd-reveal').forEach(el => {
+    wdObserver.observe(el);
+  });
 </script>
+
+
 
 
 
@@ -377,7 +382,7 @@ window.addEventListener("load", revealStats);
 
   <!-- HEADING -->
   <h2 class="why-title">
-    Why Should We Choose
+  Why Businesses Trust 
     <span class="brand">nfosoft</span><br>
     For Website Designing Service?
   </h2>

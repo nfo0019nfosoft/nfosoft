@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>nfosoft</title>
-  <link rel="stylesheet" href="css/software.css">
+  <link rel="stylesheet" href="css/website.css">
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -40,7 +40,7 @@
             <a href="website.html">Website Design</a>
             <a href="software.html">Software Application</a>
             <a href="mobile.html">Mobile Application</a>
-            <a href="digital.html">Digital Marketing</a>
+             <a href="ai.html">AI Services</a>
           </div>
         </div>
 
@@ -110,16 +110,20 @@
 
 
 
-
 <section class="page-hero">
-  <div class="hero-overlay hero-content">
-    <h1 class="hero-heading animate-text">
-      <span class="static-word">SOFTWARE</span>
-      <span class="dynamic-word">
-        <span>APPLICATIONS</span>
-      </span>
-    </h1>
-  </div>
+
+<div class="hero-overlay">
+
+<h1 class="hero-heading">
+
+<span class="hero-word">SOFTWARE</span>
+
+<span class="hero-word">APPLICATION</span>
+
+</h1>
+
+</div>
+
 </section>
 
 
@@ -128,42 +132,44 @@
 
 
 
-
-<!-- WEBSITE DESIGNING PAGE CONTENT -->
-
-<section class="wd-hero reveal">
-  <div class="wd-hero-image">
-    <img src="img/sa.png" alt="Software Applications">
+<section class="wd-hero">
+  <div class="wd-blob-wrapper">
+    <div class="wd-shape-bg"></div>
+    <img src="img/saa.png" alt="NFOSOFT Web Design" class="wd-hero-image wd-reveal">
   </div>
 
-  <div class="wd-hero-content">
-    <h1>SOFTWARE APPLICATIONS</h1>
+  <div class="wd-hero-content wd-reveal">
+    <h1>SOFTWARE <span style="color:var(--accent)">APPLICATION</span></h1>
     <p>
-      We develop powerful, user-friendly and performance-driven software applications that help businesses streamline operations and improve efficiency. Our solutions balance functionality, reliability and modern design to deliver measurable results and long-term value.
-Our approach focuses on building secure and scalable applications that work smoothly across different platforms—desktop, web and mobile—ensuring a seamless user experience.
-With nfosoft, you don’t just get a software application—you get a smart digital solution designed to support and grow your business.
+     We develop powerful, user-friendly and performance-driven software applications that help businesses streamline operations and improve efficiency. Our solutions balance functionality, reliability and modern design to deliver measurable results and long-term value
+      <br><br>
+      Our approach focuses on building secure and scalable applications that work smoothly across different platforms—desktop, web and mobile—ensuring a seamless user experience. With nfosoft, you don’t just get a software application—you get a smart digital solution designed to support and grow your business.
     </p>
+ 
+    <a href="contact.html" class="wd-cta-btn">
+      Start Your Project 
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
   </div>
 </section>
 <script>
-window.addEventListener("scroll", function(){
+  // Unique Observer for Website Design Page
+  const wdObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        // Okasari animation vachaka malli observe cheyalsina avasaram ledu
+        wdObserver.unobserve(entry.target); 
+      }
+    });
+  }, { 
+    threshold: 0.2 // 20% element screen loki rakane start avtundi
+  });
 
-  const img = document.querySelector(".wd-hero-image");
-  const content = document.querySelector(".wd-hero-content");
-
-  if(!img || !content) return;
-
-  const trigger = window.innerHeight - 100;
-
-  if(img.getBoundingClientRect().top < trigger){
-    img.classList.add("show");
-  }
-
-  if(content.getBoundingClientRect().top < trigger){
-    content.classList.add("show");
-  }
-
-});
+  // Observe all elements with 'wd-reveal' class
+  document.querySelectorAll('.wd-reveal').forEach(el => {
+    wdObserver.observe(el);
+  });
 </script>
 
 
@@ -372,7 +378,7 @@ window.addEventListener("load", revealStats);
 
   <!-- HEADING -->
   <h2 class="why-title">
-    Why Should We Choose
+    Why Businesses Trust
     <span class="brand">nfosoft</span><br>
     For Software Application Development?
   </h2>

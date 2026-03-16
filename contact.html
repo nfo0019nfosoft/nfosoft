@@ -41,7 +41,7 @@
             <a href="website.html">Website Design</a>
             <a href="software.html">Software Application</a>
             <a href="mobile.html">Mobile Application</a>
-            <a href="digital.html">Digital Marketing</a>
+            <a href="ai.html">AI Services</a>
           </div>
         </div>
 
@@ -121,79 +121,90 @@
 
 
 
-
-
 <section class="support-section">
-    <div class="support-container">
+<div class="support-container">
 
-        <div class="support-left">
-            <h2 class="support-title reveal">Help & Support</h2>
+<div class="support-left">
 
-            <div class="support-location reveal">
-                <h3>Our Location</h3>
-                <p>
-                    <i class="fa-solid fa-location-dot"></i>
-                    HUDA Techno Enclave, Madhapur Hitech City, <br>
-                    Hyderabad, Telangana - 500081
-                </p>
-            </div>
-<div class="support-info reveal">
-    
-    <div class="info-column">
-        <div class="mail">
-            <i class="fa-solid fa-envelope"></i>
-            <span>support@nfosoft.com</span>
-        </div>
-        <p class="follow-text">Follow Us On</p>
-    </div>
+<h2 class="support-title reveal">Help & Support</h2>
 
-    <div class="info-divider"></div>
+<!-- CARD 1 LOCATION -->
 
-    <div class="info-column">
-        <div class="mail">
-            <i class="fa-solid fa-envelope"></i>
-            <span>info@nfosoft.com</span>
-        </div>
-        <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-    </div>
+<div class="support-card reveal">
+
+<h3>Our Location</h3>
+
+<p>
+<i class="fa-solid fa-location-dot"></i>
+HUDA Techno Enclave, Madhapur Hitech City,<br>
+Hyderabad, Telangana - 500081
+</p>
 
 </div>
-        </div>
 
-        <div class="support-right reveal">
-            <img src="img/contact2.png" alt="Support Illustration">
-        </div>
+<!-- CARD 2 EMAIL -->
+<div class="support-card reveal">
 
-    </div>
+<div class="mail-row">
+
+<div class="mail">
+<i class="fa-solid fa-envelope"></i>
+<span>support@nfosoft.com</span>
+</div>
+
+<div class="mail">
+<i class="fa-solid fa-envelope"></i>
+<span>info@nfosoft.com</span>
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD 3 FOLLOW -->
+
+<div class="support-card reveal">
+
+<p class="follow-text">Follow Us On</p>
+
+<div class="social-icons">
+<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+<a href="#"><i class="fa-brands fa-youtube"></i></a>
+</div>
+
+</div>
+
+</div>
+
+<div class="support-right reveal">
+<img src="img/contact2.png" alt="Support Illustration">
+</div>
+
+</div>
 </section>
-
 <script>
-    const revealElements = document.querySelectorAll(".reveal");
+  const revealElements = document.querySelectorAll(".reveal");
 
-    function revealOnScroll() {
-        revealElements.forEach(el => {
-            const windowHeight = window.innerHeight;
-            const elementTop = el.getBoundingClientRect().top;
-            const revealPoint = 100;
+function revealOnScroll(){
 
-            if (elementTop < windowHeight - revealPoint) {
-                el.classList.add("active");
-            }
-        });
-    }
+revealElements.forEach(el=>{
 
-    // Initialize on scroll and load
-    window.addEventListener("scroll", revealOnScroll);
-    window.addEventListener("load", revealOnScroll);
+const windowHeight = window.innerHeight;
+const elementTop = el.getBoundingClientRect().top;
+
+if(elementTop < windowHeight - 120){
+el.classList.add("active");
+}
+
+});
+
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
 </script>
-
-
-
 
 
 
@@ -213,47 +224,94 @@
     <div class="contact-form">
       <h2>Contact</h2>
 
-      <form>
-        <input type="text" placeholder="Your Name">
-        <input type="text" placeholder="Contact Number">
-        <input type="email" placeholder="Email ID">
-        <input type="text" placeholder="Your Company Name">
+     <form id="contactForm">
 
-        <div class="checkbox-group">
-  <label class="checkbox-item">
-    <input type="checkbox">
-    <span>Website Designing</span>
-  </label>
+<input type="text" id="name" placeholder="Your Name">
+<input type="text" id="phone" placeholder="Contact Number">
+<input type="email" id="email" placeholder="Email ID">
+<input type="text" id="company" placeholder="Your Company Name">
 
-  <label class="checkbox-item">
-    <input type="checkbox">
-    <span>Mobile Apps (Android & IOS)</span>
-  </label>
+<div class="checkbox-group">
 
-  <label class="checkbox-item">
-    <input type="checkbox">
-    <span>Software Applications</span>
-  </label>
+<label class="checkbox-item">
+<input type="checkbox" value="Website Designing">
+<span>Website Designing</span>
+</label>
 
-  <label class="checkbox-item">
-    <input type="checkbox">
-    <span>Graphic Designing</span>
-  </label>
+
+<label class="checkbox-item">
+<input type="checkbox" value="Software Applications">
+<span>Software Applications</span>
+</label>
+
+<label class="checkbox-item">
+<input type="checkbox" value="Mobile Apps (Android & IOS)">
+<span>Mobile Application (Android & IOS)</span>
+</label>
+
+
+<label class="checkbox-item">
+<input type="checkbox" value="Graphic Designing">
+<span>AI Services</span>
+</label>
+
 </div>
 
+<label class="message-label">Comment or Message</label>
+<textarea id="message" rows="5"></textarea>
 
-        <label class="message-label">Comment or Message</label>
-        <textarea rows="5"></textarea>
+<button type="submit">SUBMIT</button>
 
-        <button type="submit">SUBMIT</button>
-      </form>
+</form>
     </div>
 
   </div>
 </section>
 
 
+<script>
 
+document.getElementById("contactForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+/* form values */
+
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let email = document.getElementById("email").value;
+let company = document.getElementById("company").value;
+let message = document.getElementById("message").value;
+
+/* checkbox values */
+
+let services = [];
+document.querySelectorAll(".checkbox-item input:checked").forEach((checkbox)=>{
+services.push(checkbox.value);
+});
+
+/* message format */
+
+let text =
+"New Enquiry from Website:%0A%0A" +
+"Name: " + name + "%0A" +
+"Phone: " + phone + "%0A" +
+"Email: " + email + "%0A" +
+"Company: " + company + "%0A" +
+"Services: " + services.join(", ") + "%0A" +
+"Message: " + message;
+
+/* WhatsApp number */
+
+let whatsapp = "https://wa.me/918074586016?text=" + text;
+
+/* open whatsapp */
+
+window.open(whatsapp,"_blank");
+
+});
+
+</script>
 
 
 
