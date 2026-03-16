@@ -369,95 +369,126 @@ window.addEventListener("load", revealStats);
 
 
 
+<ul class="dropdown-menu">
+  <li><a href="website.html"><i class="fa-solid fa-laptop-code"></i> Website Design</a></li>
+  <li><a href="software.html"><i class="fa-solid fa-microchip"></i> Software Application</a></li>
+  <li><a href="mobile.html"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Application</a></li>
+  <li><a href="ai.html"><i class="fa-solid fa-brain"></i> AI Services</a></li>
+</ul>
 
+<ul class="dropdown-menu">
+  <li><a href="website.html"><i class="fa-solid fa-laptop-code"></i> Website Design</a></li>
+  <li><a href="software.html"><i class="fa-solid fa-microchip"></i> Software Application</a></li>
+  <li><a href="mobile.html"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Application</a></li>
+  <li><a href="ai.html"><i class="fa-solid fa-brain"></i> AI Services</a></li>
+</ul>
 
-
-
-<section class="why-web-advanced">
-
-  <!-- BACKGROUND SHAPES -->
-  <span class="shape tri"></span>
-  <span class="shape rect"></span>
-  <span class="shape square"></span>
-
-  <!-- HEADING -->
+<section class="why-web-circular">
   <h2 class="why-title">
-  Why Businesses Trust 
+    Why Businesses Trust
     <span class="brand">nfosoft</span><br>
-    For Website Designing Service?
+   For Digital Growth & Innovation
   </h2>
 
- <!-- GRID -->
-<div class="why-grid">
+  <div class="process-wrapper">
+    <div class="process-center">
+      <div class="center-blob"></div>
+      <span class="center-text">NFOSOFT<br>PROCESS</span>
+    </div>
 
-  <!-- ROW 1 -->
-  <div class="why-img left">
-    <img src="img/w1.png" alt="">
-  </div>
-  <div class="why-text">
-    <h3>Creative Design</h3>
-    <p>
-      NFOSOFT creates visually appealing and modern website designs
-      that attract visitors and strengthen your brand identity.
-    </p>
-  </div>
+    <div class="process-step step-1 reveal-scroll">
+      <div class="step-icon"><i class="fa-solid fa-lightbulb"></i></div>
+      <div class="step-info">
+        <h3>01. Strategy</h3>
+        <p>Roadmap for success.</p>
+      </div>
+    </div>
 
-  <div class="why-img right">
-    <img src="img/w2.png" alt="">
-  </div>
-  <div class="why-text">
-    <h3>Responsive Layout</h3>
-    <p>
-      Our websites are fully responsive and optimized for all devices,
-      ensuring seamless performance on mobile, tablet and desktop.
-    </p>
-  </div>
+    <div class="process-step step-2 reveal-scroll">
+      <div class="step-icon"><i class="fa-solid fa-palette"></i></div>
+      <div class="step-info">
+        <h3>02. Design</h3>
+        <p>Premium UI/UX designs.</p>
+      </div>
+    </div>
 
-  <!-- ROW 2 -->
-  <div class="why-text">
-    <h3>Fast Performance</h3>
-    <p>
-      We develop lightweight and optimized websites that load quickly,
-      improving user experience and search engine ranking.
-    </p>
-  </div>
-  <div class="why-img left">
-    <img src="img/w3.png" alt="">
-  </div>
+    <div class="process-step step-3 reveal-scroll">
+      <div class="step-icon"><i class="fa-solid fa-code"></i></div>
+      <div class="step-info">
+        <h3>03. Develop</h3>
+        <p>Precision and performance.</p>
+      </div>
+    </div>
 
-  <div class="why-text">
-    <h3>Ongoing Support</h3>
-    <p>
-      Our team provides continuous updates, maintenance and technical
-      support to keep your website secure and running smoothly.
-    </p>
-  </div>
-  <div class="why-img right">
-    <img src="img/w4.png" alt="">
-  </div>
+    <div class="process-step step-4 reveal-scroll">
+      <div class="step-icon"><i class="fa-solid fa-rocket"></i></div>
+      <div class="step-info">
+        <h3>04. Launch</h3>
+        <p>Live with support.</p>
+      </div>
+    </div>
 
-</div>
+    <div class="circle-line"></div>
+  </div>
+</section>
+<script>
+function revealProcess() {
+  const steps = document.querySelectorAll(".reveal-scroll");
+  const screenHeight = window.innerHeight;
 
-  <!-- WAVE -->
-  <div class="wave"></div>
+  steps.forEach((step, index) => {
+    const stepTop = step.getBoundingClientRect().top;
+    if (stepTop < screenHeight - 100) {
+      // Delaying each step for a staggered effect
+      setTimeout(() => {
+        step.classList.add("show");
+      }, index * 200);
+    }
+  });
+}
+
+window.addEventListener("scroll", revealProcess);
+window.addEventListener("load", revealProcess);
+</script>
+
+
+
+
+
+
+
+<section class="cta-section-alt">
+
+  <h2 class="cta-title-alt reveal-left">
+    Let’s Build Your Website
+  </h2>
+
+  <p class="cta-text-alt reveal-right">
+    Work with our team to create a powerful digital presence that
+    reflects your brand and drives growth.
+  </p>
+
+  <a href="contact.html" class="cta-btn-alt reveal-left">
+    Get Started
+  </a>
 
 </section>
 <script>
-function revealWhySection(){
-  const section = document.querySelector(".why-web-advanced");
+function revealAnimation(){
+  const reveals = document.querySelectorAll(".reveal-left, .reveal-right");
 
-  if(!section) return;
+  reveals.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight - 80;
 
-  const sectionTop = section.getBoundingClientRect().top;
-  const screenHeight = window.innerHeight - 80;
-
-  if(sectionTop < screenHeight){
-    section.classList.add("show");
-  }
+    if(elementTop < windowHeight){
+      el.classList.add("show");
+    }
+  });
 }
 
-window.addEventListener("scroll", revealWhySection);
-window.addEventListener("load", revealWhySection);
+window.addEventListener("scroll", revealAnimation);
+window.addEventListener("load", revealAnimation);
 </script>
 
 
