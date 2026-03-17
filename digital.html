@@ -551,3 +551,2383 @@ window.addEventListener("load", revealAnimation);
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="premium-about">
+    <div class="luxury-container">
+        <div class="about-main-grid">
+            <div class="about-image-wrapper animate-left">
+                <div class="image-overlay-card">
+                    <img src="img/h1.png" alt="About Nfosoft">
+                    <div class="experience-badge">
+                        <span>10+</span>
+                        <p>Years of Excellence</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-text-wrapper animate-right">
+                <span class="luxury-tag">About Our Company</span>
+                <h2>We Drive Innovation with <b>Digital Excellence</b></h2>
+                <p>nfoSoft Innovation Pvt Ltd is the most Popular Software company. Which was established in 2015. An IT solutions company with lots of proven knowledge and experience of developing a wide range of Websites, Mobile apps and Software applications.
+
+We create your online identity by creating user-friendly company websites, Static websites, dynamic websites, mobile applications, software products and desktop applications. </p>
+                <div class="btn-group">
+                    <a href="#" class="luxury-btn">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-grid-layout">
+            <div class="service-minimal-card animate-bottom">
+                <div class="card-number">01</div>
+                <h3>Website Design</h3>
+                <p>Creative and high-performance web solutions.</p>
+            </div>
+            <div class="service-minimal-card animate-bottom">
+                <div class="card-number">02</div>
+                <h3>Software Application</h3>
+                <p>Customized software for business automation.</p>
+            </div>
+            <div class="service-minimal-card animate-bottom">
+                <div class="card-number">03</div>
+                <h3>Mobile Application</h3>
+                <p>Next-gen apps for iOS and Android platforms.</p>
+            </div>
+            <div class="service-minimal-card animate-bottom">
+                <div class="card-number">04</div>
+                <h3>AI Services</h3>
+                <p>Smart AI-driven insights and technology.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+ const revealOnScroll = function() {
+    const reveals = document.querySelectorAll('.reveal-on-scroll');
+    for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+        let elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add('reveal-active');
+        }
+    }
+}
+
+window.addEventListener('scroll', revealOnScroll);
+</script>
+
+
+
+
+:root {
+    --luxury-blue: #1c1b40; /* Image reference color */
+    --accent-blue: #3b82f6;
+    --text-main: #333;
+    --text-muted: #666;
+}
+
+.premium-about {
+    padding: 40px 5%;
+    background:#e4e4f2;
+    font-family: 'Inter', sans-serif;
+}
+
+.luxury-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Main Grid Layout */
+.about-main-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/* Image Styling */
+.about-image-wrapper { position: relative; }
+.about-image-wrapper img {
+    width: 100%;
+    border-radius: 12px;
+    height: 400px;
+    display: block;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -30px;
+    right: 30px;
+    background: var(--luxury-blue);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(28, 27, 64, 0.4);
+}
+.experience-badge span { font-size: 32px; font-weight: 800; display: block; }
+
+/* Text Content Styling */
+.luxury-tag {
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.about-text-wrapper h2 {
+    font-size: 38px;
+    color: var(--luxury-blue);
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+.about-text-wrapper h2 b { color: var(--accent-blue); font-weight: 300; }
+
+.about-text-wrapper p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.luxury-btn {
+    padding: 14px 35px;
+    border: 2px solid var(--luxury-blue);
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--luxury-blue);
+    font-weight: 700;
+    transition: 0.3s;
+}
+.luxury-btn:hover { background: var(--luxury-blue); color: #fff; transform: translateY(-3px); }
+
+/* 4 Cards Grid Layout */
+.services-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.service-minimal-card {
+     background: #F8FAFC;
+    padding: 35px 25px;
+    border-radius: 15px;
+    border: 1px solid #b4a9a9;
+    transition: 0.4s ease;
+    text-align: center;
+}
+.service-minimal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    border-color: var(--accent-blue);
+}
+
+.card-number {
+    font-size: 40px;
+    font-weight: 900;
+    color: rgba(28, 27, 64, 0.05);
+    margin-bottom: -20px;
+}
+.service-minimal-card h3 {
+    font-size: 18px;
+    color: var(--luxury-blue);
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+.service-minimal-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+/* Mobile View */
+@media (max-width: 992px) {
+    .about-main-grid { grid-template-columns: 1fr; gap: 60px; text-align: center; }
+    .services-grid-layout { grid-template-columns: 1fr 1fr; }
+    .about-text-wrapper p { text-align: center; }
+}
+
+@media (max-width: 576px) {
+    .services-grid-layout { grid-template-columns: 1fr; }
+    .about-text-wrapper h2 { font-size: 28px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nfosoft</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <link rel="icon" href="img/fav.png" type="image/png">
+
+
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="nfoSoft">
+        </a>
+      </div>
+
+
+      <!-- Navigation -->
+      <nav class="nav" id="navMenu">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <div class="dropdown">
+          <a href="services.html" class="nav-link">Services ▾</a>
+
+          <div class="dropdown-menu">
+            <a href="website.html">Website Design</a>
+            <a href="software.html">Software Application</a>
+            <a href="mobile.html">Mobile Application</a>
+            <a href="ai.html">AI Services</a>
+          </div>
+        </div>
+       <a href="#" class="nav-link" id="portfolioNavBtn">Portfolio</a>
+        <a href="careers.html" class="nav-link">Careers</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Icons -->
+      <div class="right">
+        <!-- <span class="search">🔍</span> -->
+        <span class="menu-toggle" id="menuToggle">☰</span>
+      </div>
+
+    </div>
+  </header>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+
+  </script>
+  <script>
+    const nav = document.querySelector(".nav");
+    const links = document.querySelectorAll(".nav-link");
+
+    /* Hover white box */
+    links.forEach(link => {
+      link.addEventListener("mouseenter", () => {
+        const linkRect = link.getBoundingClientRect();
+        const navRect = nav.getBoundingClientRect();
+
+        nav.style.setProperty("--left", `${linkRect.left - navRect.left}px`);
+        nav.style.setProperty("--width", `${linkRect.width}px`);
+        nav.style.setProperty("--opacity", "1");
+      });
+
+      /* Click = active purple */
+      link.addEventListener("click", () => {
+        links.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+
+    /* Hide hover box when mouse leaves menu */
+    nav.addEventListener("mouseleave", () => {
+      nav.style.setProperty("--opacity", "0");
+    });
+
+    document.querySelectorAll(".dropdown > .nav-link").forEach(link => {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth < 992) {
+          e.preventDefault();
+          this.parentElement.classList.toggle("show");
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+  <section class="hero">
+
+    <div class="slider">
+
+      <div class="slide active" style="background-image:url('img/wd.png')">
+        <div class="overlay"></div>
+        <div class="content">
+          <h1>WEBSITE DESIGNING</h1>
+          <p>Crafting responsive, user-friendly websites</p>
+          <a href="contact.html" class="btn">Join With Us →</a>
+        </div>
+      </div>
+
+
+      <div class="slide" style="background-image:url('img/sa.png')">
+        <div class="overlay"></div>
+        <div class="content">
+          <h1>SOFTWARE APPLICATIONS</h1>
+          <p>Our software development services are designed to transform our vision to reality</p>
+          <a href="contact.html" class="btn">Join With Us →</a>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="slide" style="background-image:url('img/ma.png')">
+        <div class="overlay"></div>
+        <div class="content">
+          <h1>MOBILE APPLICATIONS</h1>
+          <p>Crafting responsive, user-friendly websites</p>
+          <a href="contact.html" class="btn">Join With Us →</a>
+        </div>
+      </div>
+
+
+
+
+      <div class="slide " style="background-image:url('img/ai.png')">
+        <div class="overlay"></div>
+        <div class="content">
+          <h1>AI SERVICES</h1>
+          <p>Smart AI Solutions for Modern Businesses</p>
+          <a href="contact.html" class="btn">Join With Us →</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let slideIndex = 0;
+
+    setInterval(() => {
+      const prev = slideIndex;
+      slideIndex = (slideIndex + 1) % slides.length;
+
+      slides[prev].classList.remove('active');
+      slides[prev].classList.add('prev');
+
+      slides[slideIndex].classList.add('active');
+
+      setTimeout(() => {
+        slides[prev].classList.remove('prev');
+      }, 1600);
+    }, 4500);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="premium-about">
+    <div class="luxury-container">
+        <div class="about-main-grid">
+            <div class="about-image-wrapper">
+                <div class="image-overlay-card">
+                    <img src="img/h1.png" alt="About Nfosoft">
+                    
+                </div>
+            </div>
+
+            <div class="about-text-wrapper">
+                <span class="luxury-tag">About Our Company</span>
+                <h2>We Drive Innovation with <b>Digital Excellence</b></h2>
+                <p>nfoSoft Innovation Pvt Ltd is the most popular software company, established in 2015. An IT solutions company with proven knowledge and experience in developing a wide range of websites, mobile apps, and software applications. We create your online identity by building user-friendly company websites, static and dynamic websites, mobile applications, software products, and desktop applications.</p>
+                <div class="btn-group">
+                    <a href="#" class="luxury-btn">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-grid-layout">
+            <div class="process-box reveal-scroll">
+                <div class="box-top">
+                    <span class="step-badge">Step 01</span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <h3>Discover</h3>
+                <p>We analyze your business needs and project requirements deeply.</p>
+                <div class="hover-line"></div>
+            </div>
+
+            <div class="process-box reveal-scroll">
+                <div class="box-top">
+                    <span class="step-badge">Step 02</span>
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <h3>Plan</h3>
+                <p>Creating a strategic roadmap and technical architecture.</p>
+                <div class="hover-line"></div>
+            </div>
+
+            <div class="process-box reveal-scroll">
+                <div class="box-top">
+                    <span class="step-badge">Step 03</span>
+                    <i class="fa-solid fa-file-signature"></i>
+                </div>
+                <h3>Approve</h3>
+                <p>Reviewing blueprints and getting the green light to start.</p>
+                <div class="hover-line"></div>
+            </div>
+
+            <div class="process-box reveal-scroll">
+                <div class="box-top">
+                    <span class="step-badge">Step 04</span>
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Build</h3>
+                <p>Developing high-quality code and premium user interfaces.</p>
+                <div class="hover-line"></div>
+            </div>
+
+            <div class="process-box reveal-scroll">
+                <div class="box-top">
+                    <span class="step-badge">Step 05</span>
+                    <i class="fa-solid fa-vial-circle-check"></i>
+                </div>
+                <h3>Test</h3>
+                <p>Ensuring bug-free performance through rigorous testing.</p>
+                <div class="hover-line"></div>
+            </div>
+
+            <div class="process-box reveal-scroll">
+                <div class="box-top">
+                    <span class="step-badge">Step 06</span>
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <h3>Launch</h3>
+                <p>Deploying the project and providing ongoing support.</p>
+                <div class="hover-line"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal-scroll");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            if (elementTop < windowHeight - 100) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+    window.addEventListener("scroll", reveal);
+    window.addEventListener("load", reveal);
+</script>
+
+
+
+
+
+
+  <section class="services-3d">
+
+    <h2 class="services-title">OUR SERVICES</h2>
+
+    <!-- SERVICE 1 -->
+    <div class="service-3d-item">
+      <div class="service-images">
+        <img src="img/wd.png" class="img left">
+        <img src="img/wd.png" class="img right">
+      </div>
+      <div class="service-box">
+        <div class="icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Website Designing</h3>
+        <p>Modern, responsive and visually stunning websites crafted to elevate your digital presence.</p>
+        <a href="website.html" class="btn">Know More</a>
+      </div>
+    </div>
+
+   
+
+    <!-- SERVICE 3 -->
+    <div class="service-3d-item">
+      <div class="service-images">
+        <img src="img/ma.png" class="img left">
+        <img src="img/ma.png" class="img right">
+      </div>
+      <div class="service-box">
+        <div class="icon"><i class="fa-solid fa-mobile-screen"></i></div>
+        <h3>Mobile Applications</h3>
+        <p>Scalable Android & iOS applications with smooth user experience.</p>
+        <a href="mobile.html" class="btn">Know More</a>
+      </div>
+    </div>
+
+    <!-- SERVICE 4 -->
+    <div class="service-3d-item">
+      <div class="service-images">
+        <img src="img/sa.png" class="img left">
+        <img src="img/sa.png" class="img right">
+      </div>
+      <div class="service-box">
+        <div class="icon"><i class="fa-solid fa-gears"></i></div>
+        <h3> Software Application </h3>
+        <p>Custom software solutions to automate and scale your business.</p>
+        <a href="software.html" class="btn">Know More</a>
+      </div>
+    </div>
+
+
+
+
+    <!-- SERVICE 4 -->
+    <div class="service-3d-item">
+      <div class="service-images">
+        <img src="img/ai.png" class="img left">
+        <img src="img/ai.png" class="img right">
+      </div>
+      <div class="service-box">
+        <div class="icon"><i class="fa-solid fa-gears"></i></div>
+        <h3> AI Services </h3>
+        <p>Transforming Businesses with Artificial Intelligence.</p>
+        <a href="ai.html" class="btn">Know More</a>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+  </section>
+
+  <script>
+
+const items = document.querySelectorAll(".service-3d-item, .about-section");
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active"); // replay animation
+      }
+    });
+  },
+  { threshold: 0.45 }
+);
+
+items.forEach(item => observer.observe(item));
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="projects-section">
+    <h2 class="projects-title">PROJECTS SO FAR</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <i class="fa-solid fa-globe"></i>
+        <h3 class="counter" data-target="472">0+</h3>
+        <p>WEBSITES</p>
+      </div>
+      <div class="project-card">
+        <i class="fa-solid fa-chart-column"></i>
+        <h3 class="counter" data-target="97">0+</h3>
+        <p>DIGITAL MARKETING</p>
+      </div>
+      <div class="project-card">
+        <i class="fa-solid fa-play"></i>
+        <h3 class="counter" data-target="72">0+</h3>
+        <p>MOBILE APPS</p>
+      </div>
+
+
+
+      <div class="project-card">
+        <i class="fa-solid fa-table-cells"></i>
+        <h3 class="counter" data-target="27">0+</h3>
+        <p>APPLICATION SOFTWARE</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COUNTER SCRIPT -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    let started = false;
+
+    const startCounters = () => {
+      counters.forEach(counter => {
+        const target = +counter.dataset.target;
+        let count = 0;
+        const speed = 25;
+
+        const updateCount = () => {
+          const increment = Math.ceil(target / 80);
+          if (count < target) {
+            count += increment;
+            counter.innerText = count + "+";
+            setTimeout(updateCount, speed);
+          } else {
+            counter.innerText = target + "+";
+          }
+        };
+
+        updateCount();
+      });
+    };
+
+    window.addEventListener('scroll', () => {
+      const section = document.querySelector('.projects-section');
+      const sectionTop = section.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+
+      if (!started && sectionTop < screenHeight - 150) {
+        startCounters();
+        started = true;
+      }
+    });
+
+  
+  </script>
+
+
+
+
+
+
+
+
+
+<section class="portfolio-section">
+
+<h2 class="portfolio-title">PORTFOLIO</h2>
+
+<div class="portfolio-categories">
+
+<div class="category-card" data-tab="web">
+<img src="img/h2.png">
+<h4>Website Designing</h4>
+</div>
+
+<div class="category-card" data-tab="software">
+<img src="img/h5.png">
+<h4>Software Applications</h4>
+</div>
+
+<div class="category-card" data-tab="mobile">
+<img src="img/h4.png">
+<h4>Mobile Applications</h4>
+</div>
+
+<div class="category-card" data-tab="ai">
+<img src="img/ai.png">
+<h4>AI services</h4>
+</div>
+
+</div>
+</section>
+
+
+<!-- POPUP -->
+<div class="portfolio-popup" id="portfolioPopup">
+
+<form id="portfolioForm" class="popup-box">
+
+<h3>View Our Portfolio</h3>
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<button type="submit">Submit & View Portfolio</button>
+
+<span class="close-popup">&times;</span>
+
+</form>
+
+</div>
+
+
+
+<script>
+
+(function(){
+emailjs.init("DKD3j41IBHNXCUvvZ");
+})();
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const popup = document.getElementById("portfolioPopup");
+const form = document.getElementById("portfolioForm");
+const closeBtn = document.querySelector(".close-popup");
+const portfolioBtn = document.getElementById("portfolioNavBtn");
+const cards = document.querySelectorAll(".category-card");
+
+
+/* ✅ URL నుండి popup open */
+const params = new URLSearchParams(window.location.search);
+
+/* URL param */
+if(params.get("popup") === "true"){
+  popup.classList.add("show");
+}
+
+/* First time visit */
+if(!sessionStorage.getItem("portfolio_access_granted")){
+  popup.classList.add("show");
+}
+/* CARD HOVER */
+cards.forEach(card => {
+  card.addEventListener("mouseenter", () => {
+    popup.classList.add("show");
+  });
+});
+
+/* NAVBAR CLICK */
+portfolioBtn.addEventListener("click", function(e){
+
+e.preventDefault(); // 🔥 must
+
+popup.classList.add("show"); // only popup
+
+});
+
+/* CLOSE */
+closeBtn.addEventListener("click", ()=>{
+popup.classList.remove("show");
+});
+
+/* FORM SUBMIT */
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+emailjs.sendForm(
+"service_fia8wdn",
+"template_mmdy9nf",
+this
+)
+
+.then(function(){
+
+sessionStorage.setItem("portfolio_access_granted","true");
+
+window.location.href="portfolio.html";
+
+})
+
+.catch(function(error){
+console.log(error);
+});
+
+});
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="industries-section">
+
+
+    <!-- HEADING -->
+    <h2 class="industries-title">INDUSTRIES WE SERVED SO FAR</h2>
+
+    <!-- GRID -->
+    <div class="industries-grid">
+
+      <!-- CARD 1 -->
+      <div class="industry-card">
+        <img src="img/h8.png" alt="E-Commerce">
+        <span class="title">E-COMMERCE</span>
+
+        <div class="hover-content">
+          <h4>E-Commerce</h4>
+          <p>Online stores, payment gateways & scalable digital platforms</p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="industry-card">
+        <img src="img/h9.png" alt="Health Care">
+        <span class="title">HEALTH CARE</span>
+
+        <div class="hover-content">
+          <h4>Health Care</h4>
+          <p>Hospital systems, patient management & healthcare solutions</p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="industry-card">
+        <img src="img/h10.png" alt="Interior Designing">
+        <span class="title">INTERIOR DESIGNING</span>
+
+        <div class="hover-content">
+          <h4>Interior Designing</h4>
+          <p>Creative portfolios, design showcases & client engagement tools</p>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="industry-card">
+        <img src="img/h11.png" alt="Real Estate">
+        <span class="title">REAL ESTATE</span>
+
+        <div class="hover-content">
+          <h4>Real Estate</h4>
+          <p>Property listings, CRM systems & lead management platforms</p>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="industry-card">
+        <img src="img/h12.png" alt="Education">
+        <span class="title">EDUCATION</span>
+
+        <div class="hover-content">
+          <h4>Education</h4>
+          <p>E-learning platforms, LMS systems & student portals</p>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="industry-card">
+        <img src="img/h13.png" alt="Pharma Industry">
+        <span class="title">PHARMA INDUSTRY</span>
+
+        <div class="hover-content">
+          <h4>Pharma Industry</h4>
+          <p>Product management, compliance systems & digital branding</p>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="industry-card">
+        <img src="img/h14.png" alt="Beauty Industry">
+        <span class="title">BEAUTY INDUSTRY</span>
+
+        <div class="hover-content">
+          <h4>Beauty Industry</h4>
+          <p>Salon booking apps, brand websites & online promotions</p>
+        </div>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="industry-card">
+        <img src="img/h15.png" alt="Food Industry">
+        <span class="title">FOOD INDUSTRY</span>
+
+        <div class="hover-content">
+          <h4>Food Industry</h4>
+          <p>Restaurant websites, food delivery & order management</p>
+        </div>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="industry-card">
+        <img src="img/h16.png" alt="NGO">
+        <span class="title">NGO’s</span>
+
+        <div class="hover-content">
+          <h4>NGO’s</h4>
+          <p>Donation platforms, awareness campaigns & community systems</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <section class="contact-section">
+    <div class="contact-overlay">
+
+      <div class="contact-container">
+
+        <!-- LEFT -->
+        <div class="contact-left">
+          <h2 class="contact-heading center">CONTACT US</h2>
+
+          <div class="contact-form">
+            <input type="text" placeholder="Full Name">
+            <input type="text" placeholder="Contact Number">
+            <input type="email" placeholder="Email ID">
+            <textarea placeholder="Message"></textarea>
+            <button class="submit-btn">SUBMIT</button>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="contact-content">
+          <h2 class="contact-heading">CONNECT WITH YOUR CLIENTS</h2>
+
+          <ul>
+            <li>Innovative Designs</li>
+            <li>Most Secure And Privacy</li>
+            <li>Fast Loading Applications</li>
+          </ul>
+
+          <a href="contact.html" class="get-btn">GET STARTED →</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="footer-overlay">
+      <div class="footer-container">
+
+        <div class="footer-col imp-links">
+          <h3>IMPORTANT LINKS</h3>
+          <ul>
+            <li><a href="about.html"><span>›</span> About Us</a></li>
+            <li><a href="contact.html"><span>›</span> Contact Us</a></li>
+            <li><a href="policy.html"><span>›</span> Privacy Policy</a></li>
+            <li><a href="terms.html"><span>›</span> Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col reach">
+          <h3>REACH US</h3>
+          <p>
+            Plot No #682, 3rd Floor,<br>
+            Babukhan Rasheed Plaza,<br>
+            Rd No 36, Jubilee Hills,<br>
+            Hyderabad, Telangana-500033
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>CONTACT INFO</h3>
+          <p class="contact">
+            <i class="fa-solid fa-envelope"></i>
+            info@nfosoft.com
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>FOLLOW US ON</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © All Copyrights Reserved 2015-2026 | nfoSoft Innovations
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+  
+</body>
+
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nfosoft</title>
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <link rel="icon" href="img/fav.png" type="image/png">
+   
+
+<script>
+if(sessionStorage.getItem("portfolio_access_granted") !== "true"){
+window.location.replace("index.html?popup=true");
+}
+</script>
+
+
+</head>
+
+
+<body>
+
+  <header class="header">
+    <div class="container">
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="nfoSoft">
+        </a>
+      </div>
+
+
+      <!-- Navigation -->
+      <nav class="nav" id="navMenu">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <div class="dropdown">
+          <a href="services.html" class="nav-link">Services ▾</a>
+
+          <div class="dropdown-menu">
+            <a href="website.html">Website Design</a>
+            <a href="software.html">Software Application</a>
+            <a href="mobile.html">Mobile Application</a>
+            <a href="ai.html">AI Services</a>
+          </div>
+        </div>
+
+
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="careers.html" class="nav-link">Careers</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Icons -->
+      <div class="right">
+        <!-- <span class="search">🔍</span> -->
+        <span class="menu-toggle" id="menuToggle">☰</span>
+      </div>
+
+    </div>
+  </header>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+
+  </script>
+  <script>
+    const nav = document.querySelector(".nav");
+    const links = document.querySelectorAll(".nav-link");
+
+    /* Hover white box */
+    links.forEach(link => {
+      link.addEventListener("mouseenter", () => {
+        const linkRect = link.getBoundingClientRect();
+        const navRect = nav.getBoundingClientRect();
+
+        nav.style.setProperty("--left", `${linkRect.left - navRect.left}px`);
+        nav.style.setProperty("--width", `${linkRect.width}px`);
+        nav.style.setProperty("--opacity", "1");
+      });
+
+      /* Click = active purple */
+      link.addEventListener("click", () => {
+        links.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+
+    /* Hide hover box when mouse leaves menu */
+    nav.addEventListener("mouseleave", () => {
+      nav.style.setProperty("--opacity", "0");
+    });
+
+    document.querySelectorAll(".dropdown > .nav-link").forEach(link => {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth < 992) {
+          e.preventDefault();
+          this.parentElement.classList.toggle("show");
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+  <section class="page-hero">
+    <div class="hero-overlay">
+      <h1>Portfolio</h1>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="portfolio-section">
+
+<h2 class="portfolio-title">PORTFOLIO</h2>
+
+<!-- CATEGORY TABS -->
+<div class="portfolio-categories">
+
+<div class="category-card" data-tab="web">
+<img src="img/h2.png">
+<h4>Website Designing</h4>
+</div>
+
+
+<div class="category-card" data-tab="software">
+<img src="img/h5.png">
+<h4>Software Applications</h4>
+</div>
+
+<div class="category-card" data-tab="mobile">
+<img src="img/h4.png">
+<h4>Mobile Applications</h4>
+</div>
+
+<div class="category-card" data-tab="ai">
+<img src="img/ai.png">
+<h4>AI services</h4>
+</div>
+
+
+</div>
+
+<!-- TAB CONTENT -->
+<div class="portfolio-tabs" id="portfolioTabs">
+
+
+<div class="portfolio-grid" id="tabGrid"></div>
+
+<div class="portfolio-btn-wrap" id="btnWrap"></div>
+
+</div>
+
+</section>
+
+<script>
+
+const data = {
+
+web:{
+title:"Website Designing Projects",
+items:["por1.png","por2.png","por3.png","por4.png"],
+link:"website.html"
+},
+
+
+
+software:{
+title:"Application Software Projects",
+items:["por9.png","por10.png","por11.png","por12.png"],
+link:"software.html"
+},
+
+
+
+
+mobile:{
+title:"Mobile Application Projects",
+items:["por5.png","por6.png","por7.png","por8.png"],
+link:"mobile.html"
+},
+
+
+
+
+ai:{
+title:"AI Services",
+items:["por13.png","por14.png","por15.png","aii.png"],
+link:"ai.html"
+},
+
+};
+
+const cards = document.querySelectorAll(".category-card");
+const tabs = document.getElementById("portfolioTabs");
+const grid = document.getElementById("tabGrid");
+const btnWrap = document.getElementById("btnWrap");
+
+let activeTab = null;
+
+function openTab(key) {
+  grid.innerHTML = "";
+  data[key].items.forEach(img => {
+    grid.innerHTML += `
+      <div class="portfolio-item">
+        <img src="img/${img}">
+        <h4>${data[key].title}</h4>
+      </div>
+    `;
+  });
+
+  btnWrap.innerHTML = `
+    <a href="${data[key].link}" class="portfolio-know-btn">
+      Know More
+    </a>
+  `;
+
+  // Display block cheసి, కొంచెం గ్యాప్ తర్వాత opacity క్లాస్ యాడ్ చేస్తే యానిమేషన్ బాగుంటుంది
+  tabs.style.display = "block";
+  setTimeout(() => {
+    tabs.classList.add("show");
+  }, 10);
+}
+
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+    const key = card.dataset.tab;
+
+    // ఒకవేళ ఆల్రెడీ ఓపెన్ అయి ఉన్న ట్యాబ్ నే మళ్ళీ క్లిక్ చేస్తే...
+    if (activeTab === key) {
+      tabs.classList.remove("show");
+      card.classList.remove("active");
+      
+      // యానిమేషన్ ముగిశాక పూర్తిగా స్పేస్ ని రిమూవ్ చేయడానికి
+      setTimeout(() => {
+        tabs.style.display = "none";
+      }, 400); 
+
+      activeTab = null;
+      return;
+    }
+
+    activeTab = key;
+
+    cards.forEach(c => c.classList.remove("active"));
+    card.classList.add("active");
+
+    openTab(key);
+  });
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="footer-overlay">
+      <div class="footer-container">
+
+        <div class="footer-col imp-links">
+          <h3>IMPORTANT LINKS</h3>
+          <ul>
+            <li><a href="about.html"><span>›</span> About Us</a></li>
+            <li><a href="contact.html"><span>›</span> Contact Us</a></li>
+            <li><a href="policy.html"><span>›</span> Privacy Policy</a></li>
+            <li><a href="terms.html"><span>›</span> Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col reach">
+          <h3>REACH US</h3>
+          <p>
+            Plot No #682, 3rd Floor,<br>
+            Babukhan Rasheed Plaza,<br>
+            Rd No 36, Jubilee Hills,<br>
+            Hyderabad, Telangana-500033
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>CONTACT INFO</h3>
+          <p class="contact">
+            <i class="fa-solid fa-envelope"></i>
+            info@nfosoft.com
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>FOLLOW US ON</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © All Copyrights Reserved 2015-2026 | nfoSoft Innovations
+    </div>
+  </footer>
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const popup = document.getElementById("portfolioPopup");
+const content = document.getElementById("portfolioContent");
+
+/* permission check */
+
+if(sessionStorage.getItem("portfolio_access_granted") !== "true"){
+
+popup.classList.add("show");   // popup open
+content.style.display = "none"; // portfolio hide
+
+}else{
+
+content.style.display = "block";
+
+}
+
+});
+
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nfosoft</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <link rel="icon" href="img/fav.png" type="image/png">
+
+
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="nfoSoft">
+        </a>
+      </div>
+
+
+      <!-- Navigation -->
+      <nav class="nav" id="navMenu">
+        <a href="index.html" class="nav-link ">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <div class="dropdown">
+          <a href="services.html" class="nav-link">Services ▾</a>
+
+          <div class="dropdown-menu">
+            <a href="website.html">Website Design</a>
+            <a href="software.html">Software Application</a>
+            <a href="mobile.html">Mobile Application</a>
+            <a href="ai.html">AI Services</a>
+          </div>
+        </div>
+       <a href="#" class="nav-link" id="portfolioNavBtn">Portfolio</a>
+        <a href="careers.html" class="nav-link">Careers</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Icons -->
+      <div class="right">
+        <!-- <span class="search">🔍</span> -->
+        <span class="menu-toggle" id="menuToggle">☰</span>
+      </div>
+
+    </div>
+  </header>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+
+  </script>
+  <script>
+    const nav = document.querySelector(".nav");
+    const links = document.querySelectorAll(".nav-link");
+
+    /* Hover white box */
+    links.forEach(link => {
+      link.addEventListener("mouseenter", () => {
+        const linkRect = link.getBoundingClientRect();
+        const navRect = nav.getBoundingClientRect();
+
+        nav.style.setProperty("--left", `${linkRect.left - navRect.left}px`);
+        nav.style.setProperty("--width", `${linkRect.width}px`);
+        nav.style.setProperty("--opacity", "1");
+      });
+
+      /* Click = active purple */
+      link.addEventListener("click", () => {
+        links.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+
+    /* Hide hover box when mouse leaves menu */
+    nav.addEventListener("mouseleave", () => {
+      nav.style.setProperty("--opacity", "0");
+    });
+
+    document.querySelectorAll(".dropdown > .nav-link").forEach(link => {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth < 992) {
+          e.preventDefault();
+          this.parentElement.classList.toggle("show");
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+  <section class="hero">
+
+    <div class="slider">
+
+      <div class="slide active" style="background-image:url('img/wd.png')">
+        <div class="overlay"></div>
+        <div class="content">
+          <h1>WEBSITE DESIGNING</h1>
+          <p>Crafting responsive, user-friendly websites</p>
+          <a href="contact.html" class="btn">Join With Us →</a>
+        </div>
+      </div>
+
+
+      <div class="slide" style="background-image:url('img/sa.png')">
+        <div class="overlay"></div>
+        <div class="content">
+          <h1>SOFTWARE APPLICATIONS</h1>
+          <p>Our software development services are designed to transform our vision to reality</p>
+          <a href="contact.html" class="btn">Join With Us →</a>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="slide" style="background-image:url('img/ma.png')">
+        <div class="overlay"></div>
+        <div class="content">
+          <h1>MOBILE APPLICATIONS</h1>
+          <p>Crafting responsive, user-friendly websites</p>
+          <a href="contact.html" class="btn">Join With Us →</a>
+        </div>
+      </div>
+
+
+
+
+      <div class="slide " style="background-image:url('img/ai.png')">
+        <div class="overlay"></div>
+        <div class="content">
+          <h1>AI SERVICES</h1>
+          <p>Smart AI Solutions for Modern Businesses</p>
+          <a href="contact.html" class="btn">Join With Us →</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let slideIndex = 0;
+
+    setInterval(() => {
+      const prev = slideIndex;
+      slideIndex = (slideIndex + 1) % slides.length;
+
+      slides[prev].classList.remove('active');
+      slides[prev].classList.add('prev');
+
+      slides[slideIndex].classList.add('active');
+
+      setTimeout(() => {
+        slides[prev].classList.remove('prev');
+      }, 1600);
+    }, 4500);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="premium-about">
+    <div class="luxury-container">
+        <div class="about-main-grid">
+            <div class="about-image-wrapper">
+                <div class="image-overlay-card">
+                    <img src="img/h1.png" alt="About Nfosoft">
+                    
+                </div>
+            </div>
+
+            <div class="about-text-wrapper">
+                <span class="luxury-tag">About Our Company</span>
+                <h2>We Drive Innovation with <b>Digital Excellence</b></h2>
+                <p>nfoSoft Innovation Pvt Ltd is the most popular software company, established in 2015. An IT solutions company with proven knowledge and experience in developing a wide range of websites, mobile apps, and software applications. We create your online identity by building user-friendly company websites, static and dynamic websites, mobile applications, software products, and desktop applications.</p>
+                <div class="btn-group">
+                    <a href="#" class="luxury-btn">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-grid-layout">
+            <div class="process-box reveal-scroll">
+                <div class="box-top">
+                    <span class="step-badge">Step 01</span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <h3>Discover</h3>
+                <p>We analyze your business needs and project requirements deeply.</p>
+                <div class="hover-line"></div>
+            </div>
+
+            <div class="process-box reveal-scroll">
+                <div class="box-top">
+                    <span class="step-badge">Step 02</span>
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <h3>Plan</h3>
+                <p>Creating a strategic roadmap and technical architecture.</p>
+                <div class="hover-line"></div>
+            </div>
+
+            <div class="process-box reveal-scroll">
+                <div class="box-top">
+                    <span class="step-badge">Step 03</span>
+                    <i class="fa-solid fa-file-signature"></i>
+                </div>
+                <h3>Approve</h3>
+                <p>Reviewing blueprints and getting the green light to start.</p>
+                <div class="hover-line"></div>
+            </div>
+
+            <div class="process-box reveal-scroll">
+                <div class="box-top">
+                    <span class="step-badge">Step 04</span>
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Build</h3>
+                <p>Developing high-quality code and premium user interfaces.</p>
+                <div class="hover-line"></div>
+            </div>
+
+            <div class="process-box reveal-scroll">
+                <div class="box-top">
+                    <span class="step-badge">Step 05</span>
+                    <i class="fa-solid fa-vial-circle-check"></i>
+                </div>
+                <h3>Test</h3>
+                <p>Ensuring bug-free performance through rigorous testing.</p>
+                <div class="hover-line"></div>
+            </div>
+
+            <div class="process-box reveal-scroll">
+                <div class="box-top">
+                    <span class="step-badge">Step 06</span>
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <h3>Launch</h3>
+                <p>Deploying the project and providing ongoing support.</p>
+                <div class="hover-line"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal-scroll");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            if (elementTop < windowHeight - 100) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+    window.addEventListener("scroll", reveal);
+    window.addEventListener("load", reveal);
+</script>
+
+
+
+
+
+
+  <section class="services-3d">
+
+    <h2 class="services-title">OUR SERVICES</h2>
+
+    <!-- SERVICE 1 -->
+    <div class="service-3d-item">
+      <div class="service-images">
+        <img src="img/wd.png" class="img left">
+        <img src="img/wd.png" class="img right">
+      </div>
+      <div class="service-box">
+        <div class="icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Website Designing</h3>
+        <p>Modern, responsive and visually stunning websites crafted to elevate your digital presence.</p>
+        <a href="website.html" class="btn">Know More</a>
+      </div>
+    </div>
+
+   
+
+    <!-- SERVICE 3 -->
+    <div class="service-3d-item">
+      <div class="service-images">
+        <img src="img/ma.png" class="img left">
+        <img src="img/ma.png" class="img right">
+      </div>
+      <div class="service-box">
+        <div class="icon"><i class="fa-solid fa-mobile-screen"></i></div>
+        <h3>Mobile Applications</h3>
+        <p>Scalable Android & iOS applications with smooth user experience.</p>
+        <a href="mobile.html" class="btn">Know More</a>
+      </div>
+    </div>
+
+    <!-- SERVICE 4 -->
+    <div class="service-3d-item">
+      <div class="service-images">
+        <img src="img/sa.png" class="img left">
+        <img src="img/sa.png" class="img right">
+      </div>
+      <div class="service-box">
+        <div class="icon"><i class="fa-solid fa-gears"></i></div>
+        <h3> Software Application </h3>
+        <p>Custom software solutions to automate and scale your business.</p>
+        <a href="software.html" class="btn">Know More</a>
+      </div>
+    </div>
+
+
+
+
+    <!-- SERVICE 4 -->
+    <div class="service-3d-item">
+      <div class="service-images">
+        <img src="img/ai.png" class="img left">
+        <img src="img/ai.png" class="img right">
+      </div>
+      <div class="service-box">
+        <div class="icon"><i class="fa-solid fa-gears"></i></div>
+        <h3> AI Services </h3>
+        <p>Transforming Businesses with Artificial Intelligence.</p>
+        <a href="ai.html" class="btn">Know More</a>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+  </section>
+
+  <script>
+
+const items = document.querySelectorAll(".service-3d-item, .about-section");
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active"); // replay animation
+      }
+    });
+  },
+  { threshold: 0.45 }
+);
+
+items.forEach(item => observer.observe(item));
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="projects-section">
+    <h2 class="projects-title">PROJECTS SO FAR</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <i class="fa-solid fa-globe"></i>
+        <h3 class="counter" data-target="472">0+</h3>
+        <p>WEBSITES</p>
+      </div>
+      <div class="project-card">
+        <i class="fa-solid fa-chart-column"></i>
+        <h3 class="counter" data-target="97">0+</h3>
+        <p>DIGITAL MARKETING</p>
+      </div>
+      <div class="project-card">
+        <i class="fa-solid fa-play"></i>
+        <h3 class="counter" data-target="72">0+</h3>
+        <p>MOBILE APPS</p>
+      </div>
+
+
+
+      <div class="project-card">
+        <i class="fa-solid fa-table-cells"></i>
+        <h3 class="counter" data-target="27">0+</h3>
+        <p>APPLICATION SOFTWARE</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COUNTER SCRIPT -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    let started = false;
+
+    const startCounters = () => {
+      counters.forEach(counter => {
+        const target = +counter.dataset.target;
+        let count = 0;
+        const speed = 25;
+
+        const updateCount = () => {
+          const increment = Math.ceil(target / 80);
+          if (count < target) {
+            count += increment;
+            counter.innerText = count + "+";
+            setTimeout(updateCount, speed);
+          } else {
+            counter.innerText = target + "+";
+          }
+        };
+
+        updateCount();
+      });
+    };
+
+    window.addEventListener('scroll', () => {
+      const section = document.querySelector('.projects-section');
+      const sectionTop = section.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+
+      if (!started && sectionTop < screenHeight - 150) {
+        startCounters();
+        started = true;
+      }
+    });
+
+  
+  </script>
+
+
+
+
+
+
+
+
+
+<section class="portfolio-section">
+
+<h2 class="portfolio-title">PORTFOLIO</h2>
+
+<div class="portfolio-categories">
+
+<div class="category-card" data-tab="web">
+<img src="img/h2.png">
+<h4>Website Designing</h4>
+</div>
+
+<div class="category-card" data-tab="software">
+<img src="img/h5.png">
+<h4>Software Applications</h4>
+</div>
+
+<div class="category-card" data-tab="mobile">
+<img src="img/h4.png">
+<h4>Mobile Applications</h4>
+</div>
+
+<div class="category-card" data-tab="ai">
+<img src="img/ai.png">
+<h4>AI services</h4>
+</div>
+
+</div>
+</section>
+
+
+<!-- POPUP -->
+<div class="portfolio-popup" id="portfolioPopup">
+
+<form id="portfolioForm" class="popup-box">
+
+<h3>View Our Portfolio</h3>
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<button type="submit">Submit & View Portfolio</button>
+
+<span class="close-popup">&times;</span>
+
+</form>
+
+</div>
+
+
+
+<script>
+
+(function(){
+emailjs.init("DKD3j41IBHNXCUvvZ");
+})();
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const popup = document.getElementById("portfolioPopup");
+const form = document.getElementById("portfolioForm");
+const closeBtn = document.querySelector(".close-popup");
+const portfolioBtn = document.getElementById("portfolioNavBtn");
+const cards = document.querySelectorAll(".category-card");
+
+/* ✅ URL నుండి popup open */
+const params = new URLSearchParams(window.location.search);
+
+/* URL param */
+if(params.get("popup") === "true"){
+  popup.classList.add("show");
+}
+
+/* First time visit */
+if(!sessionStorage.getItem("portfolio_access_granted")){
+  popup.classList.add("show");
+}
+
+/* FORCE RESET when coming fresh */
+if(!window.location.search.includes("popup=true")){
+  sessionStorage.removeItem("portfolio_access_granted");
+}
+
+/* CARD HOVER */
+cards.forEach(card => {
+  card.addEventListener("mouseenter", () => {
+    popup.classList.add("show");
+  });
+});
+
+/* NAVBAR CLICK */
+portfolioBtn.addEventListener("click", function(e){
+
+e.preventDefault(); // 🔥 must
+
+popup.classList.add("show"); // only popup
+
+});
+
+/* CLOSE */
+closeBtn.addEventListener("click", ()=>{
+popup.classList.remove("show");
+});
+
+/* FORM SUBMIT */
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+emailjs.sendForm(
+"service_fia8wdn",
+"template_mmdy9nf",
+this
+)
+
+.then(function(){
+
+sessionStorage.setItem("portfolio_access_granted","true");
+
+window.location.href="portfolio.html";
+
+})
+
+.catch(function(error){
+console.log(error);
+});
+
+});
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="industries-section">
+
+
+    <!-- HEADING -->
+    <h2 class="industries-title">INDUSTRIES WE SERVED SO FAR</h2>
+
+    <!-- GRID -->
+    <div class="industries-grid">
+
+      <!-- CARD 1 -->
+      <div class="industry-card">
+        <img src="img/h8.png" alt="E-Commerce">
+        <span class="title">E-COMMERCE</span>
+
+        <div class="hover-content">
+          <h4>E-Commerce</h4>
+          <p>Online stores, payment gateways & scalable digital platforms</p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="industry-card">
+        <img src="img/h9.png" alt="Health Care">
+        <span class="title">HEALTH CARE</span>
+
+        <div class="hover-content">
+          <h4>Health Care</h4>
+          <p>Hospital systems, patient management & healthcare solutions</p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="industry-card">
+        <img src="img/h10.png" alt="Interior Designing">
+        <span class="title">INTERIOR DESIGNING</span>
+
+        <div class="hover-content">
+          <h4>Interior Designing</h4>
+          <p>Creative portfolios, design showcases & client engagement tools</p>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="industry-card">
+        <img src="img/h11.png" alt="Real Estate">
+        <span class="title">REAL ESTATE</span>
+
+        <div class="hover-content">
+          <h4>Real Estate</h4>
+          <p>Property listings, CRM systems & lead management platforms</p>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="industry-card">
+        <img src="img/h12.png" alt="Education">
+        <span class="title">EDUCATION</span>
+
+        <div class="hover-content">
+          <h4>Education</h4>
+          <p>E-learning platforms, LMS systems & student portals</p>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="industry-card">
+        <img src="img/h13.png" alt="Pharma Industry">
+        <span class="title">PHARMA INDUSTRY</span>
+
+        <div class="hover-content">
+          <h4>Pharma Industry</h4>
+          <p>Product management, compliance systems & digital branding</p>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="industry-card">
+        <img src="img/h14.png" alt="Beauty Industry">
+        <span class="title">BEAUTY INDUSTRY</span>
+
+        <div class="hover-content">
+          <h4>Beauty Industry</h4>
+          <p>Salon booking apps, brand websites & online promotions</p>
+        </div>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="industry-card">
+        <img src="img/h15.png" alt="Food Industry">
+        <span class="title">FOOD INDUSTRY</span>
+
+        <div class="hover-content">
+          <h4>Food Industry</h4>
+          <p>Restaurant websites, food delivery & order management</p>
+        </div>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="industry-card">
+        <img src="img/h16.png" alt="NGO">
+        <span class="title">NGO’s</span>
+
+        <div class="hover-content">
+          <h4>NGO’s</h4>
+          <p>Donation platforms, awareness campaigns & community systems</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <section class="contact-section">
+    <div class="contact-overlay">
+
+      <div class="contact-container">
+
+        <!-- LEFT -->
+        <div class="contact-left">
+          <h2 class="contact-heading center">CONTACT US</h2>
+
+          <div class="contact-form">
+            <input type="text" placeholder="Full Name">
+            <input type="text" placeholder="Contact Number">
+            <input type="email" placeholder="Email ID">
+            <textarea placeholder="Message"></textarea>
+            <button class="submit-btn">SUBMIT</button>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="contact-content">
+          <h2 class="contact-heading">CONNECT WITH YOUR CLIENTS</h2>
+
+          <ul>
+            <li>Innovative Designs</li>
+            <li>Most Secure And Privacy</li>
+            <li>Fast Loading Applications</li>
+          </ul>
+
+          <a href="contact.html" class="get-btn">GET STARTED →</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="footer-overlay">
+      <div class="footer-container">
+
+        <div class="footer-col imp-links">
+          <h3>IMPORTANT LINKS</h3>
+          <ul>
+            <li><a href="about.html"><span>›</span> About Us</a></li>
+            <li><a href="contact.html"><span>›</span> Contact Us</a></li>
+            <li><a href="policy.html"><span>›</span> Privacy Policy</a></li>
+            <li><a href="terms.html"><span>›</span> Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col reach">
+          <h3>REACH US</h3>
+          <p>
+            Plot No #682, 3rd Floor,<br>
+            Babukhan Rasheed Plaza,<br>
+            Rd No 36, Jubilee Hills,<br>
+            Hyderabad, Telangana-500033
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>CONTACT INFO</h3>
+          <p class="contact">
+            <i class="fa-solid fa-envelope"></i>
+            info@nfosoft.com
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>FOLLOW US ON</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © All Copyrights Reserved 2015-2026 | nfoSoft Innovations
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+  
+</body>
+
+</html>

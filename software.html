@@ -12,7 +12,7 @@
   referrerpolicy="no-referrer"
 />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="icon" href="img/logo.png" type="image/png">
+<link rel="icon" href="img/fav.png" type="image/png">
 
 
 </head>
@@ -370,83 +370,89 @@ window.addEventListener("load", revealStats);
 
 
 
-<ul class="dropdown-menu">
-  <li><a href="website.html"><i class="fa-solid fa-laptop-code"></i> Website Design</a></li>
-  <li><a href="software.html"><i class="fa-solid fa-microchip"></i> Software Application</a></li>
-  <li><a href="mobile.html"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Application</a></li>
-  <li><a href="ai.html"><i class="fa-solid fa-brain"></i> AI Services</a></li>
-</ul>
+
 
 <section class="why-web-circular">
-  <h2 class="why-title">
-    Why Businesses Trust
-    <span class="brand">nfosoft</span><br>
-   For Digital Growth & Innovation
-  </h2>
+    <h2 class="why-title">
+        How We Turn <span class="brand">Ideas Into Results</span>
+    </h2>
 
-  <div class="process-wrapper">
-    <div class="process-center">
-      <div class="center-blob"></div>
-      <span class="center-text">NFOSOFT<br>PROCESS</span>
+    <div class="process-wrapper">
+        <div class="process-center">
+            <div class="center-blob"></div>
+            <span class="center-text">OUR<br>PROCESS</span>
+        </div>
+
+        <div class="process-step step-1 reveal-scroll">
+            <div class="step-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="step-info">
+                <h3>01. Discover</h3>
+                <p>Understand goals and project requirements.</p>
+            </div>
+        </div>
+
+        <div class="process-step step-2 reveal-scroll">
+            <div class="step-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <div class="step-info">
+                <h3>02. Plan</h3>
+                <p>Define strategy, scope, and execution roadmap.</p>
+            </div>
+        </div>
+
+        <div class="process-step step-3 reveal-scroll">
+            <div class="step-icon"><i class="fa-solid fa-file-signature"></i></div>
+            <div class="step-info">
+                <h3>03. Approve</h3>
+                <p>Finalize proposal, timeline, and kickoff.</p>
+            </div>
+        </div>
+
+        <div class="process-step step-4 reveal-scroll">
+            <div class="step-icon"><i class="fa-solid fa-code-branch"></i></div>
+            <div class="step-info">
+                <h3>04. Build</h3>
+                <p>Design, develop, or implement the solution.</p>
+            </div>
+        </div>
+
+        <div class="process-step step-5 reveal-scroll">
+            <div class="step-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+            <div class="step-info">
+                <h3>05. Test</h3>
+                <p>Check performance, functionality, and optimize.</p>
+            </div>
+        </div>
+
+        <div class="process-step step-6 reveal-scroll">
+            <div class="step-icon"><i class="fa-solid fa-rocket"></i></div>
+            <div class="step-info">
+                <h3>06. Launch & Support</h3>
+                <p>Deliver the solution and provide support.</p>
+            </div>
+        </div>
+
+        <div class="circle-line"></div>
     </div>
-
-    <div class="process-step step-1 reveal-scroll">
-      <div class="step-icon"><i class="fa-solid fa-lightbulb"></i></div>
-      <div class="step-info">
-        <h3>01. Strategy</h3>
-        <p>Roadmap for success.</p>
-      </div>
-    </div>
-
-    <div class="process-step step-2 reveal-scroll">
-      <div class="step-icon"><i class="fa-solid fa-palette"></i></div>
-      <div class="step-info">
-        <h3>02. Design</h3>
-        <p>Premium UI/UX designs.</p>
-      </div>
-    </div>
-
-    <div class="process-step step-3 reveal-scroll">
-      <div class="step-icon"><i class="fa-solid fa-code"></i></div>
-      <div class="step-info">
-        <h3>03. Develop</h3>
-        <p>Precision and performance.</p>
-      </div>
-    </div>
-
-    <div class="process-step step-4 reveal-scroll">
-      <div class="step-icon"><i class="fa-solid fa-rocket"></i></div>
-      <div class="step-info">
-        <h3>04. Launch</h3>
-        <p>Live with support.</p>
-      </div>
-    </div>
-
-    <div class="circle-line"></div>
-  </div>
 </section>
+
 <script>
-function revealProcess() {
-  const steps = document.querySelectorAll(".reveal-scroll");
-  const screenHeight = window.innerHeight;
+    function revealProcess() {
+        const steps = document.querySelectorAll(".reveal-scroll");
+        const screenHeight = window.innerHeight;
 
-  steps.forEach((step, index) => {
-    const stepTop = step.getBoundingClientRect().top;
-    if (stepTop < screenHeight - 100) {
-      // Delaying each step for a staggered effect
-      setTimeout(() => {
-        step.classList.add("show");
-      }, index * 200);
+        steps.forEach((step, index) => {
+            const stepTop = step.getBoundingClientRect().top;
+            if (stepTop < screenHeight - 50) {
+                setTimeout(() => {
+                    step.classList.add("show");
+                }, index * 150);
+            }
+        });
     }
-  });
-}
 
-window.addEventListener("scroll", revealProcess);
-window.addEventListener("load", revealProcess);
+    window.addEventListener("scroll", revealProcess);
+    window.addEventListener("load", revealProcess);
 </script>
-
-
-
 
 
 

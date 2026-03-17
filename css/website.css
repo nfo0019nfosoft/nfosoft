@@ -1193,366 +1193,6 @@ font-size:30px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* --- Dropdown Icons --- */
-.dropdown-menu li a {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 20px;
-  color: #49326b;
-  text-decoration: none;
-}
-.dropdown-menu li a i {
-  color: #6c63ff;
-  width: 20px;
-  text-align: center;
-}
-
-/* --- Circular Section --- */
-.why-web-circular {
-  padding: 80px 20px;
-  background: #fff;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  overflow: hidden;
-}
-
-.why-title { font-size: 32px; color: #49326b; margin-bottom: 100px; }
-.why-title .brand { color: #6c63ff; font-weight: 800; }
-
-.process-wrapper {
-  position: relative;
-  max-width: 1100px;
-  height: 650px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Center Blob */
-.process-center { position: absolute; z-index: 5; }
-.center-blob {
-  width: 170px; height: 170px;
-  background: rgba(108, 99, 255, 0.08);
-  border-radius: 50%;
-  animation: blobMorph 8s infinite alternate;
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-}
-.center-text { font-weight: 700; color: #49326b; font-size: 13px; position: relative; }
-
-/* The Circle Line - 500px Diameter */
-.circle-line {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  border: 2px dashed rgba(108, 99, 255, 0.2);
-  border-radius: 50%;
-  z-index: 1;
-}
-
-/* Common Step Styling */
-.process-step {
-  position: absolute;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 220px;
-  opacity: 0;
-  transition: 0.8s ease;
-}
-
-.step-icon {
-  width: 65px; height: 65px;
-  background: #6c63ff; color: #fff;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 26px;
-  box-shadow: 0 10px 25px rgba(108, 99, 255, 0.3);
-  margin-bottom: 10px;
-  animation: floatIcon 3s ease-in-out infinite;
-}
-
-.step-info h3 { font-size: 18px; color: #49326b; margin: 0; }
-.step-info p { font-size: 13px; color: #666; margin: 5px 0 0; }
-
-/* --- ICON PLACEMENT: EXACTLY ON THE LINE --- */
-
-
-/* Keyframes */
-@keyframes blobMorph {
-  0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
-  100% { border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%; }
-}
-@keyframes floatIcon {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(0, -10px); }
-}
-
-/* Mobile Responsive */
-@media (max-width: 900px) {
-  .process-wrapper { height: auto; flex-direction: column; gap: 40px; }
-  .process-step { position: static; width: 100%; transform: none !important; opacity: 1; flex-direction: row !important; text-align: left !important; }
-  .circle-line, .process-center { display: none; }
-}
-
-
-/* Common Step Styling */
-.process-step {
-  position: absolute;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  width: 280px; /* బాక్స్ వెడల్పు */
-  opacity: 0;
-  transition: 0.8s ease;
-}
-
-
-
-
-/* Circle Line - Size Fix */
-.circle-line {
-  position: absolute;
-  width: 100%; /* wrapper వెడల్పు అంతా ఉంటుంది */
-  height: 100%; /* wrapper ఎత్తు అంతా ఉంటుంది */
-  border: 2px dashed rgba(108, 99, 255, 0.8);
-  border-radius: 50%;
-  z-index: 1;
-}
-
-/* Animation trigger */
-.reveal-scroll.show {
-  opacity: 1;
-}
-/* --- Circular Process Section Wrapper --- */
-.process-wrapper {
-  position: relative;
-  width: 500px; /* సర్కిల్ సైజు */
-  height: 500px;
-  margin: 100px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* దొట్టెడ్ సర్కిల్ లైన్ */
-.circle-line {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 2px dashed rgba(108, 99, 255, 0.2);
-  border-radius: 50%;
-  z-index: 1;
-}
-
-/* Common Step Style */
-.process-step {
-  position: absolute;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  width: 250px; /* టెక్స్ట్ పట్టడానికి విడ్త్ */
-  opacity: 0; /* యానిమేషన్ కోసం */
-  transition: 0.8s ease;
-}
-
-/* ఐకాన్ స్టైల్ */
-.step-icon {
-  width: 65px;
-  height: 65px;
-  background: #6c63ff;
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  box-shadow: 0 10px 25px rgba(108, 99, 255, 0.3);
-  flex-shrink: 0;
-}
-
-/* --- పక్కాగా ఐకాన్ లైన్ మీద, మేటర్ బయట ఉండేలా పొజిషన్స్ --- */
-
-/* 01. Strategy (ఐకాన్ పైన, మేటర్ ఇంకా పైన) */
-.step-1 { 
-  top: 0; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  flex-direction: column-reverse; /* మేటర్ పైన, ఐకాన్ కింద */
-  text-align: center;
-  height: 150px; /* గ్యాప్ కోసం */
-  justify-content: flex-end;
-}
-.step-1 .step-icon { margin-top: 15px; }
-
-/* 02. Design (కుడి వైపు - మేటర్ బయటకి) */
-.step-2 { 
-  top: 50%; 
-  right: -18%; 
-  transform: translate(50%, -50%); 
-  flex-direction: row; /* ఐకాన్ ఎడమకి (లైన్ మీద), మేటర్ కుడికి */
-  text-align: left;
-  gap: 15px;
-}
-
-/* 03. Develop (ఐకాన్ కింద, మేటర్ ఇంకా కింద) */
-.step-3 { 
-  bottom: -8%; 
-  left: 50%; 
-  transform: translate(-50%, 50%); 
-  flex-direction: column; /* ఐకాన్ పైన, మేటర్ కింద */
-  text-align: center;
-  height: 150px;
-  justify-content: flex-start;
-}
-.step-3 .step-icon { margin-bottom: 15px; }
-
-/* 04. Launch (ఎడమ వైపు - మేటర్ బయటకి) */
-.step-4 { 
-  top: 50%; 
-  left: -18%; 
-  transform: translate(-50%, -50%); 
-  flex-direction: row-reverse; /* ఐకాన్ కుడికి (లైన్ మీద), మేటర్ ఎడమకి */
-  text-align: right;
-  gap: 15px;
-}
-
-/* Scroll Reveal Trigger */
-.reveal-scroll.show {
-  opacity: 1;
-}
-
-/* Center Blob Style */
-.process-center {
-  position: absolute;
-  text-align: center;
-  z-index: 5;
-}
-.center-blob {
-  width: 160px;
-  height: 160px;
-  background: rgba(108, 99, 255, 0.15);
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-
-/* --- MOBILE CSS (ONLY FOR MOBILE) --- */
-@media (max-width: 768px) {
-  /* 1. సెక్షన్ ప్యాడింగ్ మరియు టైటిల్ అడ్జస్ట్మెంట్ */
-  .why-web-circular {
-    padding: 60px 15px;
-  }
-
-  .creative-title {
-    font-size: 26px !important;
-    margin-bottom: 40px !important;
-  }
-
-  /* 2. మొబైల్‌లో సర్కిల్ లైన్ మరియు సెంటర్ బ్లోబ్‌ని తీసేయాలి */
-  .circle-line, 
-  .process-center,
-  .center-blob {
-    display: none !important;
-  }
-
-  /* 3. వ్రాపర్ సెట్టింగ్స్ - ఒకదాని కింద ఒకటి రావడానికి */
-  .process-wrapper {
-    width: 100% !important;
-    height: auto !important;
-    margin: 0 auto !important;
-    flex-direction: column !important;
-    gap: 30px !important; /* ప్రతి స్టెప్ మధ్య దూరం */
-    display: flex !important;
-  }
-
-  /* 4. ప్రతి స్టెప్ ని ఒక రో (Row) లాగా మార్చడం */
-  .process-step {
-    position: static !important; /* Absolute తీసేసి Static పెట్టాలి */
-    width: 100% !important;
-    transform: none !important; /* పాత ట్రాన్స్‌ఫార్మ్స్ అన్నీ క్యాన్సిల్ */
-    opacity: 1 !important;
-    display: flex !important;
-    flex-direction: row !important; /* ఐకాన్ పక్కనే టెక్స్ట్ */
-    align-items: center !important;
-    text-align: left !important;
-    gap: 20px !important;
-    background: rgba(73, 50, 107, 0.03); /* చిన్న బ్యాక్‌గ్రౌండ్ టింట్ */
-    padding: 15px;
-    border-radius: 12px;
-  }
-
-  /* 5. ఐకాన్ సైజు మొబైల్ కోసం కొంచెం తగ్గించడం */
-  .step-icon {
-    width: 55px !important;
-    height: 55px !important;
-    font-size: 20px !important;
-    margin: 0 !important; /* పాత మార్జిన్స్ తీసేయాలి */
-    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.2) !important;
-  }
-
-  /* 6. టెక్స్ట్ అలైన్‌మెంట్ */
-  .step-info {
-    width: 100% !important;
-    margin: 0 !important;
-  }
-
-  .step-info h3 {
-    font-size: 18px !important;
-    margin-bottom: 4px !important;
-  }
-
-  .step-info p {
-    font-size: 14px !important;
-    line-height: 1.4 !important;
-  }
-
-  /* 1, 3 స్టెప్స్ కి ఉన్న రివర్స్ డైరెక్షన్ ని ఫిక్స్ చేయడం */
-  .step-1, .step-3 {
-    flex-direction: row !important;
-    justify-content: flex-start !important;
-    height: auto !important;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ===============================
    CTA SECTION – WHITE BACKGROUND
 ================================ */
@@ -1680,4 +1320,147 @@ font-size:30px;
 .reveal-right.show{
   opacity:1;
   transform:translateX(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.why-web-circular {
+  padding: 50px 20px 150px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.why-title { font-size: 36px; color: #49326b; margin-bottom: 80px; }
+.why-title .brand { color: #6c63ff; font-weight: 800; }
+
+/* Wrapper for Circle */
+.process-wrapper {
+    position: relative;
+    width: 600px; /* డెస్క్ టాప్ సైజు */
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center Blob & Text */
+.process-center { position: absolute; z-index: 5; text-align: center; }
+.center-blob {
+    width: 180px; height: 180px;
+    background: rgba(108, 99, 255, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: blobMorph 8s infinite alternate;
+}
+.center-text { font-weight: 800; color: #49326b; font-size: 14px; position: relative; letter-spacing: 1px; }
+
+/* The Dotted Circle Line */
+.circle-line {
+    position: absolute;
+    width: 500px; height: 500px;
+    border: 2px dashed rgba(108, 99, 255, 0.3);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Common Step Styling */
+.process-step {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    width: 260px;
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.step-icon {
+    width: 60px; height: 60px;
+    background: #6c63ff; color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 8px 20px rgba(108, 99, 255, 0.3);
+    flex-shrink: 0;
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+.step-info h3 { font-size: 17px; color: #49326b; margin-bottom: 2px; }
+.step-info p { font-size: 12px; color: #666; line-height: 1.3; }
+
+/* --- 6 Steps Positioning (Calculated for 360 degrees) --- */
+
+/* 01. Discover - Top Center */
+.step-1 { top: -28px; left: 50%; transform: translate(-50%, 0); flex-direction: column-reverse; text-align: center; }
+.step-1 .step-icon { margin-top: 10px; }
+
+/* 02. Plan - Top Right */
+.step-2 { top: 25%; right: -25%; flex-direction: row; text-align: left; gap: 15px; }
+
+/* 03. Approve - Bottom Right */
+.step-3 { bottom: 24%; right: -24%; flex-direction: row; text-align: left; gap: 15px; }
+
+/* 04. Build - Bottom Center */
+.step-4 { bottom: -40px; left: 50%; transform: translate(-50%, 0); flex-direction: column; text-align: center; }
+.step-4 .step-icon { margin-bottom: 10px; }
+
+/* 05. Test - Bottom Left */
+.step-5 { bottom: 24%; left: -24%; flex-direction: row-reverse; text-align: right; gap: 15px; }
+
+/* 06. Launch - Top Left */
+.step-6 { top: 25%; left: -25%; flex-direction: row-reverse; text-align: right; gap: 15px; }
+
+/* Scroll Reveal Trigger */
+.reveal-scroll.show { opacity: 1; }
+
+/* Animations */
+@keyframes blobMorph {
+    0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
+    100% { border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%; }
+}
+@keyframes floatIcon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 992px) {
+    .process-wrapper { width: 100%; height: auto; flex-direction: column; gap: 25px; margin-top: 50px; }
+    .circle-line, .process-center { display: none; }
+    
+    .process-step {
+        position: static !important;
+        width: 100% !important;
+        transform: none !important;
+        flex-direction: row !important;
+        text-align: left !important;
+        opacity: 1;
+        padding: 20px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        gap: 20px;
+    }
+    
+    .step-icon { margin: 0 !important; width: 50px; height: 50px; font-size: 20px; }
+    .step-info h3 { font-size: 18px; }
 }

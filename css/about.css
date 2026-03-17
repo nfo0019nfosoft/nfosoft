@@ -891,7 +891,7 @@
 
 .about-text-wrapper p {
     font-size: 16px;
-    color: var(--text-muted);
+    color: black;
     line-height: 1.8;
     margin: 0;
     text-align: justify;
@@ -973,166 +973,164 @@
 
 
 
-/* =========================
-   TECHNOLOGY SECTION
-========================= */
+
+
+
+:root {
+    --primary-color: #49326b; /* Main Theme Blue */
+    --secondary-color: #0056b3;
+    --bg-light: #f8fbff;
+    --text-dark: #2c3e50;
+    --card-shadow: rgba(0, 123, 255, 0.15);
+}
 
 .tech-focus {
-  padding: 90px 20px;
-  background: #fff;
-  margin-top: -100px;
+    padding: 50px 20px;
+    background-color: var(--bg-light);
+    overflow: hidden;
 }
 
-/* MAIN CONTAINER – EXACT HALF / HALF */
 .tech-container {
-  max-width: 1500px;          /* 🔥 little wider */
-  margin: auto;
-  display: flex;
-  align-items: center;
-  gap: 0;                     /* 🔥 NO GAP so exact half */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
 }
 
-/* =========================
-   LEFT SIDE – 50%
-========================= */
-
+/* LEFT CONTENT */
 .tech-left {
-  width: 50%;                 /* 🔥 EXACT HALF */
-  padding-left: 60px;
-  box-sizing: border-box;
+    flex: 1;
+    min-width: 350px;
 }
 
 .tech-left h2 {
-  font-size: 36px;
-  color: #584379;
-  margin-bottom: 12px;
-  font-weight: 700;
-  margin-left: 60px;
+    font-size: 35px;
+    color: #49326b;
+    margin-bottom: 15px;
+    font-weight: 800;
 }
+
 
 .tech-desc {
-  margin-bottom: 40px;
-  font-size: 16px;
-  font-weight: 500;
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 40px;
+    line-height: 1.7;
 }
 
-/* =========================
-   CARDS GRID
-========================= */
-
+/* TECH CARDS GRID */
 .tech-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .tech-card {
-  background: #1c1c4d;
-  color: #fff;
-  padding: 45px 35px;
-  min-height: 210px;
-  border-radius: 20px;
-  text-align: center;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 123, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 
+/* Hover Effect: Theme Color Background */
+.tech-card:hover {
+    background: var(--primary-color);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px var(--card-shadow);
+}
+
+/* Icon Styling - Consistent Theme */
 .tech-card i {
-  font-size: 64px;
-  margin-bottom: 14px;
+    font-size: 28px;
+    color: var(--primary-color);
+    background: rgba(0, 123, 255, 0.08);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: 0.3s;
 }
 
-.tech-link {
-  display: block;
-  margin-top: 12px;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
+.tech-card h4 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin: 0;
+    transition: 0.3s;
 }
 
-/* =========================
-   RIGHT SIDE – 50% (BIG IMAGE)
-========================= */
+/* Hover text color changes to white */
+.tech-card:hover i {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
 
+.tech-card:hover h4 {
+    color: #fff;
+}
+
+/* RIGHT IMAGE */
 .tech-right {
-  width: 50%;                 /* 🔥 EXACT HALF */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    flex: 1;
+    min-width: 400px;
+    text-align: center;
 }
 
 .tech-right img {
-  width: 90%;                 /* 🔥 BIG IMAGE */
-  max-width: 650px;           /* 🔥 CONTROL */
-  height: auto;
-  object-fit: contain;
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+    /* Smooth floating animation */
+    animation: floating 4s ease-in-out infinite;
 }
 
-/* =========================
-   ANIMATIONS – DESKTOP
-========================= */
-
-.animate-left,
-.animate-right {
-  opacity: 0;
-  transition: all 1s ease;
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
-.animate-left {
-  transform: translateX(-120px);
-}
-
-.animate-right {
-  transform: translateX(120px);
-}
+/* ANIMATIONS FOR JS */
+.animate-left { opacity: 0; transform: translateX(-50px); transition: 1s ease; }
+.animate-right { opacity: 0; transform: translateX(50px); transition: 1s ease; }
 
 .tech-focus.active .animate-left,
 .tech-focus.active .animate-right {
-  opacity: 1;
-  transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
 }
 
-/* =========================
-   MOBILE VIEW
-========================= */
-
+/* Mobile Adjustments */
 @media (max-width: 768px) {
-
-  .tech-container {
-    flex-direction: column;
-  }
-
-  .tech-left,
-  .tech-right {
-    width: 100%;              /* 🔥 FULL WIDTH */
-    padding-left: 0;
-  }
-
-  .tech-left h2,
-  .tech-desc {
-    text-align: center;
-  }
-
-  .tech-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .tech-right img {
-    width: 100%;
-    max-width: 420px;
-  }
-
-  /* MOBILE ANIMATION */
-  .animate-left,
-  .animate-right {
-    transform: translateY(60px);
-  }
-
-  .tech-focus.active .animate-left,
-  .tech-focus.active .animate-right {
-    transform: translateY(0);
-  }
+    .tech-container { flex-direction: column; text-align: center; }
+    .tech-left h2::after { margin: 10px auto; }
+    .tech-cards { grid-template-columns: 1fr; }
+    .tech-card { align-items: center; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

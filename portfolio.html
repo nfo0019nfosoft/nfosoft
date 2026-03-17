@@ -11,21 +11,32 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-  <link rel="icon" href="img/logo.png" type="image/png">
+  <link rel="icon" href="img/fav.png" type="image/png">
 
-<script>
-   
-  // ఒకవేళ సెషన్‌లో పర్మిషన్ లేకపోతే...
-  if (sessionStorage.getItem("portfolio_access_granted") !== "true") {
-      // అలర్ట్ ఇచ్చి ఫారమ్ పేజీకి పంపడం
-      alert("Access Denied! Please fill out the form to view our portfolio.");
-      window.location.href = "portfolio-form.html"; // ఇక్కడ నీ ఫారమ్ పేజీ పేరు కరెక్ట్ గా ఇవ్వు
-  }
+  
+  <style>
+    body { display:none; }
+  </style>
 
-</script>
+  <script>
+  (function(){
+
+    const access = sessionStorage.getItem("portfolio_access_granted");
+
+    if (access !== "true") {
+      window.location.href = "index.html?popup=true";
+    }
+
+  })();
+  </script>
+
 </head>
 
-<body>
+
+
+
+
+<body onload="document.body.style.display='block'">
 
   <header class="header">
     <div class="container">
@@ -143,229 +154,153 @@
 
 
 
-  <h2 class="title">Websites</h2>
+<section class="portfolio-section">
 
-  <div class="grid">
+<h2 class="portfolio-title">PORTFOLIO</h2>
 
-    <a href="https://www.deltapage.com/" class="card animate left">
-      <img src="img/p1.png">
+<!-- CATEGORY TABS -->
+<div class="portfolio-categories">
+
+<div class="category-card" data-tab="web">
+<img src="img/h2.png">
+<h4>Website Designing</h4>
+</div>
+
+
+<div class="category-card" data-tab="software">
+<img src="img/h5.png">
+<h4>Software Applications</h4>
+</div>
+
+<div class="category-card" data-tab="mobile">
+<img src="img/h4.png">
+<h4>Mobile Applications</h4>
+</div>
+
+<div class="category-card" data-tab="ai">
+<img src="img/ai.png">
+<h4>AI services</h4>
+</div>
+
+
+</div>
+
+<!-- TAB CONTENT -->
+<div class="portfolio-tabs" id="portfolioTabs">
+
+
+<div class="portfolio-grid" id="tabGrid"></div>
+
+<div class="portfolio-btn-wrap" id="btnWrap"></div>
+
+</div>
+
+</section>
+
+<script>
+
+const data = {
+
+web:{
+title:"Website Designing Projects",
+items:["por1.png","por2.png","por3.png","por4.png"],
+link:"website.html"
+},
+
+
+
+software:{
+title:"Application Software Projects",
+items:["por9.png","por10.png","por11.png","por12.png"],
+link:"software.html"
+},
+
+
+
+
+mobile:{
+title:"Mobile Application Projects",
+items:["por5.png","por6.png","por7.png","por8.png"],
+link:"mobile.html"
+},
+
+
+
+
+ai:{
+title:"AI Services",
+items:["por13.png","por14.png","por15.png","aii.png"],
+link:"ai.html"
+},
+
+};
+
+const cards = document.querySelectorAll(".category-card");
+const tabs = document.getElementById("portfolioTabs");
+const grid = document.getElementById("tabGrid");
+const btnWrap = document.getElementById("btnWrap");
+
+let activeTab = null;
+
+function openTab(key) {
+  grid.innerHTML = "";
+  data[key].items.forEach(img => {
+    grid.innerHTML += `
+      <div class="portfolio-item">
+        <img src="img/${img}">
+        <h4>${data[key].title}</h4>
+      </div>
+    `;
+  });
+
+  btnWrap.innerHTML = `
+    <a href="${data[key].link}" class="portfolio-know-btn">
+      Know More
     </a>
+  `;
 
-    <a href="https://www.nobledegreecollege.com/" class="card animate top">
-      <img src="img/p2.png">
-    </a>
+  // Display block cheసి, కొంచెం గ్యాప్ తర్వాత opacity క్లాస్ యాడ్ చేస్తే యానిమేషన్ బాగుంటుంది
+  tabs.style.display = "block";
+  setTimeout(() => {
+    tabs.classList.add("show");
+  }, 10);
+}
 
-    <a href="https://artclinicsivf.in/" class="card animate right">
-      <img src="img/p3.png">
-    </a>
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+    const key = card.dataset.tab;
 
-    <a href="https://www.jaypore.com/" class="card animate left">
-      <img src="img/p4.png">
-    </a>
+    // ఒకవేళ ఆల్రెడీ ఓపెన్ అయి ఉన్న ట్యాబ్ నే మళ్ళీ క్లిక్ చేస్తే...
+    if (activeTab === key) {
+      tabs.classList.remove("show");
+      card.classList.remove("active");
+      
+      // యానిమేషన్ ముగిశాక పూర్తిగా స్పేస్ ని రిమూవ్ చేయడానికి
+      setTimeout(() => {
+        tabs.style.display = "none";
+      }, 400); 
 
-    <!-- 5th -->
-    <a href="https://jyothicaterers.in/" class="card animate zoom blue">
-      <img src="img/p5.png">
-    </a>
+      activeTab = null;
+      return;
+    }
 
-    <a href="https://www.amecet.in/" class="card animate right">
-      <img src="img/p6.png">
-    </a>
+    activeTab = key;
 
-    <a href="https://www.zoomin.com/" class="card animate left">
-      <img src="img/p7.png">
-    </a>
+    cards.forEach(c => c.classList.remove("active"));
+    card.classList.add("active");
 
-    <!-- 8th -->
-    <a href="https://cubicassociates.com/" class="card animate down blue">
-      <img src="img/p8.png">
-    </a>
+    openTab(key);
+  });
+});
 
-    <a href="https://kshethragroup.com/" class="card animate right">
-      <img src="img/p9.png">
-    </a>
+</script>
 
-  </div>
 
 
 
-  <script>
-    const cards = document.querySelectorAll('.card');
 
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
 
-    cards.forEach(card => observer.observe(card));
 
-  </script>
-
-
-
-
-
-
-
-
-
-  <section class="apps-section">
-    <h2 class="title">Mobile Apps</h2>
-
-    <div class="apps-grid">
-
-      <div class="app-card left">
-        <a href="https://play.google.com/store/apps/details?id=ca.skipthedishes.dashboard&gl=US&pli=1">
-          <img src="img/m1.png">
-          <p>Restaurant Partner App</p>
-        </a>
-      </div>
-
-      <div class="app-card top">
-        <a href="https://play.google.com/store/apps/details?id=com.biryaniblues.app">
-          <img src="img/m2.png">
-          <p>Biryani Blues</p>
-        </a>
-      </div>
-
-      <div class="app-card right">
-        <a href="https://play.google.com/store/apps/details?id=com.biryaniblues.app">
-          <img src="img/m3.png">
-          <p>Event Ticket Hero</p>
-        </a>
-      </div>
-
-      <div class="app-card left">
-        <a href="https://play.google.com/store/apps/details?id=com.travel.goticket">
-          <img src="img/m4.png">
-          <p>goTicket Bus Ticket</p>
-        </a>
-      </div>
-
-      <div class="app-card zoom">
-
-        <a href="https://play.google.com/store/apps/details?id=com.linonlineshopping.jeansformen">
-          <img src="img/m5.png">
-          <p>Mens Jeans &amp; Trousers</p>
-        </a>
-      </div>
-
-      <div class="app-card right">
-
-        <a href="https://play.google.com/store/apps/details?id=com.landeed">
-          <img src="img/m6.png">
-          <p>Landeed - Property Title Check</p>
-        </a>
-      </div>
-
-      <div class="app-card left">
-        
-        <a href="https://play.google.com/store/apps/details?id=apps.vcast.bop.bookmyop">
-          <img src="img/m7.png">
-          <p>Book My OP Ticket</p>
-        </a>
-      </div>
-
-      <div class="app-card down">
-
-        <a href="https://play.google.com/store/apps/details?id=com.kolo.android">
-          <img src="img/m8.png">
-          <p>Kolo - Home Design &amp; Interiors</p>
-        </a>
-      </div>
-
-      <div class="app-card right">
-
-        <a href="https://play.google.com/store/apps/details?id=com.handbagsforwomen_shoppingonline.handbags">
-          <img src="img/m9.png">
-          <p>Cheap bags for women, purses</p>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-
-
-
-
-
-
-  <section class="quote-section">
-    <div class="quote-container">
-
-      <!-- LEFT -->
-      <div class="services animate-left">
-        <h2 class="section-title">More Services</h2>
-
-        <div class="services-grid">
-          <div class="service-box">Website<br>Designing</div>
-          <div class="service-box">Software Applications</div>
-          <div class="service-box">Android APP<br>Development</div>
-
-          <div class="service-box">AI Services</div>
-        </div>
-      </div>
-
-      <!-- RIGHT -->
-      <div class="quote-form animate-right">
-        <h2 class="section-title">Get a Quote</h2>
-
-        <form>
-          <input type="text" placeholder="Your Name">
-          <input type="text" placeholder="Contact Number">
-          <input type="email" placeholder="Email ID">
-          <input type="text" placeholder="Your Company Name">
-
-          <div class="checks">
-            <label><input type="checkbox"> Website Designing</label>
-            <label><input type="checkbox"> Software Applications</label>
-            <label><input type="checkbox"> Mobile Applications (Android & IOS)</label>
-            <label><input type="checkbox"> AI Servics</label>
-          </div>
-
-          <textarea placeholder="Comment or Message"></textarea>
-
-          <button type="submit">SUBMIT</button>
-        </form>
-      </div>
-
-    </div>
-  </section>
-
-
-
-
-
-
-
-
-
-
-
-  <section class="hero-section">
-    <div class="hero-content">
-      <h1 class="hero-heading animate-late">connect.</h1>
-
-      <p class="hero-text animate-text">
-        We Help You Expand<br>
-        Your Business Globally
-      </p>
-
-
-
-      <a href="contact.html" class="hero-cta-btn animate-late">
-        Start Your Project
-      </a>
-
-    </div>
-  </section>
 
 
 

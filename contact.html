@@ -12,7 +12,7 @@
   referrerpolicy="no-referrer"
 />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="icon" href="img/logo.png" type="image/png">
+<link rel="icon" href="img/fav.png" type="image/png">
 
 
 </head>
@@ -136,8 +136,10 @@
 
 <p>
 <i class="fa-solid fa-location-dot"></i>
-HUDA Techno Enclave, Madhapur Hitech City,<br>
-Hyderabad, Telangana - 500081
+Plot No #682, 3rd Floor,
+          Babukhan Rasheed Plaza,<br>
+          Rd No 36, Jubilee Hills,
+          Hyderabad, Telangana-500033
 </p>
 
 </div>
@@ -179,7 +181,7 @@ Hyderabad, Telangana - 500081
 </div>
 
 <div class="support-right reveal">
-<img src="img/contact2.png" alt="Support Illustration">
+<img src="img/contact22.png" alt="Support Illustration">
 </div>
 
 </div>
@@ -211,71 +213,129 @@ window.addEventListener("load", revealOnScroll);
 
 
 
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="contact-section.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
 
 <section class="contact-section">
-  <div class="contact-container">
 
-    <!-- LEFT IMAGE -->
-    <div class="contact-image">
-      <img src="img/contact3.png" alt="Contact">
-    </div>
+<div class="contact-container">
 
-    <!-- RIGHT FORM -->
-    <div class="contact-form">
-      <h2>Contact</h2>
+<!-- LEFT IMAGE -->
 
-     <form id="contactForm">
+<div class="contact-image reveal">
 
-<input type="text" id="name" placeholder="Your Name">
-<input type="text" id="phone" placeholder="Contact Number">
-<input type="email" id="email" placeholder="Email ID">
+<img src="img/contact2.png" alt="Contact">
+
+</div>
+
+
+<!-- RIGHT FORM -->
+
+<div class="contact-form-card reveal">
+
+<h2 class="form-title">
+
+<span>CONTACT US</span>
+
+</h2>
+
+
+<form id="contactForm">
+
+<div class="form-row">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="text" id="phone" placeholder="Contact Number" required>
+
+</div>
+<div class="form-row">
+
+<input type="email" id="email" placeholder="Email ID" required>
+
 <input type="text" id="company" placeholder="Your Company Name">
+</div>
+
+
+
+<!-- SERVICES -->
 
 <div class="checkbox-group">
 
 <label class="checkbox-item">
+
 <input type="checkbox" value="Website Designing">
+
 <span>Website Designing</span>
+
 </label>
 
 
 <label class="checkbox-item">
+
 <input type="checkbox" value="Software Applications">
+
 <span>Software Applications</span>
-</label>
 
-<label class="checkbox-item">
-<input type="checkbox" value="Mobile Apps (Android & IOS)">
-<span>Mobile Application (Android & IOS)</span>
 </label>
 
 
 <label class="checkbox-item">
-<input type="checkbox" value="Graphic Designing">
+
+<input type="checkbox" value="Mobile Application">
+
+<span>Mobile Application</span>
+
+</label>
+
+
+<label class="checkbox-item">
+
+<input type="checkbox" value="AI Services">
+
 <span>AI Services</span>
+
 </label>
 
 </div>
 
-<label class="message-label">Comment or Message</label>
-<textarea id="message" rows="5"></textarea>
+<textarea id="message" rows="5" placeholder="Comment or Message"></textarea>
 
-<button type="submit">SUBMIT</button>
+<button type="submit" class="submit-btn">
+<i class="fa-solid fa-paper-plane"></i>
+Submit
+</button>
+
+
 
 </form>
-    </div>
 
-  </div>
+</div>
+
+</div>
+
 </section>
 
 
 <script>
 
+/* FORM SUBMIT */
+
 document.getElementById("contactForm").addEventListener("submit", function(e){
 
 e.preventDefault();
-
-/* form values */
 
 let name = document.getElementById("name").value;
 let phone = document.getElementById("phone").value;
@@ -283,37 +343,58 @@ let email = document.getElementById("email").value;
 let company = document.getElementById("company").value;
 let message = document.getElementById("message").value;
 
-/* checkbox values */
-
 let services = [];
+
 document.querySelectorAll(".checkbox-item input:checked").forEach((checkbox)=>{
 services.push(checkbox.value);
 });
 
-/* message format */
-
 let text =
-"New Enquiry from Website:%0A%0A" +
-"Name: " + name + "%0A" +
-"Phone: " + phone + "%0A" +
-"Email: " + email + "%0A" +
-"Company: " + company + "%0A" +
-"Services: " + services.join(", ") + "%0A" +
-"Message: " + message;
+`New Enquiry from Website
 
-/* WhatsApp number */
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Company: ${company}
+Services: ${services.join(", ")}
+Message: ${message}`;
 
-let whatsapp = "https://wa.me/918074586016?text=" + text;
-
-/* open whatsapp */
+let whatsapp = "https://wa.me/918074586016?text=" + encodeURIComponent(text);
 
 window.open(whatsapp,"_blank");
 
 });
 
+
+/* SCROLL ANIMATION */
+
+function reveal(){
+
+let reveals = document.querySelectorAll(".reveal");
+
+for(let i=0;i<reveals.length;i++){
+
+let windowHeight = window.innerHeight;
+let elementTop = reveals[i].getBoundingClientRect().top;
+let visible = 120;
+
+if(elementTop < windowHeight - visible){
+
+reveals[i].classList.add("active");
+
+}
+
+}
+
+}
+
+window.addEventListener("scroll",reveal);
+window.addEventListener("load",reveal);
+
 </script>
 
-
+</body>
+</html>
 
 
 

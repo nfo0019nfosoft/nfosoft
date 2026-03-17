@@ -12,7 +12,7 @@
   referrerpolicy="no-referrer"
 />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="icon" href="img/logo.png" type="image/png">
+<link rel="icon" href="img/fav.png" type="image/png">
 
 
 </head>
@@ -196,66 +196,96 @@ We are committed to helping organizations grow faster and succeed in the ever-ev
 
 
 
-
-
 <section class="tech-focus">
   <div class="tech-container">
 
-    <!-- LEFT SIDE -->
     <div class="tech-left animate-left">
-      <h2>Our Technology Focus</h2>
+      <h2 class="section-title">OUR TECHNOLOGY  FOCUS</h2>
       <p class="tech-desc">
-        We focus on latest technology according to the requirement for the project.
+        We harness the power of cutting-edge technologies tailored specifically to meet your project requirements and business goals.
       </p>
 
       <div class="tech-cards">
         <div class="tech-card">
-          <i class="fa-solid fa-globe"></i>
+          <div class="icon-box web">
+            <i class="fa-solid fa-globe"></i>
+          </div>
           <h4>Website Designing</h4>
+          <p>Responsive & Modern UI</p>
         </div>
 
-
-
         <div class="tech-card">
-          <i class="fa-solid fa-desktop"></i>
+          <div class="icon-box software">
+            <i class="fa-solid fa-desktop"></i>
+          </div>
           <h4>Software Applications</h4>
+          <p>Robust Enterprise Solutions</p>
         </div>
 
-
         <div class="tech-card">
-          <i class="fa-solid fa-mobile-screen-button"></i>
+          <div class="icon-box mobile">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
           <h4>Mobile Applications</h4>
+          <p>iOS & Android Hybrid Apps</p>
         </div>
 
-        
-
         <div class="tech-card">
-       <i class="fa-solid fa-robot"></i>
+          <div class="icon-box ai">
+            <i class="fa-solid fa-robot"></i>
+          </div>
           <h4>AI Services</h4>
+          <p>Smart Automation & Data</p>
         </div>
       </div>
     </div>
 
-    <!-- RIGHT SIDE IMAGE (YOU WILL GIVE PIC) -->
     <div class="tech-right animate-right">
-      <img src="img/about2.png" alt="Technology">
+      <div class="image-wrapper">
+         <img src="img/about2.png" alt="Modern Technology Focus">
+      </div>
     </div>
 
   </div>
 </section>
+
 <script>
-const sections = document.querySelectorAll(".tech-focus");
+  document.addEventListener("DOMContentLoaded", () => {
+  const techSection = document.querySelector(".tech-focus");
+  const techCards = document.querySelectorAll(".tech-card");
 
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("active");
-      sectionObserver.unobserve(entry.target);
-    }
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Main section active avuthundhi (Left content & Right Image animation)
+        entry.target.classList.add("active");
+
+        // Cards okadhani tharvatha okati ravatam kosam (Staggered Delay)
+        techCards.forEach((card, index) => {
+          setTimeout(() => {
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+          }, index * 200); // Prathi card ki 200ms delay
+        });
+
+        sectionObserver.unobserve(entry.target);
+      }
+    });
+  }, { 
+    threshold: 0.2 // Section 20% kanipinchagane animation start avuthundhi
   });
-}, { threshold: 0.3 });
 
-sections.forEach(sec => sectionObserver.observe(sec));
+  if (techSection) {
+    sectionObserver.observe(techSection);
+  }
+
+  // Initial Styles for Cards (JS dwara apply chesthe transition smooth ga untundhi)
+  techCards.forEach(card => {
+    card.style.opacity = "0";
+    card.style.transform = "translateY(30px)";
+    card.style.transition = "all 0.6s ease-out";
+  });
+});
 </script>
 
 
