@@ -572,7 +572,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../img/car1.png");
+  background-image: url("../img/portbg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -584,7 +584,7 @@
 .hero-overlay {
   width: 100%;
   height: 100%;
-  background: rgba(42, 40, 90, 0.65);
+  background: rgba(42, 40, 90, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -652,156 +652,6 @@
 
 
 
-/* =========================
-   HERO BASE
-========================= */
-
-.hero-section {
-  height: 90vh;
-  background: url("../img/contactbg.png") center/cover no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 350px;
-}
-
-.hero-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-}
-
-.hero-content {
-  position: relative;
-  text-align: center;
-  color: #fff;
-  padding: 0 20px;
-}
-
-/* =========================
-   INITIAL HIDDEN STATE
-========================= */
-
-.hero-heading,
-.hero-cta-btn {
-  opacity: 0;
-}
-
-/* =========================
-   TEXT STYLES
-========================= */
-
-.hero-heading {
-  font-size: 64px;
-  margin-bottom: 20px;
-}
-
-.hero-text {
-  font-size: 32px;
-  line-height: 1.4;
-  margin-bottom: 40px;
-}
-
-/* =========================
-   BUTTON (WHITE BORDER)
-========================= */
-
-.hero-cta-btn {
-  display: inline-block;
-  padding: 14px 42px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-  background: #4b2c6f;
-  border: 2px solid #fff;
-  border-radius: 50px;
-  text-decoration: none;
-}
-
-/* =========================
-   ANIMATION 1
-   TEXT ZOOM + ONE FLOAT
-========================= */
-
-@keyframes textIntro {
-  0% {
-    opacity: 0;
-    transform: scale(0.7) translateY(0);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1) translateY(-15px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-.animate-text {
-  animation: textIntro 2.5s ease forwards;
-}
-
-/* =========================
-   ANIMATION 2
-   FADE IN + 3 BLINKS
-========================= */
-
-@keyframes fadeBlink {
-  0% { opacity: 0; }
-  20% { opacity: 1; }
-  30% { opacity: 0; }
-  40% { opacity: 1; }
-  50% { opacity: 0; }
-  60% { opacity: 1; }
-  70% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.animate-late {
-  animation: fadeBlink 3s ease forwards;
-  animation-delay: 2.7s; /* text animation tarvata */
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-  .hero-heading {
-    font-size: 42px;
-  }
-
-  .hero-text {
-    font-size: 22px;
-  }
-
-  .hero-cta-btn {
-    font-size: 16px;
-    padding: 12px 32px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    height: 80vh;
-  }
-
-  .hero-heading {
-    font-size: 34px;
-  }
-
-  .hero-text {
-    font-size: 20px;
-  }
-}
-
-
-
-
-
 
 
 
@@ -809,7 +659,7 @@
 
 
 .portfolio-section{
-padding:80px 20px;
+padding:40px 20px 100px;
 background:#e4e4f2;
 font-family:Poppins,sans-serif;
 text-align:center;
@@ -1113,4 +963,168 @@ font-size:26px;
   opacity:1;
   transform:translateX(0);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   CTA SECTION – WHITE BACKGROUND
+================================ */
+
+.cta-section-alt{
+  padding:50px 8% 80px;     /* 🔥 compact spacing */
+  background:#ffffff;      /* 🔥 white bg */
+  text-align:center;
+  color:#1c1b40;
+  position:relative;
+  overflow:hidden;
+  margin-top: -60px;
+}
+
+/* soft subtle background accent */
+.cta-section-alt::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at top,
+      rgba(88,67,121,0.06),
+      transparent 65%);
+  pointer-events:none;
+}
+
+/* ===============================
+   HEADING
+================================ */
+
+.cta-title-alt{
+  font-size:34px;
+  font-weight:700;
+  margin-bottom:16px;
+  color:#584379;
+}
+
+/* ===============================
+   TEXT
+================================ */
+
+.cta-text-alt{
+  max-width:650px;
+  margin:0 auto 34px;
+  font-size:16.5px;
+  line-height:1.7;
+  color:#444;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+
+.cta-btn-alt{
+  display:inline-block;
+  padding:14px 42px;
+  background:#584379;
+  color:#ffffff;
+  border-radius:50px;
+  font-size:15.5px;
+  font-weight:600;
+  text-decoration:none;
+  transition:.35s ease;
+  box-shadow:0 16px 40px rgba(28,27,64,.25);
+}
+
+/* hover */
+.cta-btn-alt:hover{
+  transform:translateY(-3px);
+  background:#1c1b40;
+  box-shadow:0 26px 60px rgba(255,138,0,.35);
+}
+
+/* ===============================
+   MOBILE VIEW
+================================ */
+
+@media(max-width:768px){
+
+  .cta-section-alt{
+    padding:55px 6% 65px;   /* 🔥 less height */
+  }
+
+  .cta-title-alt{
+    font-size:26px;
+  }
+
+  .cta-text-alt{
+    font-size:15px;
+    margin-bottom:28px;
+  }
+
+  .cta-btn-alt{
+    padding:13px 34px;
+    font-size:15px;
+  }
+}
+
+@media(max-width:480px){
+
+  .cta-title-alt{
+    font-size:22px;
+  }
+
+  .cta-text-alt{
+    font-size:14.5px;
+  }
+}
+/* LEFT ANIMATION */
+.reveal-left{
+  opacity:0;
+  transform:translateX(-80px);
+  transition:all .9s ease;
+}
+
+/* RIGHT ANIMATION */
+.reveal-right{
+  opacity:0;
+  transform:translateX(80px);
+  transition:all .9s ease;
+}
+
+/* SHOW STATE */
+.reveal-left.show,
+.reveal-right.show{
+  opacity:1;
+  transform:translateX(0);
+}
+
+
+
+
+
+
 
