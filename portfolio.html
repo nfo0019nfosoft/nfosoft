@@ -237,59 +237,94 @@ link:"ai.html"
 
 const cards = document.querySelectorAll(".category-card");
 const tabs = document.getElementById("portfolioTabs");
-const grid = document.getElementById("tabGrid");
-const btnWrap = document.getElementById("btnWrap");
 
-let activeTab = null;
-
-function openTab(key) {
-  grid.innerHTML = "";
-  data[key].items.forEach(img => {
-    grid.innerHTML += `
-      <div class="portfolio-item">
-        <img src="img/${img}">
-        <h4>${data[key].title}</h4>
-      </div>
-    `;
-  });
-
-  btnWrap.innerHTML = `
-    <a href="${data[key].link}" class="portfolio-know-btn">
-      Know More
-    </a>
-  `;
-
-  // Display block cheసి, కొంచెం గ్యాప్ తర్వాత opacity క్లాస్ యాడ్ చేస్తే యానిమేషన్ బాగుంటుంది
-  tabs.style.display = "block";
-  setTimeout(() => {
-    tabs.classList.add("show");
-  }, 10);
-}
+let activeCard = null;
+let activeContent = null;
 
 cards.forEach(card => {
   card.addEventListener("click", () => {
     const key = card.dataset.tab;
 
-    // ఒకవేళ ఆల్రెడీ ఓపెన్ అయి ఉన్న ట్యాబ్ నే మళ్ళీ క్లిక్ చేస్తే...
-    if (activeTab === key) {
-      tabs.classList.remove("show");
-      card.classList.remove("active");
-      
-      // యానిమేషన్ ముగిశాక పూర్తిగా స్పేస్ ని రిమూవ్ చేయడానికి
-      setTimeout(() => {
-        tabs.style.display = "none";
-      }, 400); 
+    // 📱 MOBILE VIEW
+    if (window.innerWidth <= 768) {
 
-      activeTab = null;
-      return;
+      // Same card click → close
+      if (activeCard === card) {
+        activeContent.remove();
+        card.classList.remove("active");
+        activeCard = null;
+        activeContent = null;
+        return;
+      }
+
+      // Remove old
+      if (activeContent) {
+        activeContent.remove();
+        activeCard.classList.remove("active");
+      }
+
+      // Create content
+      const content = document.createElement("div");
+      content.className = "portfolio-tabs show";
+
+      let gridHTML = `<div class="portfolio-grid">`;
+
+      data[key].items.forEach(img => {
+        gridHTML += `
+          <div class="portfolio-item">
+            <img src="img/${img}">
+            <h4>${data[key].title}</h4>
+          </div>
+        `;
+      });
+
+      gridHTML += `</div>
+        <div class="portfolio-btn-wrap">
+          <a href="${data[key].link}" class="portfolio-know-btn">Know More</a>
+        </div>
+      `;
+
+      content.innerHTML = gridHTML;
+
+      // Insert below clicked card
+      card.insertAdjacentElement("afterend", content);
+
+      card.classList.add("active");
+
+      activeCard = card;
+      activeContent = content;
+
+    } 
+    
+    // 💻 DESKTOP VIEW (your old system)
+    else {
+      const key = card.dataset.tab;
+
+      cards.forEach(c => c.classList.remove("active"));
+      card.classList.add("active");
+
+      tabs.classList.add("show");
+      tabs.style.display = "block";
+
+      const grid = document.getElementById("tabGrid");
+      const btnWrap = document.getElementById("btnWrap");
+
+      grid.innerHTML = "";
+      data[key].items.forEach(img => {
+        grid.innerHTML += `
+          <div class="portfolio-item">
+            <img src="img/${img}">
+            <h4>${data[key].title}</h4>
+          </div>
+        `;
+      });
+
+      btnWrap.innerHTML = `
+        <a href="${data[key].link}" class="portfolio-know-btn">
+          Know More
+        </a>
+      `;
     }
-
-    activeTab = key;
-
-    cards.forEach(c => c.classList.remove("active"));
-    card.classList.add("active");
-
-    openTab(key);
   });
 });
 
